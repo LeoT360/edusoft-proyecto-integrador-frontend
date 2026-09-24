@@ -1,12 +1,12 @@
 /* ====================================
-   MÓDULO REPORTES ESTADÍSTICOS - SURA G8
+   MÓDULO REPORTES ESTADÍSTICOS - EduSoft
    Solo visible para rol Profesor
    ==================================== */
 
    .reportes-container {
     padding: 35px 24px;
     min-height: calc(100vh - 68px);
-    background: linear-gradient(135deg, rgba(0,61,165,0.04) 0%, rgba(0,163,224,0.04) 100%);
+    background: linear-gradient(135deg, rgba(48,43,180,0.04) 0%, rgba(0,214,240,0.04) 100%);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
@@ -54,13 +54,13 @@
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 14px rgba(0,30,96,0.25);
+    box-shadow: 0 4px 14px rgba(48,43,180,0.25);
     white-space: nowrap;
   }
   
   .btn-nuevo-reporte:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0,30,96,0.35);
+    box-shadow: 0 6px 20px rgba(48,43,180,0.35);
   }
   
   /* ── Pestañas ── */
@@ -68,7 +68,7 @@
     display: flex;
     gap: 8px;
     margin-bottom: 28px;
-    border-bottom: 2px solid rgba(0,30,96,0.1);
+    border-bottom: 2px solid rgba(48,43,180,0.1);
     padding-bottom: 0;
   }
   
@@ -91,7 +91,7 @@
   
   .tab-btn:hover {
     color: var(--sura-azul-profundo);
-    background: rgba(0,30,96,0.04);
+    background: rgba(48,43,180,0.04);
   }
   
   .tab-activo {
@@ -100,7 +100,7 @@
   }
   
   .tab-badge {
-    background: rgba(5,195,222,0.15);
+    background: rgba(0,214,240,0.15);
     color: var(--sura-aqua);
     padding: 2px 8px;
     border-radius: 12px;
@@ -135,8 +135,8 @@
     background: rgba(255,255,255,0.97);
     border-radius: 16px;
     padding: 22px 20px;
-    box-shadow: 0 4px 16px rgba(0,30,96,0.08);
-    border: 1px solid rgba(0,30,96,0.07);
+    box-shadow: 0 4px 16px rgba(48,43,180,0.08);
+    border: 1px solid rgba(48,43,180,0.07);
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -148,7 +148,7 @@
   
   .kpi-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0,30,96,0.12);
+    box-shadow: 0 8px 24px rgba(48,43,180,0.12);
   }
   
   .kpi-card::before {
@@ -184,7 +184,7 @@
   
   .kpi-barra-wrap {
     height: 6px;
-    background: rgba(0,30,96,0.08);
+    background: rgba(48,43,180,0.08);
     border-radius: 10px;
     margin-top: 6px;
     overflow: hidden;
@@ -206,7 +206,7 @@
     font-weight: 700;
     margin: 0 0 14px;
     padding-bottom: 8px;
-    border-bottom: 2px solid rgba(5,195,222,0.2);
+    border-bottom: 2px solid rgba(0,214,240,0.2);
   }
   
   .reporte-row {
@@ -217,15 +217,15 @@
     background: rgba(255,255,255,0.97);
     border-radius: 12px;
     margin-bottom: 10px;
-    box-shadow: 0 2px 8px rgba(0,30,96,0.06);
-    border: 1px solid rgba(0,30,96,0.06);
+    box-shadow: 0 2px 8px rgba(48,43,180,0.06);
+    border: 1px solid rgba(48,43,180,0.06);
     transition: all 0.25s ease;
     flex-wrap: wrap;
     gap: 12px;
   }
   
   .reporte-row:hover {
-    box-shadow: 0 6px 20px rgba(0,30,96,0.1);
+    box-shadow: 0 6px 20px rgba(48,43,180,0.1);
     transform: translateX(4px);
   }
   
@@ -308,7 +308,7 @@
   .modal-overlay-rep {
     position: fixed;
     inset: 0;
-    background: rgba(0,30,96,0.6);
+    background: rgba(48,43,180,0.6);
     backdrop-filter: blur(6px);
     display: flex;
     justify-content: center;
@@ -327,7 +327,7 @@
     max-width: 600px;
     max-height: 88vh;
     overflow-y: auto;
-    box-shadow: 0 20px 60px rgba(0,30,96,0.3);
+    box-shadow: 0 20px 60px rgba(48,43,180,0.3);
     animation: modalUp 0.3s cubic-bezier(0.4,0,0.2,1);
     display: flex;
     flex-direction: column;
@@ -383,9 +383,9 @@
   .modal-rep-seccion {
     margin-bottom: 18px;
     padding: 14px 16px;
-    background: rgba(0,30,96,0.03);
+    background: rgba(48,43,180,0.03);
     border-radius: 12px;
-    border: 1px solid rgba(0,30,96,0.07);
+    border: 1px solid rgba(48,43,180,0.07);
   }
   
   .modal-rep-seccion h4 {
@@ -396,7 +396,7 @@
     letter-spacing: 0.4px;
     margin: 0 0 12px;
     padding-bottom: 8px;
-    border-bottom: 2px solid rgba(5,195,222,0.2);
+    border-bottom: 2px solid rgba(0,214,240,0.2);
   }
   
   .fila-rep {
@@ -404,7 +404,7 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 6px 0;
-    border-bottom: 1px solid rgba(0,30,96,0.04);
+    border-bottom: 1px solid rgba(48,43,180,0.04);
     gap: 12px;
   }
   
@@ -426,8 +426,8 @@
   
   .modal-rep-footer {
     padding: 14px 24px;
-    border-top: 1px solid rgba(0,30,96,0.08);
-    background: rgba(0,30,96,0.02);
+    border-top: 1px solid rgba(48,43,180,0.08);
+    background: rgba(48,43,180,0.02);
   }
   
   .btn-rep-editar-modal {
@@ -454,24 +454,24 @@
   }
   
   .rep-form fieldset {
-    border: 1px solid rgba(0,30,96,0.12);
+    border: 1px solid rgba(48,43,180,0.12);
     border-radius: 14px;
     padding: 18px 20px;
-    background: rgba(0,30,96,0.02);
+    background: rgba(48,43,180,0.02);
   }
   
   .rep-form legend {
     font-weight: 700;
     color: var(--sura-azul-profundo);
     padding: 4px 14px;
-    background: rgba(5,195,222,0.1);
+    background: rgba(0,214,240,0.1);
     border-radius: 8px;
     font-size: 14px;
   }
   
   /* Scrollbar */
   .modal-rep::-webkit-scrollbar { width: 6px; }
-  .modal-rep::-webkit-scrollbar-track { background: rgba(0,30,96,0.05); border-radius: 10px; }
+  .modal-rep::-webkit-scrollbar-track { background: rgba(48,43,180,0.05); border-radius: 10px; }
   .modal-rep::-webkit-scrollbar-thumb {
     background: linear-gradient(180deg, var(--sura-azul-profundo), var(--sura-aqua));
     border-radius: 10px;
@@ -517,7 +517,7 @@
   .reportes-search {
     flex: 1;
     padding: 12px 20px;
-    border: 2px solid rgba(0,30,96,0.12);
+    border: 2px solid rgba(48,43,180,0.12);
     border-radius: 25px;
     font-size: 14px;
     background: rgba(255,255,255,0.95);
@@ -528,7 +528,7 @@
   .reportes-search:focus {
     outline: none;
     border-color: var(--sura-aqua);
-    box-shadow: 0 0 0 3px rgba(5,195,222,0.12);
+    box-shadow: 0 0 0 3px rgba(0,214,240,0.12);
   }
   
   .btn-limpiar-search {
@@ -536,7 +536,7 @@
     height: 34px;
     border-radius: 50%;
     border: none;
-    background: rgba(0,30,96,0.1);
+    background: rgba(48,43,180,0.1);
     color: var(--sura-azul-profundo);
     font-size: 12px;
     font-weight: 700;

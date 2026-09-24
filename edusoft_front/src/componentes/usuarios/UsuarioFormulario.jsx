@@ -9,7 +9,7 @@ import { mostrarAlerta } from '../../utils/swalConfig';
 import Swal from 'sweetalert2';
 import { usuarioService } from '../../services/usuarioService';
 import './UsuarioFormulario.css'; // ✅ Ruta corregida (era '../usuarios/UsuarioFormulario.css')
-import logoSura from '../../imagenes/logoSura.png';
+import logoEdusoft from '../../assets/logo-edusoft.svg';
 
 function UsuarioFormulario() {
   const [usuario, setUsuario] = useState({
@@ -82,7 +82,7 @@ function UsuarioFormulario() {
 
   return (
     <div className="contenedor-formulario">
-      <img src={logoSura} alt="Logo Sura" className="logo-sura-formulario" />
+      <img src={logoEdusoft} alt="Logo Edusoft" className="logo-sura-formulario" />
 
       <form onSubmit={envioDatos} className="usuario-formulario">
         <h2>Registro de usuario</h2>

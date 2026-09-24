@@ -76,7 +76,7 @@ export const exportarAsistenciasPDF = (asistencias) => {
   win.document.write(`
     <html>
       <head>
-        <title>Reporte de Asistencias - Sura G8</title>
+        <title>Reporte de Asistencias - EduSoft</title>
         <style>
           body { font-family: 'Segoe UI', Arial, sans-serif; padding: 30px; color: #111; }
           .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
@@ -98,7 +98,7 @@ export const exportarAsistenciasPDF = (asistencias) => {
       <body>
         <div class="header">
           <div>
-            <div class="titulo">📋 Reporte de Asistencias — Sura G8</div>
+            <div class="titulo">📋 Reporte de Asistencias — EduSoft</div>
             <div class="subtitulo">Generado el ${fechaActual}</div>
           </div>
         </div>

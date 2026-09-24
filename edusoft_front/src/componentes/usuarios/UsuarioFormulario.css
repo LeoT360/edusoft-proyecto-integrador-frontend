@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px; 
+  gap: 200px; 
   padding: 20px;
   box-sizing: border-box;
 }
@@ -94,7 +94,7 @@
 }
 
 .logo-sura-formulario {
-  width: 400px; 
+  width: 350px; 
   height: auto;
   flex-shrink: 0; 
   animation: animacion 0.6s ease;

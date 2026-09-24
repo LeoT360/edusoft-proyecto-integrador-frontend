@@ -16,7 +16,7 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 20px;
   box-shadow: 
-    0 8px 32px 0 rgba(0, 61, 165, 0.15),
+    0 8px 32px 0 rgba(48, 43, 180, 0.15),
     inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
   
   position: relative;
@@ -31,7 +31,7 @@
   right: -50px;
   width: 300px;
   height: 300px;
-  background-image: url('../../assets/tigre-circular.png'); /* ← Imagen circular del tigre */
+  background-image: url('../../assets/icon-edusoft.svg');
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0.05;
@@ -40,14 +40,14 @@
 }
 
 .formulario-container h2 {
-  color: #003DA5;
+  color: #302BB4;
   text-align: center;
   margin-bottom: 25px;
   font-size: 28px;
   font-weight: bold;
   position: relative;
   z-index: 1;
-  text-shadow: 0 2px 4px rgba(0, 61, 165, 0.1);
+  text-shadow: 0 2px 4px rgba(48, 43, 180, 0.1);
 }
 
 .formulario-container h2::after {
@@ -55,7 +55,7 @@
   display: block;
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, #FDB913 0%, #00A3E0 100%);
+  background: linear-gradient(90deg, #FDB913 0%, #00D6F0 100%);
   margin: 12px auto 0;
   border-radius: 2px;
 }
@@ -101,28 +101,28 @@
 
 /* Fieldsets con efecto cristal */
 fieldset {
-  border: 1px solid rgba(0, 61, 165, 0.2);
+  border: 1px solid rgba(48, 43, 180, 0.2);
   border-radius: 16px;
   padding: 20px;
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 2px 8px rgba(0, 61, 165, 0.08);
+  box-shadow: 0 2px 8px rgba(48, 43, 180, 0.08);
   transition: all 0.3s ease;
 }
 
 fieldset:hover {
-  border-color: rgba(0, 163, 224, 0.4);
-  box-shadow: 0 4px 16px rgba(0, 163, 224, 0.15);
+  border-color: rgba(0, 214, 240, 0.4);
+  box-shadow: 0 4px 16px rgba(0, 214, 240, 0.15);
   transform: translateY(-2px);
 }
 
 legend {
   font-weight: bold;
-  color: #003DA5;
+  color: #302BB4;
   padding: 0 12px;
   font-size: 16px;
-  background: linear-gradient(135deg, rgba(0, 61, 165, 0.1) 0%, rgba(0, 163, 224, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(48, 43, 180, 0.1) 0%, rgba(0, 214, 240, 0.1) 100%);
   border-radius: 8px;
   padding: 6px 16px;
 }
@@ -137,7 +137,7 @@ legend {
 .form-group label {
   font-weight: 600;
   margin-bottom: 6px;
-  color: #003DA5;
+  color: #302BB4;
   font-size: 14px;
 }
 
@@ -145,7 +145,7 @@ legend {
 .form-group select,
 .form-group textarea {
   padding: 12px 16px;
-  border: 2px solid rgba(0, 61, 165, 0.15);
+  border: 2px solid rgba(48, 43, 180, 0.15);
   border-radius: 10px;
   font-size: 14px;
   font-family: Arial, sans-serif;
@@ -159,14 +159,14 @@ legend {
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #00A3E0;
-  box-shadow: 0 0 0 3px rgba(0, 163, 224, 0.1);
+  border-color: #00D6F0;
+  box-shadow: 0 0 0 3px rgba(0, 214, 240, 0.1);
   background: rgba(255, 255, 255, 1);
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: rgba(0, 61, 165, 0.4);
+  color: rgba(48, 43, 180, 0.4);
 }
 
 /* Checkboxes con estilo moderno */
@@ -180,7 +180,7 @@ legend {
 }
 
 .form-group-checkbox:hover {
-  background: rgba(0, 163, 224, 0.05);
+  background: rgba(0, 214, 240, 0.05);
 }
 
 .form-group-checkbox input {
@@ -188,12 +188,12 @@ legend {
   height: 20px;
   margin-right: 12px;
   cursor: pointer;
-  accent-color: #00A3E0;
+  accent-color: #00D6F0;
 }
 
 .form-group-checkbox label {
   cursor: pointer;
-  color: #003DA5;
+  color: #302BB4;
   font-weight: 500;
 }
 
@@ -220,9 +220,9 @@ legend {
 
 /* Botón enviar - Gradiente Sura */
 .btn-enviar {
-  background: linear-gradient(135deg, #003DA5 0%, #00A3E0 100%);
+  background: linear-gradient(135deg, #302BB4 0%, #00D6F0 100%);
   color: white;
-  box-shadow: 0 4px 15px rgba(0, 61, 165, 0.3);
+  box-shadow: 0 4px 15px rgba(48, 43, 180, 0.3);
 }
 
 .btn-enviar::before {
@@ -241,15 +241,15 @@ legend {
 }
 
 .btn-enviar:hover:not(:disabled) {
-  background: linear-gradient(135deg, #002A7A 0%, #0088B8 100%);
+  background: linear-gradient(135deg, #24218A 0%, #00AFC7 100%);
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 61, 165, 0.4);
+  box-shadow: 0 8px 25px rgba(48, 43, 180, 0.4);
 }
 
 /* Botón limpiar - Dorado del tigre */
 .btn-limpiar {
   background: linear-gradient(135deg, #FDB913 0%, #FFA000 100%);
-  color: #003DA5;
+  color: #302BB4;
   box-shadow: 0 4px 15px rgba(253, 185, 19, 0.3);
 }
 

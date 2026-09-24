@@ -1,13 +1,13 @@
 /* ====================================
-   MÓDULO PROFESORES - TEMA SURA G8
-   Adaptado de barranavP con variables Sura
+   MÓDULO PROFESORES - TEMA EduSoft
+   Adaptado con variables del sistema institucional
    ==================================== */
 
 /* ===== CONTENEDOR PRINCIPAL ===== */
 .profesores-container {
   padding: 35px 24px;
   min-height: calc(100vh - 68px);
-  background: linear-gradient(135deg, rgba(0, 61, 165, 0.04) 0%, rgba(0, 163, 224, 0.04) 100%);
+  background: linear-gradient(135deg, rgba(48, 43, 180, 0.04) 0%, rgba(0, 214, 240, 0.04) 100%);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -57,13 +57,13 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 14px rgba(0, 30, 96, 0.25);
+  box-shadow: 0 4px 14px rgba(48, 43, 180, 0.25);
   white-space: nowrap;
 }
 
 .add-profesor-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 30, 96, 0.35);
+  box-shadow: 0 6px 20px rgba(48, 43, 180, 0.35);
 }
 
 /* ===== BUSCADOR ===== */
@@ -73,19 +73,19 @@
   max-width: 550px;
   margin: 0 auto 30px;
   padding: 13px 22px;
-  border: 2px solid rgba(0, 30, 96, 0.15);
+  border: 2px solid rgba(48, 43, 180, 0.15);
   border-radius: 25px;
   font-size: 0.95rem;
   background: rgba(255, 255, 255, 0.95);
   color: var(--sura-azul-profundo);
   transition: all 0.3s ease;
-  box-shadow: var(--sura-sombra-sm, 0 2px 8px rgba(0,61,165,0.08));
+  box-shadow: var(--sura-sombra-sm, 0 2px 8px rgba(48,43,180,0.08));
 }
 
 .search-bar:focus {
   outline: none;
   border-color: var(--sura-aqua);
-  box-shadow: 0 0 0 3px rgba(5, 195, 222, 0.12);
+  box-shadow: 0 0 0 3px rgba(0, 214, 240, 0.12);
   background: white;
 }
 
@@ -121,11 +121,11 @@
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border-radius: 18px;
-  box-shadow: 0 4px 16px rgba(0, 30, 96, 0.08);
+  box-shadow: 0 4px 16px rgba(48, 43, 180, 0.08);
   padding: 26px 22px;
   text-align: center;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(0, 30, 96, 0.07);
+  border: 1px solid rgba(48, 43, 180, 0.07);
   position: relative;
   overflow: hidden;
   animation: fadeInUp 0.5s ease both;
@@ -147,7 +147,7 @@
 
 .profesor-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 30px rgba(0, 30, 96, 0.15);
+  box-shadow: 0 10px 30px rgba(48, 43, 180, 0.15);
 }
 
 .profesor-inactivo {
@@ -163,13 +163,13 @@
   object-fit: cover;
   margin: 0 auto 14px;
   border: 3px solid var(--sura-aqua);
-  box-shadow: 0 4px 14px rgba(5, 195, 222, 0.25);
+  box-shadow: 0 4px 14px rgba(0, 214, 240, 0.25);
   transition: all 0.3s ease;
 }
 
 .profesor-card:hover .profesor-foto {
   transform: scale(1.07);
-  box-shadow: 0 6px 20px rgba(5, 195, 222, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 214, 240, 0.4);
 }
 
 /* ===== INFO EN TARJETA ===== */
@@ -274,7 +274,7 @@
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 30, 96, 0.6);
+  background: rgba(48, 43, 180, 0.6);
   backdrop-filter: blur(6px);
   display: flex;
   justify-content: center;
@@ -296,7 +296,7 @@
   max-width: 600px;
   max-height: 88vh;
   overflow-y: auto;
-  box-shadow: 0 20px 60px rgba(0, 30, 96, 0.35);
+  box-shadow: 0 20px 60px rgba(48, 43, 180, 0.35);
   animation: modalSlide 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -364,9 +364,9 @@
 .modal-seccion {
   margin-bottom: 22px;
   padding: 16px;
-  background: rgba(0, 30, 96, 0.03);
+  background: rgba(48, 43, 180, 0.03);
   border-radius: 12px;
-  border: 1px solid rgba(0, 30, 96, 0.07);
+  border: 1px solid rgba(48, 43, 180, 0.07);
 }
 
 .modal-seccion h4 {
@@ -377,7 +377,7 @@
   text-transform: uppercase;
   letter-spacing: 0.4px;
   padding-bottom: 8px;
-  border-bottom: 2px solid rgba(5, 195, 222, 0.25);
+  border-bottom: 2px solid rgba(0, 214, 240, 0.25);
 }
 
 .modal-item {
@@ -385,7 +385,7 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 7px 0;
-  border-bottom: 1px solid rgba(0,30,96,0.05);
+  border-bottom: 1px solid rgba(48,43,180,0.05);
   gap: 12px;
 }
 
@@ -427,7 +427,7 @@
 
 /* Scrollbar del modal */
 .modal-detalle::-webkit-scrollbar { width: 6px; }
-.modal-detalle::-webkit-scrollbar-track { background: rgba(0,30,96,0.05); border-radius: 10px; }
+.modal-detalle::-webkit-scrollbar-track { background: rgba(48,43,180,0.05); border-radius: 10px; }
 .modal-detalle::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, var(--sura-azul-profundo), var(--sura-aqua));
   border-radius: 10px;
@@ -439,7 +439,7 @@
   margin: 0 auto;
   background: white;
   border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(0, 30, 96, 0.12);
+  box-shadow: 0 8px 32px rgba(48, 43, 180, 0.12);
   overflow: hidden;
 }
 
@@ -488,23 +488,23 @@
 }
 
 .profesor-form fieldset {
-  border: 1px solid rgba(0, 30, 96, 0.15);
+  border: 1px solid rgba(48, 43, 180, 0.15);
   border-radius: 14px;
   padding: 20px 22px;
-  background: rgba(0, 30, 96, 0.02);
+  background: rgba(48, 43, 180, 0.02);
   transition: all 0.3s ease;
 }
 
 .profesor-form fieldset:hover {
-  border-color: rgba(5, 195, 222, 0.4);
-  box-shadow: 0 4px 14px rgba(5, 195, 222, 0.1);
+  border-color: rgba(0, 214, 240, 0.4);
+  box-shadow: 0 4px 14px rgba(0, 214, 240, 0.1);
 }
 
 .profesor-form legend {
   font-weight: 700;
   color: var(--sura-azul-profundo);
   padding: 4px 14px;
-  background: rgba(5, 195, 222, 0.1);
+  background: rgba(0, 214, 240, 0.1);
   border-radius: 8px;
   font-size: 14px;
 }
@@ -528,7 +528,7 @@
 .form-group select,
 .form-group textarea {
   padding: 11px 15px;
-  border: 2px solid rgba(0, 30, 96, 0.12);
+  border: 2px solid rgba(48, 43, 180, 0.12);
   border-radius: 10px;
   font-size: 14px;
   font-family: inherit;
@@ -542,7 +542,7 @@
 .form-group textarea:focus {
   outline: none;
   border-color: var(--sura-aqua);
-  box-shadow: 0 0 0 3px rgba(5, 195, 222, 0.1);
+  box-shadow: 0 0 0 3px rgba(0, 214, 240, 0.1);
 }
 
 .form-group-checkbox {
@@ -554,7 +554,7 @@
   transition: background 0.2s ease;
 }
 
-.form-group-checkbox:hover { background: rgba(5,195,222,0.05); }
+.form-group-checkbox:hover { background: rgba(0,214,240,0.05); }
 
 .form-group-checkbox input {
   width: 18px;
@@ -598,7 +598,7 @@
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--sura-aqua);
-  box-shadow: 0 4px 12px rgba(5,195,222,0.25);
+  box-shadow: 0 4px 12px rgba(0,214,240,0.25);
 }
 
 /* ===== BOTONES DEL FORMULARIO ===== */
@@ -619,12 +619,12 @@
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 14px rgba(0, 30, 96, 0.25);
+  box-shadow: 0 4px 14px rgba(48, 43, 180, 0.25);
 }
 
 .btn-submit:hover:not(:disabled) {
   transform: translateY(-3px);
-  box-shadow: 0 8px 22px rgba(0, 30, 96, 0.35);
+  box-shadow: 0 8px 22px rgba(48, 43, 180, 0.35);
 }
 
 .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }

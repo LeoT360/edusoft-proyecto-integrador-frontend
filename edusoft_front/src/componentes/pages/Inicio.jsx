@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import logoSura from '../../imagenes/logoSura.png';
+import logoEdusoft from '../../assets/title-edusoft.svg';
 import './Inicio.css';
 
 function Inicio() {
@@ -54,10 +54,10 @@ function Inicio() {
       <div className="inicio-content">
 
         {/* Logo */}
-        <img src={logoSura} alt="Logo Sura" className="inicio-logo" />
+        <img src={logoEdusoft} alt="Logo Edusoft" className="inicio-logo" />
 
         {/* Título */}
-        <h1 className="inicio-titulo">Sistema Integrado Sura G8</h1>
+        <h1 className="inicio-titulo">Sistema Integrado EduSoft</h1>
 
         <p className="inicio-subtitulo">
           Gestión Académica Integral
@@ -100,7 +100,7 @@ function Inicio() {
 
       {/* Footer */}
       <footer className="inicio-footer">
-        <p>Proyecto Integrador - Sura G8 | 2026</p>
+        <p>Proyecto Integrador EduSoft | 2026</p>
       </footer>
     </div>
   );

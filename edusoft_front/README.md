@@ -1,4 +1,4 @@
-# 📚 Proyecto Integrador Sura G8
+# 📚 Proyecto Integrador EduSoft
 ### Sistema de Gestión Académica — Documentación General
 
 ---
@@ -27,7 +27,7 @@
 
 ## 1 · ¿Qué es el proyecto?
 
-**Sura G8** es una plataforma web de gestión académica desarrollada como proyecto integrador por el grupo 8. Permite administrar los procesos centrales de una institución educativa: registro de usuarios, cursos, asistencias, notas, matrículas, notificaciones y reportes estadísticos.
+**EduSoft** es una plataforma web de gestión académica desarrollada como proyecto integrador para la administración de una institución educativa. Permite manejar los procesos centrales del sistema: registro de usuarios, cursos, asistencias, notas, matrículas, notificaciones y reportes estadísticos.
 
 El sistema distingue entre dos tipos de usuarios — **Profesores** y **Estudiantes** — y adapta todo lo que ven y pueden hacer según ese rol. Un estudiante no verá las mismas opciones que un profesor, y tampoco podrá acceder a secciones que no le correspondan, ni siquiera escribiendo la dirección directamente en el navegador.
 
@@ -423,7 +423,7 @@ Durante la integración de los módulos se detectaron y resolvieron varios probl
 | Asistencias | Ruta con typo: `/w{id}` en lugar de `/{id}` | Corregida la anotación `@GetMapping` |
 | Asistencias | Usaba stored procedures inexistentes en H2 | Reemplazados por métodos JPA estándar (`findAll`, `save`, `findById`) |
 | Asistencias | Apuntaba a `localhost:8081` (puerto incorrecto) | Corregido a `localhost:8080` |
-| Matrícula | Ruta base: `/apisurag8/` (con 'g' extra) | Unificada a `/apisura8/` igual que el resto |
+| Matrícula | Ruta base previa con nombre antiguo del backend | Corrección aplicada para unificar el endpoint del proyecto |
 | Matrícula | Sin `@CrossOrigin` — bloqueaba peticiones del navegador | Añadida la anotación con los orígenes permitidos |
 | Matrícula | Sin endpoint `DELETE` | Añadido siguiendo el patrón de los demás módulos |
 | Reportes | Campo `desempeÃ±o` — error de codificación (tildes en Java) | Renombrado a `desempeno` (sin tilde) |
@@ -435,7 +435,7 @@ Durante la integración de los módulos se detectaron y resolvieron varios probl
 | Módulo | Problema encontrado | Solución aplicada |
 |---|---|---|
 | Matrícula | Construido en Next.js + TypeScript (framework incorrecto) | Convertido completamente a React JSX puro |
-| Matrícula | Usaba componentes de librería externa (shadcn/ui) | Reemplazados por HTML/CSS estándar con el estilo Sura G8 |
+| Matrícula | Usaba componentes de librería externa (shadcn/ui) | Reemplazados por HTML/CSS estándar con el estilo EduSoft |
 | Notificaciones | Botón ✏️ Editar visible para Estudiantes | Condicionado con `{esProfesor && <button...>}` |
 | Todos los listados | La búsqueda no filtraba por ID | Añadido `String(item.id).includes(q)` en cada filtro |
 | Asistencias | El servicio apuntaba a `localhost:8081/api/asistencias` | Corregido a `localhost:8080/apisura8/v1/asistencias` |
@@ -459,4 +459,4 @@ Durante la integración de los módulos se detectaron y resolvieron varios probl
 
 ---
 
-*Proyecto Integrador — Grupo 8 · Sura G8 · 2026*
+*Proyecto Integrador EduSoft · 2026*

@@ -1,53 +1,53 @@
 /* ====================================
-   COLORES CORPORATIVOS SURA - UNIFICADO
+  COLORES CORPORATIVOS EDUSOFT - UNIFICADO
    Variables globales para todo el proyecto
    Dark Mode: añadir clase "dark" al <body>
    ==================================== */
 
    :root {
-    /* ===== PALETA PRINCIPAL SURA ===== */
-    --sura-azul-profundo: #001E60;
-    --sura-aqua: #05C3DE;
+    /* ===== PALETA PRINCIPAL EDUSOFT ===== */
+    --sura-azul-profundo: #302BB4;
+    --sura-aqua: #00D6F0;
     --sura-blanco: #FFFFFF;
-    --sura-gris-oscuro: #484949;
-    --sura-gris-claro: #DAE0E8;
+    --sura-gris-oscuro: #17203A;
+    --sura-gris-claro: #EEF1F7;
   
     /* ===== ALIASES PARA CONSISTENCIA ===== */
-    --sura-azul-medio: #003DA5;
-    --sura-azul-cielo: #00A3E0;
+    --sura-azul-medio: #4D48D6;
+    --sura-azul-cielo: #6CE7F5;
     --sura-amarillo: #FDB913;
     --sura-amarillo-oscuro: #FFA000;
   
     /* ===== TEXTOS ===== */
     --sura-texto-principal: var(--sura-gris-oscuro);
-    --sura-texto-secundario: #666666;
+    --sura-texto-secundario: #5D6780;
     --sura-texto-sobre-azul: var(--sura-blanco);
   
     /* ===== FONDO GENERAL DE LA APP ===== */
-    --sura-fondo-app: #f4f6fb;
+    --sura-fondo-app: #F5F7FC;
     --sura-fondo-card: rgba(255, 255, 255, 0.98);
-    --sura-fondo-card-hover: rgba(0, 30, 96, 0.03);
-    --sura-borde-card: rgba(0, 30, 96, 0.07);
-    --sura-borde-input: rgba(0, 30, 96, 0.12);
+    --sura-fondo-card-hover: rgba(48, 43, 180, 0.04);
+    --sura-borde-card: rgba(48, 43, 180, 0.10);
+    --sura-borde-input: rgba(48, 43, 180, 0.16);
   
     /* ===== TABLA ===== */
     --sura-tabla-th-bg: linear-gradient(135deg, var(--sura-azul-profundo), var(--sura-aqua));
     --sura-tabla-th-color: #ffffff;
     --sura-tabla-td-color: var(--sura-gris-oscuro);
-    --sura-tabla-borde: rgba(0, 30, 96, 0.06);
-    --sura-tabla-hover: rgba(0, 30, 96, 0.03);
+    --sura-tabla-borde: rgba(48, 43, 180, 0.08);
+    --sura-tabla-hover: rgba(0, 214, 240, 0.06);
   
     /* ===== NAVBAR ===== */
-    --sura-navbar-bg: linear-gradient(135deg, var(--sura-azul-profundo) 0%, var(--sura-azul-medio) 100%);
+    --sura-navbar-bg: linear-gradient(135deg, #241F8F 0%, var(--sura-azul-profundo) 100%);
     --sura-navbar-texto: #ffffff;
     --sura-menu-bg: #ffffff;
-    --sura-menu-header-bg: linear-gradient(135deg, var(--sura-azul-profundo), var(--sura-azul-medio));
-    --sura-menu-item-hover: rgba(0, 30, 96, 0.06);
+    --sura-menu-header-bg: linear-gradient(135deg, #241F8F, var(--sura-azul-profundo));
+    --sura-menu-item-hover: rgba(0, 214, 240, 0.08);
     --sura-menu-item-color: var(--sura-azul-profundo);
-    --sura-menu-divisor: rgba(0, 30, 96, 0.08);
-    --sura-menu-subitem-color: #444;
-    --sura-menu-subitem-hover: rgba(0, 30, 96, 0.05);
-    --sura-menu-pie-bg: rgba(0, 30, 96, 0.04);
+    --sura-menu-divisor: rgba(48, 43, 180, 0.10);
+    --sura-menu-subitem-color: #4B5570;
+    --sura-menu-subitem-hover: rgba(0, 214, 240, 0.06);
+    --sura-menu-pie-bg: rgba(48, 43, 180, 0.05);
   
     /* ===== ESTADOS / FEEDBACK ===== */
     --sura-exito: #28a745;
@@ -59,7 +59,7 @@
     --sura-error-texto: #721c24;
   
     --sura-info: var(--sura-aqua);
-    --sura-info-fondo: rgba(0, 163, 224, 0.15);
+    --sura-info-fondo: rgba(0, 214, 240, 0.15);
     --sura-info-texto: var(--sura-azul-medio);
   
     --sura-advertencia: var(--sura-amarillo);
@@ -67,14 +67,14 @@
     --sura-advertencia-texto: #856404;
   
     /* ===== GRADIENTES REUTILIZABLES ===== */
-    --sura-gradiente-principal: linear-gradient(135deg, var(--sura-azul-medio) 0%, var(--sura-azul-cielo) 100%);
+    --sura-gradiente-principal: linear-gradient(135deg, var(--sura-azul-profundo) 0%, var(--sura-aqua) 100%);
     --sura-gradiente-dorado: linear-gradient(135deg, var(--sura-amarillo) 0%, var(--sura-amarillo-oscuro) 100%);
     --sura-gradiente-peligro: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
   
     /* ===== GLASSMORPHISM ===== */
     --sura-glass-fondo: rgba(255, 255, 255, 0.85);
     --sura-glass-borde: rgba(255, 255, 255, 0.3);
-    --sura-glass-sombra: 0 8px 32px 0 rgba(0, 61, 165, 0.15), inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
+    --sura-glass-sombra: 0 8px 32px 0 rgba(48, 43, 180, 0.15), inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
     --sura-glass-blur: blur(20px) saturate(180%);
   
     /* ===== BORDES Y RADIOS ===== */
@@ -84,9 +84,9 @@
     --sura-radio-xl: 20px;
   
     /* ===== SOMBRAS ===== */
-    --sura-sombra-sm: 0 2px 8px rgba(0, 61, 165, 0.08);
-    --sura-sombra-md: 0 4px 16px rgba(0, 61, 165, 0.12);
-    --sura-sombra-lg: 0 8px 32px rgba(0, 61, 165, 0.2);
+    --sura-sombra-sm: 0 2px 8px rgba(48, 43, 180, 0.10);
+    --sura-sombra-md: 0 4px 16px rgba(48, 43, 180, 0.14);
+    --sura-sombra-lg: 0 8px 32px rgba(48, 43, 180, 0.22);
   
     /* ===== TRANSICIONES ===== */
     --sura-transicion: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -103,7 +103,7 @@
   body.dark {
     /* ===== PALETA ADAPTADA AL OSCURO ===== */
     --sura-azul-profundo: #7EADFF;       /* texto azul → legible sobre fondo oscuro */
-    --sura-aqua: #05C3DE;
+    --sura-aqua: #00D6F0;
     --sura-blanco: #1a1f2e;              /* superficies "blancas" → gris muy oscuro */
     --sura-gris-oscuro: #e2e8f0;        /* texto principal → casi blanco */
     --sura-gris-claro: #2d3748;         /* bordes suaves */
@@ -330,7 +330,7 @@
   body.dark [class*="badge-prox"],
   body.dark [class*="solo-prof"],
   body.dark [class*="badge-rol"] {
-    background: rgba(5,195,222,0.15) !important;
+    background: rgba(0,214,240,0.15) !important;
     color: var(--sura-aqua) !important;
   }
   

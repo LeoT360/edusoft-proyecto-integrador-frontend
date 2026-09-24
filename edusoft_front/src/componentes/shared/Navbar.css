@@ -11,7 +11,7 @@
 
   /* ✅ FIX DARK MODE: color fijo dedicado, NO usa --sura-azul-profundo
      para que no se vea afectado cuando esa variable cambia en dark mode */
-  background: #001E60;
+  background: #302BB4;
   color: #ffffff;
 
   font-family: 'Segoe UI', sans-serif;
@@ -48,7 +48,7 @@ body.dark .navbar-sura-izquierda h3 {
 }
 
 .logo-sura-navbar {
-  width: 65px;
+  width: 200px;
   height: auto;
   border-radius: 8px;
   filter: brightness(0) invert(1);
@@ -59,18 +59,18 @@ body.dark .navbar-sura-izquierda h3 {
 
 /* Badge rol en la navbar — siempre con su color aqua */
 .badge-rol {
-  background: linear-gradient(135deg, #05C3DE 0%, #05A3C0 100%);
-  color: #001E60;
+  background: linear-gradient(135deg, #00D6F0 0%, #00AFC7 100%);
+  color: #302BB4;
   padding: 4px 12px;
   border-radius: 12px;
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
-  box-shadow: 0 2px 8px rgba(5, 195, 222, 0.35);
+  box-shadow: 0 2px 8px rgba(0, 214, 240, 0.35);
 }
 
 body.dark .badge-rol {
-  color: #001E60 !important; /* mantiene legibilidad sobre el aqua */
+  color: #302BB4 !important; /* mantiene legibilidad sobre el aqua */
 }
 
 /* ===== BOTÓN HAMBURGUESA ===== */
@@ -104,7 +104,7 @@ body.dark .badge-rol {
 
 .boton-menu:hover {
   background: #ffffff;
-  color: #001E60;
+  color: #302BB4;
   transform: scale(1.05);
 }
 
@@ -172,7 +172,7 @@ body.dark .btn-dark-toggle {
   max-height: 520px;
 
   /* Modo claro: fondo azul corporativo */
-  background: #001E60;
+  background: #302BB4;
   color: #ffffff;
 
   border-radius: 16px;
@@ -221,8 +221,8 @@ body.dark .menu-panel-header {
 }
 
 .badge-rol-panel {
-  background: linear-gradient(135deg, #05C3DE 0%, #05A3C0 100%);
-  color: #001E60;
+  background: linear-gradient(135deg, #00D6F0 0%, #00AFC7 100%);
+  color: #302BB4;
   padding: 3px 10px;
   border-radius: 10px;
   font-size: 11px;
@@ -243,11 +243,11 @@ body.dark .menu-panel-header {
   background: rgba(255, 255, 255, 0.05);
 }
 .menu-scroll-area::-webkit-scrollbar-thumb {
-  background: rgba(5, 195, 222, 0.5);
+  background: rgba(0, 214, 240, 0.5);
   border-radius: 10px;
 }
 .menu-scroll-area::-webkit-scrollbar-thumb:hover {
-  background: rgba(5, 195, 222, 0.8);
+  background: rgba(0, 214, 240, 0.8);
 }
 
 /* ===== ÍTEMS DIRECTOS (Home, Usuarios) ===== */
@@ -265,14 +265,14 @@ body.dark .menu-panel-header {
 }
 
 .menu-item-directo:hover {
-  background: rgba(5, 195, 222, 0.15);
+  background: rgba(0, 214, 240, 0.15);
   padding-left: 24px;
 }
 
 .menu-item-arrow {
   margin-left: auto;
   font-size: 18px;
-  color: #05C3DE;
+  color: #00D6F0;
   opacity: 0.7;
 }
 
@@ -294,7 +294,7 @@ body.dark .menu-panel-header {
   padding: 13px 18px;
   background: transparent;
   border: none;
-  color: #05C3DE !important;
+  color: #00D6F0 !important;
   cursor: pointer;
   font-size: 13px;
   font-weight: 700;
@@ -306,7 +306,7 @@ body.dark .menu-panel-header {
 
 .menu-acordeon-header:hover,
 .menu-acordeon-header.abierto {
-  background: rgba(5, 195, 222, 0.1);
+  background: rgba(0, 214, 240, 0.1);
 }
 
 .menu-acordeon-titulo {
@@ -318,7 +318,7 @@ body.dark .menu-panel-header {
 /* Chevron giratorio */
 .menu-chevron {
   font-size: 22px;
-  color: #05C3DE;
+  color: #00D6F0;
   opacity: 0.7;
   transition: transform 0.25s ease;
   line-height: 1;
@@ -352,14 +352,14 @@ body.dark .menu-panel-header {
 }
 
 .menu-subitem:hover {
-  background: rgba(5, 195, 222, 0.12);
+  background: rgba(0, 214, 240, 0.12);
   color: #ffffff !important;
   padding-left: 44px;
 }
 
 .menu-subitem-bullet {
   font-size: 12px;
-  color: #05C3DE;
+  color: #00D6F0;
   opacity: 0.7;
   flex-shrink: 0;
 }
