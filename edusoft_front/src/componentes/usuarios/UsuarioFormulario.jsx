@@ -5,6 +5,7 @@
 // ====================================
 
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { mostrarAlerta } from '../../utils/swalConfig';
 import Swal from 'sweetalert2';
 import { usuarioService } from '../../services/usuarioService';
@@ -22,6 +23,7 @@ function UsuarioFormulario() {
 
   const [error, setError] = useState('');
   const [cargando, setCargando] = useState(false);
+  const navegacion = useNavigate();
 
   const capturarDatos = (e) => {
     setUsuario({ ...usuario, [e.target.name]: e.target.value });
@@ -82,6 +84,14 @@ function UsuarioFormulario() {
 
   return (
     <div className="contenedor-formulario">
+      <button
+        type="button"
+        className="btn-volver-inicio"
+        onClick={() => navegacion('/')}
+      >
+        ← Volver al inicio
+      </button>
+
       <img src={logoEdusoft} alt="Logo Edusoft" className="logo-sura-formulario" />
 
       <form onSubmit={envioDatos} className="usuario-formulario">

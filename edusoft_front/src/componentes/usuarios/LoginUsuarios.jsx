@@ -71,6 +71,14 @@ function LoginUsuarios() {
 
   return (
     <div className="contenedor-login">
+      <button
+        type="button"
+        className="btn-volver-inicio"
+        onClick={() => navegacion('/')}
+      >
+        ← Volver al inicio
+      </button>
+
       <img src={logoEdusoft} alt="Logo Edusoft" className="logo-sura-login" />
 
       <form className="login-formulario" onSubmit={envioDatos}>
