@@ -10,6 +10,8 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { profesorService } from '../../services/profesorService';
 import './Profesores.css';
 
+const DEFAULT_AVATAR = 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png';
+
 const FORM_INICIAL = {
   nombreCompleto:    '',
   numeroDocumento:   '',
