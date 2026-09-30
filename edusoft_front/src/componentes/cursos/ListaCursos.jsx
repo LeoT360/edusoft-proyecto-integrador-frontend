@@ -1,3 +1,4 @@
+import Icon from '../shared/Icon';
 // ====================================
 // LISTA CURSOS - UNIFICADA
 // Profesor: CRUD completo
@@ -83,7 +84,7 @@ function ListaCursos() {
       {/* ENCABEZADO */}
       <div className="cursos-header">
         <div className="cursos-header-texto">
-          <h2>📖 {esProfesor ? 'Gestión de Cursos' : 'Catálogo de Cursos'}</h2>
+          <h2><Icon name="book" size={18} /> {esProfesor ? 'Gestión de Cursos' : 'Catálogo de Cursos'}</h2>
           <p className="cursos-subtitulo">
             {esProfesor
               ? `${cursos.length} curso${cursos.length !== 1 ? 's' : ''} registrado${cursos.length !== 1 ? 's' : ''}`
@@ -92,7 +93,7 @@ function ListaCursos() {
         </div>
         {esProfesor && (
           <button className="btn-nuevo-curso" onClick={() => navigate('/cursos/crear')}>
-            ＋ Nuevo Curso
+             Nuevo Curso
           </button>
         )}
       </div>
@@ -101,7 +102,7 @@ function ListaCursos() {
       <div className="cursos-filtros">
         <input
           className="cursos-search"
-          placeholder="🔍 Buscar por título, maestro o descripción..."
+          placeholder=" Buscar por título, maestro o descripción..."
           value={busqueda}
           onChange={e => setBusqueda(e.target.value)}
         />
@@ -123,7 +124,7 @@ function ListaCursos() {
 
       {!error && filtrados.length === 0 && (
         <div className="cursos-vacio">
-          <span className="cursos-vacio-icono">📭</span>
+          <span className="cursos-vacio-icono"><Icon name="mail" size={18} /></span>
           <p>No se encontraron cursos con esos criterios.</p>
           {(busqueda || filtraTipo) && (
             <button className="btn-limpiar-filtros"
@@ -175,14 +176,14 @@ function TarjetaCurso({ curso, esProfesor, onVer, onEditar, renderEstrellas }) {
 
       {/* Badge presencialidad */}
       <span className={`badge-modalidad ${presencial ? 'badge-presencial' : 'badge-virtual'}`}>
-        {presencial ? '🏫 Presencial' : '💻 Virtual'}
+        {presencial ? ' Presencial' : ' Virtual'}
       </span>
 
       <div className="curso-card-body">
         <h3 className="curso-titulo">{curso.titulo || 'Sin título'}</h3>
 
         {curso.maestro && (
-          <p className="curso-maestro">👨‍🏫 {curso.maestro}</p>
+          <p className="curso-maestro"><Icon name="graduation" size={18} /> {curso.maestro}</p>
         )}
 
         {curso.descripcion && (
@@ -196,13 +197,13 @@ function TarjetaCurso({ curso, esProfesor, onVer, onEditar, renderEstrellas }) {
         {/* Metadata */}
         <div className="curso-meta">
           {curso.duracion != null && (
-            <span className="curso-meta-item">⏱ {curso.duracion}h</span>
+            <span className="curso-meta-item"><Icon name="clock" size={18}/> {curso.duracion}h</span>
           )}
           {curso.intensidad != null && (
             <span className="curso-meta-item">⚡ {curso.intensidad} hrs/sem</span>
           )}
           {curso.estudiantes != null && (
-            <span className="curso-meta-item">👥 {curso.estudiantes}</span>
+            <span className="curso-meta-item"><Icon name="group" size={18} /> {curso.estudiantes}</span>
           )}
         </div>
 
@@ -218,11 +219,11 @@ function TarjetaCurso({ curso, esProfesor, onVer, onEditar, renderEstrellas }) {
       {/* Acciones */}
       <div className="curso-card-footer" onClick={e => e.stopPropagation()}>
         <button className="btn-curso-ver" onClick={onVer}>
-          👁 Ver detalle
+           Ver detalle
         </button>
         {esProfesor && (
           <button className="btn-curso-editar" onClick={onEditar}>
-            ✏️ Editar
+             Editar
           </button>
         )}
       </div>
@@ -242,7 +243,7 @@ function ModalDetalleCurso({ curso, esProfesor, onCerrar, onEditar, renderEstrel
             <h3>{curso.titulo || 'Sin título'}</h3>
             {curso.tipoCurso && <span className="modal-tipo-badge">{curso.tipoCurso}</span>}
           </div>
-          <button className="btn-cerrar-modal-curso" onClick={onCerrar}>✕</button>
+          <button className="btn-cerrar-modal-curso" onClick={onCerrar}><Icon name="close" size={18}/></button>
         </div>
 
         {/* Body */}
@@ -250,7 +251,7 @@ function ModalDetalleCurso({ curso, esProfesor, onCerrar, onEditar, renderEstrel
 
           {/* Info general - todos la ven */}
           <section className="modal-curso-seccion">
-            <h4>📋 Información General</h4>
+            <h4><Icon name="clipboard" size={18} /> Información General</h4>
             <FilaDetalle label="Maestro"       valor={curso.maestro} />
             <FilaDetalle label="Modalidad"     valor={curso.presencialidad ? 'Presencial' : 'Virtual'} />
             <FilaDetalle label="Tipo"          valor={curso.tipoCurso} />
@@ -272,7 +273,7 @@ function ModalDetalleCurso({ curso, esProfesor, onCerrar, onEditar, renderEstrel
           {/* Descripción */}
           {curso.descripcion && (
             <section className="modal-curso-seccion">
-              <h4>📝 Descripción</h4>
+              <h4><Icon name="note" size={18} /> Descripción</h4>
               <p className="modal-descripcion">{curso.descripcion}</p>
             </section>
           )}
@@ -280,7 +281,7 @@ function ModalDetalleCurso({ curso, esProfesor, onCerrar, onEditar, renderEstrel
           {/* Info solo para profesores */}
           {esProfesor && (
             <section className="modal-curso-seccion">
-              <h4>🔒 Datos Administrativos</h4>
+              <h4><Icon name="lock" size={18} /> Datos Administrativos</h4>
               <FilaDetalle label="Lugar de realización" valor={curso.lugarRealizacion} />
               <FilaDetalle label="Fecha de creación"    valor={curso.fechaCreacion} />
               <FilaDetalle label="Fecha de finalización" valor={curso.fechaFinalizacion} />
@@ -295,7 +296,7 @@ function ModalDetalleCurso({ curso, esProfesor, onCerrar, onEditar, renderEstrel
 
           {!esProfesor && (
             <div className="modal-aviso-estudiante-curso">
-              ℹ️ Algunos datos administrativos del curso son visibles solo para docentes.
+               Algunos datos administrativos del curso son visibles solo para docentes.
             </div>
           )}
         </div>
@@ -304,7 +305,7 @@ function ModalDetalleCurso({ curso, esProfesor, onCerrar, onEditar, renderEstrel
         {esProfesor && (
           <div className="modal-curso-footer">
             <button className="btn-curso-editar-modal" onClick={onEditar}>
-              ✏️ Editar este curso
+               Editar este curso
             </button>
           </div>
         )}

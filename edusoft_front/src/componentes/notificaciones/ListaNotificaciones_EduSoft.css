@@ -144,7 +144,6 @@
 
 .btn-recargar:hover:not(:disabled) {
   background: #1E40AF;
-  transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(48, 43, 180, 0.4);
 }
 
@@ -598,7 +597,6 @@
 
 .btn-cerrar-modal:hover {
   background: #1E40AF;
-  transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(48, 43, 180, 0.4);
 }
 

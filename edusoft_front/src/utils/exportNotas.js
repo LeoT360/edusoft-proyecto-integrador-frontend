@@ -104,7 +104,7 @@ import Swal from 'sweetalert2';
       fontSize: 9,
     },
     headStyles: {
-      fillColor: [0, 85, 164], // Azul SURA
+      fillColor: [0, 85, 164], // Azul institucional EduSoft
       textColor: 255,
     },
   });

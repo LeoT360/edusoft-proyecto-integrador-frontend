@@ -1,3 +1,4 @@
+import Icon from '../shared/Icon';
 // ====================================
 // LISTA ASISTENCIAS - UNIFICADA
 // Profesor: ve todo + puede registrar nuevas asistencias
@@ -147,7 +148,7 @@ function ListaAsistencias() {
       {/* ENCABEZADO */}
       <div className="asistencias-header">
         <div>
-          <h2>📋 {esProfesor ? 'Gestión de Asistencias' : 'Mi Asistencia'}</h2>
+          <h2><Icon name="clipboard" size={18} /> {esProfesor ? 'Gestión de Asistencias' : 'Mi Asistencia'}</h2>
           <p className="asistencias-subtitulo">
             {esProfesor
               ? 'Registra y consulta las asistencias del sistema'
@@ -159,7 +160,7 @@ function ListaAsistencias() {
             className="btn-nueva-asistencia"
             onClick={() => setMostrarForm(!mostrarForm)}
           >
-            {mostrarForm ? '✕ Cerrar' : '＋ Registrar Asistencia'}
+            {mostrarForm ? '✕ Cerrar' : ' Registrar Asistencia'}
           </button>
         )}
       </div>
@@ -172,22 +173,22 @@ function ListaAsistencias() {
         </div>
         <div className="kpi-asist kpi-ausentes">
           <span className="kpi-num">{ausentes}</span>
-          <span className="kpi-lbl">❌ Ausentes</span>
+          <span className="kpi-lbl"><Icon name="close" size={18} /> Ausentes</span>
         </div>
         <div className="kpi-asist kpi-pct">
           <span className="kpi-num">{pct}%</span>
-          <span className="kpi-lbl">📊 Asistencia</span>
+          <span className="kpi-lbl"><Icon name="chart" size={18} /> Asistencia</span>
         </div>
         <div className="kpi-asist kpi-total">
           <span className="kpi-num">{filtradas.length}</span>
-          <span className="kpi-lbl">📁 Total registros</span>
+          <span className="kpi-lbl"><Icon name="file" size={18} /> Total registros</span>
         </div>
       </div>
 
       {/* FORMULARIO DESLIZANTE (solo Profesor) */}
       {esProfesor && mostrarForm && (
         <div className="asistencia-form-panel">
-          <h3>📝 Nueva Asistencia</h3>
+          <h3><Icon name="note" size={18} /> Nueva Asistencia</h3>
 
           {msgForm && (
             <div className={`message-alert ${tipoMsg === 'exito' ? 'message-success' : 'message-error'}`}>
@@ -231,7 +232,7 @@ function ListaAsistencias() {
                 <input id="asistio" name="asistio" type="checkbox"
                   checked={form.asistio} onChange={handleChange} />
                 <label htmlFor="asistio">
-                  {form.asistio ? '✅ Asistió' : '❌ No asistió'}
+                  {form.asistio ? '✅ Asistió' : ' No asistió'}
                 </label>
               </div>
 
@@ -239,7 +240,7 @@ function ListaAsistencias() {
 
             <div className="form-actions">
               <button type="submit" className="btn-submit" disabled={guardando}>
-                {guardando ? '⏳ Guardando...' : '💾 Guardar Asistencia'}
+                {guardando ? ' Guardando...' : ' Guardar Asistencia'}
               </button>
               <button type="button" className="btn-cancel"
                 onClick={() => { setMostrarForm(false); setErrForm({}); setMsgForm(''); }}>
@@ -254,17 +255,17 @@ function ListaAsistencias() {
       <div className="asistencias-toolbar">
         <input
           className="asistencias-search"
-          placeholder="🔍 Buscar por nombre o fecha..."
+          placeholder=" Buscar por nombre o fecha..."
           value={busqueda}
           onChange={e => setBusqueda(e.target.value)}
         />
         {esProfesor && filtradas.length > 0 && (
           <div className="export-buttons">
             <button className="btn-export csv" onClick={handleExportCSV}>
-              📄 CSV
+               CSV
             </button>
             <button className="btn-export pdf" onClick={handleExportPDF}>
-              🖨️ PDF
+               PDF
             </button>
           </div>
         )}
@@ -277,7 +278,7 @@ function ListaAsistencias() {
         <div className="asistencias-tabla-wrap">
           {filtradas.length === 0 ? (
             <div className="asistencias-vacio">
-              <span>📭</span>
+              <span><Icon name="mail" size={18} /></span>
               <p>No se encontraron registros de asistencia.</p>
             </div>
           ) : (
@@ -300,7 +301,7 @@ function ListaAsistencias() {
                     <td>{a.horaEntrada}</td>
                     <td>
                       <span className={`badge-asistencia ${a.asistio ? 'badge-presente' : 'badge-ausente'}`}>
-                        {a.asistio ? '✅ Presente' : '❌ Ausente'}
+                        {a.asistio ? '✅ Presente' : ' Ausente'}
                       </span>
                     </td>
                   </tr>

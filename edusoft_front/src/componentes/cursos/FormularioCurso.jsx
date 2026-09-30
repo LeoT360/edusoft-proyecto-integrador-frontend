@@ -1,3 +1,4 @@
+import Icon from '../shared/Icon';
 // ====================================
 // FORMULARIO CURSO - UNIFICADO
 // Sirve para CREAR y EDITAR
@@ -141,7 +142,7 @@ function FormularioCurso() {
 
         {/* ENCABEZADO */}
         <div className="curso-form-header">
-          <h3>{modoEdicion ? '✏️ Editar Curso' : '➕ Nuevo Curso'}</h3>
+          <h3>{modoEdicion ? ' Editar Curso' : ' Nuevo Curso'}</h3>
           <p>{modoEdicion ? 'Modifica la información del curso.' : 'Completa los datos del nuevo curso.'}</p>
         </div>
 
@@ -156,7 +157,7 @@ function FormularioCurso() {
 
           {/* ═══ INFORMACIÓN BÁSICA ═══ */}
           <fieldset>
-            <legend>📖 Información Básica</legend>
+            <legend><Icon name="book" size={18} /> Información Básica</legend>
 
             <div className="form-group">
               <label htmlFor="titulo">Título del Curso *</label>
@@ -198,14 +199,14 @@ function FormularioCurso() {
               <input id="presencialidad" name="presencialidad" type="checkbox"
                 checked={formData.presencialidad} onChange={handleChange} />
               <label htmlFor="presencialidad">
-                {formData.presencialidad ? '🏫 Presencial' : '💻 Virtual'}
+                {formData.presencialidad ? ' Presencial' : ' Virtual'}
               </label>
             </div>
           </fieldset>
 
           {/* ═══ DETALLES ACADÉMICOS ═══ */}
           <fieldset>
-            <legend>📊 Detalles Académicos</legend>
+            <legend><Icon name="chart" size={18} /> Detalles Académicos</legend>
 
             <div className="form-grid-2">
               <div className="form-group">
@@ -255,7 +256,7 @@ function FormularioCurso() {
 
           {/* ═══ FECHAS ═══ */}
           <fieldset>
-            <legend>📅 Fechas</legend>
+            <legend><Icon name="calendar" size={18} /> Fechas</legend>
             <div className="form-grid-2">
               <div className="form-group">
                 <label htmlFor="fechaCreacion">Fecha de Inicio</label>
@@ -273,7 +274,7 @@ function FormularioCurso() {
 
           {/* ═══ NOTAS ADICIONALES ═══ */}
           <fieldset>
-            <legend>💬 Comentarios Adicionales</legend>
+            <legend><Icon name="mail" size={18} /> Comentarios Adicionales</legend>
             <div className="form-group">
               <textarea id="comentarios" name="comentarios" rows="3"
                 value={formData.comentarios} onChange={handleChange}
@@ -285,8 +286,8 @@ function FormularioCurso() {
           <div className="form-actions">
             <button type="submit" className="btn-submit" disabled={cargando}>
               {cargando
-                ? '⏳ Guardando...'
-                : modoEdicion ? '💾 Actualizar Curso' : '➕ Crear Curso'}
+                ? ' Guardando...'
+                : modoEdicion ? ' Actualizar Curso' : ' Crear Curso'}
             </button>
             <button type="button" className="btn-cancel"
               onClick={() => navigate('/cursos')} disabled={cargando}>

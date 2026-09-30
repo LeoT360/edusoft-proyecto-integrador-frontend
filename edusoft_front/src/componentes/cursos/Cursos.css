@@ -59,7 +59,6 @@
 }
 
 .btn-nuevo-curso:hover {
-  transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(48, 43, 180, 0.35);
 }
 
@@ -170,7 +169,6 @@
 }
 
 .curso-card:hover {
-  transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(48, 43, 180, 0.14);
 }
 
@@ -391,7 +389,6 @@
 
 .btn-cerrar-modal-curso:hover {
   background: rgba(255,255,255,0.35);
-  transform: rotate(90deg);
 }
 
 .modal-curso-body { padding: 20px 24px; flex: 1; }
@@ -489,7 +486,6 @@
 }
 
 .btn-curso-editar-modal:hover {
-  transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(253, 185, 19, 0.4);
 }
 

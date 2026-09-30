@@ -9,8 +9,10 @@ import { mostrarAlerta } from '../../utils/swalConfig';
 import { usuarioService } from '../../services/usuarioService';
 import './LoginUsuarios.css';
 import logoEdusoft from '../../assets/logo-edusoft.svg';
+import logoWhiteEdusoft from '../../assets/logo-white-edusoft.svg';
 
 function LoginUsuarios() {
+  const logoActual = document.body.classList.contains('dark') ? logoWhiteEdusoft : logoEdusoft;
   const [login, setLogin] = useState({ correo: '', contraseña: '' });
   const [cargando, setCargando] = useState(false);
   const navegacion = useNavigate();
@@ -76,10 +78,20 @@ function LoginUsuarios() {
         className="btn-volver-inicio"
         onClick={() => navegacion('/')}
       >
-        ← Volver al inicio
+         Volver al inicio
       </button>
 
-      <img src={logoEdusoft} alt="Logo Edusoft" className="logo-edusoft-login" />
+      <section className="auth-visual auth-visual-login">
+        <div className="auth-visual-image">
+          <img
+            src="https://images.pexels.com/photos/6424590/pexels-photo-6424590.jpeg?cs=srgb&dl=pexels-nemuel-6424590.jpg&fm=jpg"
+            alt="Programación y tecnología"
+          />
+        </div>
+        <div className="auth-visual-overlay">
+          <img src={logoActual} alt="EduSoft" className="auth-visual-logo" />
+        </div>
+      </section>
 
       <form className="login-formulario" onSubmit={envioDatos}>
         <h2>Iniciar sesión</h2>

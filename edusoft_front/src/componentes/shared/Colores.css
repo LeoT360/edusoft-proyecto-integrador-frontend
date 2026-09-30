@@ -4,9 +4,9 @@
    --edusoft-* para no romper los módulos existentes.
    ==================================== */
 :root {
-  --edusoft-azul-profundo: #172554;
+  --edusoft-azul-profundo: #040759;
   --edusoft-azul-medio: #1D4ED8;
-  --edusoft-azul-cielo: #3B82F6;
+  --edusoft-azul-cielo: #0080FF;
   --edusoft-aqua: #3B82F6;
   --edusoft-blanco: #FFFFFF;
   --edusoft-gris-oscuro: #172033;
@@ -100,10 +100,9 @@ body.dark table td, body.dark table th { border-color: #334155 !important; }
 
 /* ===== NORMALIZACIÓN VISUAL DE MÓDULOS ===== */
 .profesores-container,.cursos-container,.asistencias-container,.matricula-container,.reportes-container,.notificaciones-container,.usuarios-container,.home-container,.dashboard-container { background:#F5F7FA !important; }
-.inicio-container { background:#172554 !important; }
-.inicio-content,.home-header { background:#FFFFFF !important; backdrop-filter:none !important; -webkit-backdrop-filter:none !important; border:1px solid #E2E8F0; box-shadow:0 2px 6px rgba(15,23,42,.06); border-radius:8px; }
-.home-header h1,.inicio-titulo { color:#172554; }
-.inicio-subtitulo { color:#1D4ED8; }
+.inicio-container { background:#EEF4FB !important; }
+.home-header { background:#FFFFFF !important; backdrop-filter:none !important; -webkit-backdrop-filter:none !important; border:1px solid #E2E8F0; box-shadow:0 2px 6px rgba(15,23,42,.06); border-radius:8px; }
+.home-header h1 { color:#172554; }
 [class*="-header"] h2, [class*="-container"] h2, [class*="-container"] h1 { color:#172554; }
 .add-profesor-btn,.btn-nuevo-curso,.btn-nueva-asistencia,.btn-nueva-matricula,.btn-nuevo-reporte,.usuario-carta button,.btn-primary { background:#1D4ED8 !important; color:#FFFFFF !important; border-radius:6px !important; box-shadow:none !important; }
 .add-profesor-btn:hover,.btn-nuevo-curso:hover,.btn-nueva-asistencia:hover,.btn-nueva-matricula:hover,.btn-nuevo-reporte:hover,.usuario-carta button:hover,.btn-primary:hover { background:#1E40AF !important; transform:none !important; box-shadow:none !important; }
@@ -112,8 +111,8 @@ body.dark table td, body.dark table th { border-color: #334155 !important; }
 
 body.dark .profesores-container,body.dark .cursos-container,body.dark .asistencias-container,body.dark .matricula-container,body.dark .reportes-container,body.dark .notificaciones-container,body.dark .usuarios-container,body.dark .home-container,body.dark .dashboard-container { background:#0F172A !important; }
 body.dark .inicio-container { background:#0F172A !important; }
-body.dark .inicio-content,body.dark .home-header { background:#1E293B !important; border-color:#334155; box-shadow:none; }
-body.dark .home-header h1,body.dark .inicio-titulo,body.dark [class*="-header"] h2,body.dark [class*="-container"] h2,body.dark [class*="-container"] h1 { color:#E2E8F0; }
+body.dark .home-header { background:#1E293B !important; border-color:#334155; box-shadow:none; }
+body.dark .home-header h1,body.dark [class*="-header"] h2,body.dark [class*="-container"] h2,body.dark [class*="-container"] h1 { color:#E2E8F0; }
 
 
 /* ================================================================
@@ -453,3 +452,84 @@ body:not(.dark) .protected-content button { box-shadow:none; }
 /* Remove old decorative effects from notification module. */
 .protected-content .lista-container::before { opacity:.025; }
 .protected-content .lista-container h2 { text-shadow:none; }
+
+
+/* =========================================================
+   EDUSOFT — IDENTIDAD VISUAL FINAL
+   ========================================================= */
+:root{--ed-bg:#EEF4FB;--ed-surface:#FFFFFF;--ed-blue-dark:#172554;--ed-blue:#1D4ED8;--ed-blue-light:#3B82F6;--ed-gold:#E5A11A;--ed-text:#172033;--ed-muted:#64748B;--ed-border:#D6E0EC;}
+body:not(.dark){background:var(--ed-bg)!important;color:var(--ed-text)!important;}
+body:not(.dark) .protected-content{background:var(--ed-bg)!important;}
+body:not(.dark) .protected-content .home-header,body:not(.dark) .protected-content .home-descripcion,body:not(.dark) .protected-content .cursos-header,body:not(.dark) .protected-content .asistencias-header,body:not(.dark) .protected-content .matricula-header,body:not(.dark) .protected-content .reportes-header{background:#E8F1FF!important;border-color:#C8DBF7!important;box-shadow:none!important;backdrop-filter:none!important;}
+body:not(.dark) .protected-content .home-tarjetas .tarjeta,body:not(.dark) .protected-content .curso-card,body:not(.dark) .protected-content .profesor-card,body:not(.dark) .protected-content .dashboard-card,body:not(.dark) .protected-content .kpi-card,body:not(.dark) .protected-content .kpi-asist,body:not(.dark) .protected-content .kpi-mat,body:not(.dark) .protected-content .usuario-carta,body:not(.dark) .protected-content .tabla-container,body:not(.dark) .protected-content .table-container,body:not(.dark) .protected-content .formulario{background:#fff!important;border-color:var(--ed-border)!important;box-shadow:0 2px 8px rgba(15,23,42,.05)!important;backdrop-filter:none!important;}
+body:not(.dark) .protected-content .tarjeta-azul,body:not(.dark) .protected-content .tarjeta-cyan{border-top:3px solid var(--ed-blue)!important;}body:not(.dark) .protected-content .tarjeta-dorado{border-top:3px solid var(--ed-gold)!important;}
+body:not(.dark) .protected-content h1,body:not(.dark) .protected-content h2,body:not(.dark) .protected-content h3{color:var(--ed-blue-dark)!important;}
+body:not(.dark) .protected-content p,body:not(.dark) .protected-content label{color:var(--ed-muted);}
+
+body.dark{background:#0B1220!important;color:#E2E8F0!important;}body.dark .protected-content{background:#0B1220!important;}
+body.dark .protected-content .home-header,body.dark .protected-content .home-descripcion,body.dark .protected-content .cursos-header,body.dark .protected-content .asistencias-header,body.dark .protected-content .matricula-header,body.dark .protected-content .reportes-header{background:#162238!important;border-color:#334155!important;box-shadow:none!important;backdrop-filter:none!important;color:#E2E8F0!important;}
+body.dark .protected-content .home-tarjetas .tarjeta,body.dark .protected-content .curso-card,body.dark .protected-content .profesor-card,body.dark .protected-content .dashboard-card,body.dark .protected-content .kpi-card,body.dark .protected-content .kpi-asist,body.dark .protected-content .kpi-mat,body.dark .protected-content .usuario-carta,body.dark .protected-content .tabla-container,body.dark .protected-content .table-container,body.dark .protected-content .formulario,body.dark .protected-content fieldset{background:#1E293B!important;color:#E2E8F0!important;border-color:#334155!important;box-shadow:none!important;backdrop-filter:none!important;}
+body.dark .protected-content h1,body.dark .protected-content h2,body.dark .protected-content h3,body.dark .protected-content h4,body.dark .protected-content label,body.dark .protected-content legend{color:#F8FAFC!important;}body.dark .protected-content p,body.dark .protected-content span{color:#CBD5E1;}
+body.dark .protected-content input,body.dark .protected-content select,body.dark .protected-content textarea{background:#0F172A!important;color:#E2E8F0!important;border-color:#475569!important;}
+body.dark .protected-content input:focus,body.dark .protected-content select:focus,body.dark .protected-content textarea:focus{border-color:#60A5FA!important;box-shadow:0 0 0 2px rgba(59,130,246,.18)!important;}
+body.dark .protected-content input::placeholder,body.dark .protected-content textarea::placeholder{color:#94A3B8!important;}
+body.dark .protected-content table{background:#1E293B!important;color:#E2E8F0!important;}body.dark .protected-content table th{background:#172554!important;color:#fff!important;border-color:#334155!important;}body.dark .protected-content table td{color:#CBD5E1!important;border-color:#334155!important;}body.dark .protected-content table tbody tr:hover td{background:#263449!important;}
+
+/* MODALES: eliminar brillo, rotación, elevación y transiciones exageradas. */
+.protected-content .modal-content,.protected-content .modal-detalle,.protected-content .modal-curso,.protected-content .modal-rep{transition:none!important;}
+.protected-content .modal-content *, .protected-content .modal-detalle *, .protected-content .modal-curso *, .protected-content .modal-rep *{transition:none!important;}
+.protected-content .modal-content button:hover,.protected-content .modal-detalle button:hover,.protected-content .modal-curso button:hover,.protected-content .modal-rep button:hover{transform:none!important;box-shadow:none!important;filter:none!important;}
+.protected-content .modal-content::before,.protected-content .modal-content::after,.protected-content .modal-detalle::before,.protected-content .modal-detalle::after,.protected-content .modal-curso::before,.protected-content .modal-curso::after,.protected-content .modal-rep::before,.protected-content .modal-rep::after{display:none!important;}
+body.dark .protected-content .modal-overlay,body.dark .protected-content .modal-overlay-curso,body.dark .protected-content .modal-overlay-rep{background:rgba(2,6,23,.84)!important;backdrop-filter:blur(2px)!important;}
+body.dark .protected-content .modal-content,body.dark .protected-content .modal-detalle,body.dark .protected-content .modal-curso,body.dark .protected-content .modal-rep{background:#1E293B!important;color:#E2E8F0!important;border-color:#334155!important;box-shadow:none!important;}
+body.dark .protected-content .modal-content h3,body.dark .protected-content .modal-detalle h3,body.dark .protected-content .modal-curso h3,body.dark .protected-content .modal-rep h3,body.dark .protected-content .modal-content h4,body.dark .protected-content .modal-detalle h4,body.dark .protected-content .modal-curso h4,body.dark .protected-content .modal-rep h4{color:#F8FAFC!important;}
+body.dark .protected-content .modal-content p,body.dark .protected-content .modal-detalle p,body.dark .protected-content .modal-curso p,body.dark .protected-content .modal-rep p{color:#CBD5E1!important;}
+.edusoft-icon{display:inline-block;vertical-align:middle;flex:none;}
+
+/* Logos: versión blanca en tema oscuro */
+body.dark .lista-container::before,
+body.dark .formulario-notificacion-container::before,
+body.dark .editar-notificacion-container::before {
+  background-image: url('../../assets/logo-white-edusoft.svg') !important;
+  opacity: .06;
+}
+
+body.dark .inicio-logo { filter: none !important; }
+
+/* Modal: anular definitivamente efectos heredados de hover */
+body .protected-content .modal-content:hover,
+body .protected-content .modal-detalle:hover,
+body .protected-content .modal-curso:hover,
+body .protected-content .modal-rep:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+body .protected-content .modal-content button:hover,
+body .protected-content .modal-detalle button:hover,
+body .protected-content .modal-curso button:hover,
+body .protected-content .modal-rep button:hover,
+body .protected-content .modal-content a:hover,
+body .protected-content .modal-detalle a:hover,
+body .protected-content .modal-curso a:hover,
+body .protected-content .modal-rep a:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+/* Tema oscuro para páginas de autenticación */
+body.dark .contenedor-login,
+body.dark .contenedor-formulario { background:#0B1220 !important; }
+body.dark .login-formulario,
+body.dark .usuario-formulario { background:#1E293B !important; color:#E2E8F0 !important; border:1px solid #334155; box-shadow:none; }
+body.dark .login-formulario h2,
+body.dark .usuario-formulario h2,
+body.dark .login-formulario p,
+body.dark .contenedor-formulario p { color:#E2E8F0 !important; }
+body.dark .login-formulario input,
+body.dark .usuario-formulario input,
+body.dark .usuario-formulario select { background:#0F172A !important; color:#E2E8F0 !important; border-color:#475569 !important; }
+body.dark .login-formulario input:focus,
+body.dark .usuario-formulario input:focus,
+body.dark .usuario-formulario select:focus { border-color:#60A5FA !important; box-shadow:0 0 0 2px rgba(59,130,246,.18) !important; }
+body.dark .btn-volver-inicio { background:#1E293B !important; color:#BFDBFE !important; border-color:#3B82F6 !important; }

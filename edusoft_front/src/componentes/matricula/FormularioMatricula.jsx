@@ -1,6 +1,6 @@
 // ====================================
 // FORMULARIO MATRÍCULA
-// Convertido de Next.js/TypeScript/shadcn → React JSX puro
+// Convertido de Next.js/TypeScript/shadcn  React JSX puro
 // Campos: nombre, documento, correo, fechaMatricula, valorMatricula
 // Modo dual: crear (sin id) / editar (id en useParams)
 // Solo accesible para Profesor (RutaSoloProfesor en App.jsx)
@@ -100,7 +100,7 @@ function FormularioMatricula() {
       nombre:         form.nombre.trim(),
       documento:      form.documento.trim(),
       correo:         form.correo.trim(),
-      fechaMatricula: form.fechaMatricula,          // String "yyyy-MM-dd" → Jackson lo convierte a LocalDate
+      fechaMatricula: form.fechaMatricula,          // String "yyyy-MM-dd"  Jackson lo convierte a LocalDate
       valorMatricula: parseFloat(form.valorMatricula),
     };
 
@@ -136,7 +136,7 @@ function FormularioMatricula() {
       {/* ENCABEZADO */}
       <div className="matricula-header">
         <div>
-          <h2>{modoEdicion ? '✏️ Editar Matrícula' : '🏫 Nueva Matrícula'}</h2>
+          <h2>{modoEdicion ? 'Editar Matrícula' : 'Nueva Matrícula'}</h2>
           <p className="matricula-subtitulo">
             {modoEdicion
               ? 'Modifica los datos del registro seleccionado'
@@ -147,7 +147,7 @@ function FormularioMatricula() {
           className="btn-volver"
           onClick={() => navigate('/matricula')}
         >
-          ← Volver a la lista
+           Volver a la lista
         </button>
       </div>
 
@@ -163,7 +163,7 @@ function FormularioMatricula() {
 
         <div className="form-matricula-card-header">
           <h3>
-            {modoEdicion ? '📝 Datos a modificar' : '📝 Datos del estudiante'}
+            {modoEdicion ? 'Datos a modificar' : 'Datos del estudiante'}
           </h3>
           <p>Los campos marcados con <span className="asterisco">*</span> son obligatorios</p>
         </div>
@@ -305,10 +305,10 @@ function FormularioMatricula() {
               {enviado
                 ? '✅ Enviado correctamente'
                 : guardando
-                  ? '⏳ Guardando...'
+                  ? 'Guardando...'
                   : modoEdicion
-                    ? '💾 Actualizar Matrícula'
-                    : '🏫 Registrar Matrícula'}
+                    ? 'Actualizar Matrícula'
+                    : 'Registrar Matrícula'}
             </button>
             <button
               type="button"

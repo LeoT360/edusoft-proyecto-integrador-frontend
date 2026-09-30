@@ -59,7 +59,6 @@
   }
   
   .btn-nuevo-reporte:hover {
-    transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(48,43,180,0.35);
   }
   
@@ -147,7 +146,6 @@
   }
   
   .kpi-card:hover {
-    transform: translateY(-4px);
     box-shadow: 0 8px 24px rgba(48,43,180,0.12);
   }
   
@@ -226,7 +224,6 @@
   
   .reporte-row:hover {
     box-shadow: 0 6px 20px rgba(48,43,180,0.1);
-    transform: translateX(4px);
   }
   
   .reporte-row-info {
@@ -302,7 +299,7 @@
     transition: all 0.3s ease;
   }
   
-  .btn-nuevo-reporte-vacio:hover { transform: translateY(-2px); opacity: 0.9; }
+  .btn-nuevo-reporte-vacio:hover { opacity: 0.9; }
   
   /* ── Modales ── */
   .modal-overlay-rep {
@@ -376,7 +373,7 @@
     flex-shrink: 0;
   }
   
-  .btn-cerrar-modal-rep:hover { background: rgba(255,255,255,0.35); transform: rotate(90deg); }
+  .btn-cerrar-modal-rep:hover { background: rgba(255,255,255,0.35); }
   
   .modal-rep-body { padding: 20px 24px; flex: 1; }
   
@@ -443,7 +440,7 @@
     transition: all 0.3s ease;
   }
   
-  .btn-rep-editar-modal:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(253,185,19,0.4); }
+  .btn-rep-editar-modal:hover { box-shadow: 0 6px 18px rgba(253,185,19,0.4); }
   
   /* Formulario dentro del modal */
   .rep-form {

@@ -1,3 +1,4 @@
+import Icon from '../shared/Icon';
 // ====================================
 // LISTA PROFESORES - UNIFICADA
 // Profesor: ve todos los campos + acciones CRUD
@@ -78,13 +79,13 @@ function ListaProfesores() {
 
       {/* ENCABEZADO */}
       <div className="list-header">
-        <h2>🎓 {esProfesor ? 'Gestión de Profesores' : 'Nuestros Profesores'}</h2>
+        <h2><Icon name="graduation" size={18} /> {esProfesor ? 'Gestión de Profesores' : 'Nuestros Profesores'}</h2>
         {esProfesor && (
           <button
             className="add-profesor-btn"
             onClick={() => navigate('/profesores/crear')}
           >
-            ＋ Nuevo Profesor
+             Nuevo Profesor
           </button>
         )}
       </div>
@@ -92,7 +93,7 @@ function ListaProfesores() {
       {/* BUSCADOR */}
       <input
         className="search-bar"
-        placeholder="🔍 Buscar por nombre o área..."
+        placeholder=" Buscar por nombre o área..."
         value={busqueda}
         onChange={e => setBusqueda(e.target.value)}
       />
@@ -127,7 +128,7 @@ function ListaProfesores() {
 
               {/* Info */}
               <h3>{nombre}</h3>
-              <p className="profesor-areas">📚 {areas}</p>
+              <p className="profesor-areas"><Icon name="book" size={18} /> {areas}</p>
 
               {perfil && (
                 <p className="profesor-perfil-breve">
@@ -159,7 +160,7 @@ function ListaProfesores() {
                   className="btn-accion btn-ver"
                   onClick={() => setSeleccionado(prof)}
                 >
-                  👁 Ver
+                   Ver
                 </button>
 
                 {/* Editar - solo profesor */}
@@ -168,7 +169,7 @@ function ListaProfesores() {
                     className="btn-accion btn-editar"
                     onClick={() => navigate(`/profesores/editar/${prof.id}`)}
                   >
-                    ✏️ Editar
+                     Editar
                   </button>
                 )}
 
@@ -178,7 +179,7 @@ function ListaProfesores() {
                     className="btn-accion btn-desactivar"
                     onClick={() => handleDesactivar(prof.id)}
                   >
-                    🚫 Desactivar
+                     Desactivar
                   </button>
                 )}
               </div>
@@ -224,7 +225,7 @@ function ModalDetalle({ prof, esProfesor, onCerrar }) {
             <h3>{nombre}</h3>
             <p>{prof.areasAsignadas || prof.especialidad || '—'}</p>
           </div>
-          <button className="btn-cerrar-modal-prof" onClick={onCerrar}>✕</button>
+          <button className="btn-cerrar-modal-prof" onClick={onCerrar}><Icon name="close" size={18}/></button>
         </div>
 
         {/* Cuerpo */}
@@ -232,7 +233,7 @@ function ModalDetalle({ prof, esProfesor, onCerrar }) {
 
           {/* Info pública - todos la ven */}
           <section className="modal-seccion">
-            <h4>📋 Información General</h4>
+            <h4><Icon name="clipboard" size={18} /> Información General</h4>
             <Item label="Nivel Académico"   valor={prof.nivelAcademico} />
             <Item label="Áreas Asignadas"   valor={prof.areasAsignadas || prof.especialidad} />
             <Item label="Años de Experiencia" valor={prof.anosExperiencia ? `${prof.anosExperiencia} años` : null} />
@@ -248,7 +249,7 @@ function ModalDetalle({ prof, esProfesor, onCerrar }) {
           {esProfesor && (
             <>
               <section className="modal-seccion">
-                <h4>🔒 Datos Laborales (Confidencial)</h4>
+                <h4><Icon name="lock" size={18} /> Datos Laborales (Confidencial)</h4>
                 <Item label="N° Documento"    valor={prof.numeroDocumento} />
                 <Item label="Correo"          valor={prof.correoElectronico} />
                 <Item label="Celular"         valor={prof.celular} />
@@ -262,7 +263,7 @@ function ModalDetalle({ prof, esProfesor, onCerrar }) {
               {/* Hoja de vida */}
               {(prof.hojaDeVida || prof.hojaDeVidaFile) && (
                 <section className="modal-seccion">
-                  <h4>📄 Hoja de Vida</h4>
+                  <h4><Icon name="file" size={18} /> Hoja de Vida</h4>
                   {prof.hojaDeVida && (
                     <a
                       href={prof.hojaDeVida}
@@ -270,7 +271,7 @@ function ModalDetalle({ prof, esProfesor, onCerrar }) {
                       rel="noopener noreferrer"
                       className="btn-accion btn-ver"
                     >
-                      📥 Ver / Descargar CV
+                       Ver / Descargar CV
                     </a>
                   )}
                 </section>
@@ -281,7 +282,7 @@ function ModalDetalle({ prof, esProfesor, onCerrar }) {
           {/* Aviso para estudiantes */}
           {!esProfesor && (
             <div className="modal-aviso-estudiante">
-              ℹ️ Algunos datos del docente son confidenciales y solo visibles para administradores.
+               Algunos datos del docente son confidenciales y solo visibles para administradores.
             </div>
           )}
         </div>

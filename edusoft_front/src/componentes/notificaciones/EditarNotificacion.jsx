@@ -1,3 +1,4 @@
+import Icon from '../shared/Icon';
 // ====================================
 // COMPONENTE EDITAR NOTIFICACIÓN
 // ====================================
@@ -13,7 +14,7 @@ function EditarNotificacion({ notificacionId, onCancelar, onGuardado }) {
   // ========== ESTADOS DEL COMPONENTE ==========
   
   const [formData, setFormData] = useState({
-    id: null,  // ← IMPORTANTE: Guardamos el ID para que JPA sepa que es una actualización
+    id: null,  //  IMPORTANTE: Guardamos el ID para que JPA sepa que es una actualización
     idRemitente: '',
     idDestinatario: '',
     emailRemitente: '',
@@ -57,7 +58,7 @@ function EditarNotificacion({ notificacionId, onCancelar, onGuardado }) {
       
       // Pre-llenamos el formulario con los datos traídos
       setFormData({
-        id: datos.id,  // ← MUY IMPORTANTE: Incluimos el ID
+        id: datos.id,  //  MUY IMPORTANTE: Incluimos el ID
         idRemitente: datos.idRemitente || '',
         idDestinatario: datos.idDestinatario || '',
         emailRemitente: datos.emailRemitente || '',
@@ -118,7 +119,7 @@ function EditarNotificacion({ notificacionId, onCancelar, onGuardado }) {
       // Preparamos los datos asegurando que los tipos sean correctos
       const datosAEnviar = {
         ...formData,
-        id: parseInt(formData.id),  // ← CRÍTICO: El ID debe ir para que sea actualización
+        id: parseInt(formData.id),  //  CRÍTICO: El ID debe ir para que sea actualización
         idRemitente: formData.idRemitente ? parseInt(formData.idRemitente) : null,
         idDestinatario: formData.idDestinatario ? parseInt(formData.idDestinatario) : null,
         cantidadArchivosAdjuntos: parseInt(formData.cantidadArchivosAdjuntos)
@@ -165,7 +166,7 @@ function EditarNotificacion({ notificacionId, onCancelar, onGuardado }) {
   return (
     <div className="editar-container">
       <div className="editar-header">
-        <h2>✏️ Editar Notificación #{formData.id}</h2>
+        <h2><Icon name="edit" size={18} /> Editar Notificación #{formData.id}</h2>
         {onCancelar && (
           <button onClick={onCancelar} className="btn-cerrar-header">
             ✕
@@ -183,7 +184,7 @@ function EditarNotificacion({ notificacionId, onCancelar, onGuardado }) {
         
         {/* ===== SECCIÓN 1: DATOS DE REMITENTE Y DESTINATARIO ===== */}
         <fieldset>
-          <legend>👤 Información de Usuarios</legend>
+          <legend><Icon name="user" size={18} /> Información de Usuarios</legend>
           
           <div className="form-group">
             <label htmlFor="idRemitente">ID Remitente:</label>
@@ -238,7 +239,7 @@ function EditarNotificacion({ notificacionId, onCancelar, onGuardado }) {
 
         {/* ===== SECCIÓN 2: CONTENIDO DEL MENSAJE ===== */}
         <fieldset>
-          <legend>✉️ Contenido del Mensaje</legend>
+          <legend><Icon name="mail" size={18} /> Contenido del Mensaje</legend>
           
           <div className="form-group">
             <label htmlFor="asunto">Asunto: *</label>
@@ -269,7 +270,7 @@ function EditarNotificacion({ notificacionId, onCancelar, onGuardado }) {
 
         {/* ===== SECCIÓN 3: CLASIFICACIÓN ===== */}
         <fieldset>
-          <legend>🏷️ Clasificación</legend>
+          <legend><Icon name="tag" size={18} /> Clasificación</legend>
           
           <div className="form-group">
             <label htmlFor="tipoNotificacion">Tipo de Notificación:</label>
@@ -305,7 +306,7 @@ function EditarNotificacion({ notificacionId, onCancelar, onGuardado }) {
 
         {/* ===== SECCIÓN 4: INFORMACIÓN DEL CURSO ===== */}
         <fieldset>
-          <legend>📚 Curso Relacionado</legend>
+          <legend><Icon name="book" size={18} /> Curso Relacionado</legend>
           
           <div className="form-group">
             <label htmlFor="cursoRelacionado">Curso:</label>
@@ -345,7 +346,7 @@ function EditarNotificacion({ notificacionId, onCancelar, onGuardado }) {
 
         {/* ===== SECCIÓN 5: FECHAS Y HORA ===== */}
         <fieldset>
-          <legend>📅 Fechas y Hora</legend>
+          <legend><Icon name="calendar" size={18} /> Fechas y Hora</legend>
           
           <div className="form-group">
             <label htmlFor="fechaCreacion">Fecha Creación:</label>
@@ -385,7 +386,7 @@ function EditarNotificacion({ notificacionId, onCancelar, onGuardado }) {
 
         {/* ===== SECCIÓN 6: OPCIONES ADICIONALES ===== */}
         <fieldset>
-          <legend>⚙️ Opciones Adicionales</legend>
+          <legend><Icon name="settings" size={18} /> Opciones Adicionales</legend>
           
           <div className="form-group">
             <label htmlFor="cantidadArchivosAdjuntos">Archivos Adjuntos:</label>
@@ -459,7 +460,7 @@ function EditarNotificacion({ notificacionId, onCancelar, onGuardado }) {
             className="btn-guardar"
             disabled={enviando}
           >
-            {enviando ? '⏳ Guardando...' : '💾 Guardar Cambios'}
+            {enviando ? ' Guardando...' : ' Guardar Cambios'}
           </button>
           
           {onCancelar && (
@@ -469,7 +470,7 @@ function EditarNotificacion({ notificacionId, onCancelar, onGuardado }) {
               onClick={onCancelar}
               disabled={enviando}
             >
-              ❌ Cancelar
+               Cancelar
             </button>
           )}
         </div>

@@ -15,7 +15,7 @@ function ListaNotas() {
 
   const navigate = useNavigate();
 
-  // 🔐 Usuario autenticado
+  //  Usuario autenticado
   const usuario = JSON.parse(localStorage.getItem("usuario"));
   const esProfesor = usuario?.rol === "Profesor";
 
@@ -86,12 +86,12 @@ function ListaNotas() {
 
     const esNumero = !isNaN(texto);
 
-    // 🔢 Si es número → buscar SOLO por nota exacta
+    //  Si es número  buscar SOLO por nota exacta
     if (esNumero) {
       return Number(nota.nota) === Number(texto);
     }
 
-    // 🔤 Si es texto → búsqueda parcial
+    //  Si es texto  búsqueda parcial
     const materia = nota.nombreMateria?.toLowerCase() || "";
     const tipo = nota.tipoExamen?.toLowerCase() || "";
     const estudiante = nota.nombreEstudiante?.toLowerCase() || "";

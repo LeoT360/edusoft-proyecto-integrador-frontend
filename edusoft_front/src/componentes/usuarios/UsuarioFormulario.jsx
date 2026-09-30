@@ -11,8 +11,10 @@ import Swal from 'sweetalert2';
 import { usuarioService } from '../../services/usuarioService';
 import './UsuarioFormulario.css'; // ✅ Ruta corregida (era '../usuarios/UsuarioFormulario.css')
 import logoEdusoft from '../../assets/logo-edusoft.svg';
+import logoWhiteEdusoft from '../../assets/logo-white-edusoft.svg';
 
 function UsuarioFormulario() {
+  const logoActual = document.body.classList.contains('dark') ? logoWhiteEdusoft : logoEdusoft;
   const [usuario, setUsuario] = useState({
     nombre: '',
     correo: '',
@@ -89,10 +91,20 @@ function UsuarioFormulario() {
         className="btn-volver-inicio"
         onClick={() => navegacion('/')}
       >
-        ← Volver al inicio
+         Volver al inicio
       </button>
 
-      <img src={logoEdusoft} alt="Logo Edusoft" className="logo-edusoft-formulario" />
+      <section className="auth-visual auth-visual-registro">
+        <div className="auth-visual-image">
+          <img
+            src="https://images.openai.com/static-rsc-4/leXjJnVaGzNOEh_wCPd3KLW89xwi50jOMpmu-ZgBt8-o2PcArbYTGBEQcJAte4Zhipfaz4Zfid06IHB8s_s9c6fOHDF-pYvsIMwS3PKgxcHT_bBsET7-g0LfBNuBPNZhfpm_8ByiVYXOMDrrIGt4YbA9VoCY7C6qEUyCjTbO3kFxCdGJ_VhsMJ_-GI_kUq4V?purpose=fullsize"
+            alt="Entorno de desarrollo tecnológico"
+          />
+        </div>
+        <div className="auth-visual-overlay">
+          <img src={logoActual} alt="EduSoft" className="auth-visual-logo" />
+        </div>
+      </section>
 
       <form onSubmit={envioDatos} className="usuario-formulario">
         <h2>Registro de usuario</h2>

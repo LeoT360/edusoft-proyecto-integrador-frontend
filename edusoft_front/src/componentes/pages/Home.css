@@ -26,7 +26,7 @@
 }
 
 @keyframes slideInDown {
-  from { opacity: 0; transform: translateY(-30px); }
+  from { opacity: 0; }
   to   { opacity: 1; transform: translateY(0); }
 }
 
@@ -132,7 +132,6 @@
 }
 
 .tarjeta:not(.tarjeta-proximamente):hover {
-  transform: translateY(-8px);
   box-shadow: 0 16px 48px rgba(48, 43, 180, 0.25);
 }
 
@@ -211,7 +210,6 @@
 }
 
 .tarjeta:not(.tarjeta-proximamente):hover .tarjeta-flecha {
-  transform: translateX(5px);
 }
 
 /* ===== AVISO ESTUDIANTE ===== */
@@ -262,7 +260,6 @@
 }
 
 .estadistica:hover {
-  transform: translateY(-5px);
   box-shadow: 0 8px 24px rgba(48, 43, 180, 0.2);
 }
 

@@ -62,7 +62,6 @@
 }
 
 .add-profesor-btn:hover {
-  transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(48, 43, 180, 0.35);
 }
 
@@ -146,7 +145,6 @@
 }
 
 .profesor-card:hover {
-  transform: translateY(-6px);
   box-shadow: 0 10px 30px rgba(48, 43, 180, 0.15);
 }
 
@@ -356,7 +354,6 @@
 
 .btn-cerrar-modal-prof:hover {
   background: rgba(255,255,255,0.35);
-  transform: rotate(90deg);
 }
 
 .modal-body-prof { padding: 22px; }
@@ -462,7 +459,7 @@
 }
 
 @keyframes slideIn {
-  from { opacity: 0; transform: translateY(-8px); }
+  from { opacity: 0; }
   to   { opacity: 1; transform: translateY(0); }
 }
 
@@ -623,7 +620,6 @@
 }
 
 .btn-submit:hover:not(:disabled) {
-  transform: translateY(-3px);
   box-shadow: 0 8px 22px rgba(48, 43, 180, 0.35);
 }
 
@@ -644,7 +640,6 @@
 .btn-cancel:hover:not(:disabled) {
   background: #dc3545;
   color: white;
-  transform: translateY(-2px);
 }
 
 .btn-cancel:disabled { opacity: 0.6; cursor: not-allowed; }

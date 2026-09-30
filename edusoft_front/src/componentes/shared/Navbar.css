@@ -1,164 +1,551 @@
 /* ================================================================
    EDUSOFT — NAVEGACIÓN CORPORATIVA
+
    Escritorio: sidebar fija | Móvil: menú a pantalla completa
    ================================================================ */
+
+
+/* ================================================================
+   SIDEBAR DESKTOP — MODO CLARO
+   ================================================================ */
+
 .sidebar-desktop {
-  position: fixed;
-  inset: 0 auto 0 0;
-  width: 256px;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  background: #FFFFFF;
-  border-right: 1px solid #E2E8F0;
-  color: #172033;
+    position: fixed;
+    inset: 0 auto 0 0;
+
+    width: 256px;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #FFFFFF;
+    border-right: 1px solid #E2E8F0;
+
+    color: #172033;
 }
+
+
+/* ================================================================
+   MARCA / LOGO
+   ================================================================ */
 
 .sidebar-brand {
-  padding: 20px 22px 16px;
-  border-bottom: 1px solid #E2E8F0;
-  cursor: pointer;
+    padding: 20px 22px 16px;
+
+    border-bottom: 1px solid #E2E8F0;
+
+    cursor: pointer;
+
+    background: #FFFFFF;
 }
-.sidebar-brand img { display:block; width:148px; max-width:100%; height:auto; }
+
+.sidebar-brand img {
+    display: block;
+
+    width: 148px;
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ================================================================
+   USUARIO
+   ================================================================ */
 
 .sidebar-user {
-  padding: 16px 20px;
-  border-bottom: 1px solid #E2E8F0;
-  display:flex;
-  flex-direction:column;
-  gap:3px;
+    padding: 16px 20px;
+
+    border-bottom: 1px solid #E2E8F0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+
+    background: #FFFFFF;
 }
-.sidebar-user strong { font-size:14px; font-weight:600; color:#172033; }
-.sidebar-user span { font-size:12px; color:#64748B; }
+
+.sidebar-user strong {
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #172033;
+}
+
+.sidebar-user span {
+    font-size: 12px;
+
+    color: #64748B;
+}
+
+
+/* ================================================================
+   NAVEGACIÓN
+   ================================================================ */
 
 .nav-scroll-area {
-  flex:1;
-  overflow-y:auto;
-  padding:12px 10px;
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 16px 12px;
 }
-.nav-scroll-area::-webkit-scrollbar { width:6px; }
-.nav-scroll-area::-webkit-scrollbar-thumb { background:#CBD5E1; border-radius:3px; }
+
+.nav-scroll-area::-webkit-scrollbar {
+    width: 6px;
+}
+
+.nav-scroll-area::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 3px;
+}
+
+
+/* ================================================================
+   ITEMS DEL MENÚ
+   ================================================================ */
 
 .nav-item-directo {
-  width:100%;
-  border:0;
-  background:transparent;
-  color:#334155;
-  text-align:left;
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding:10px 11px;
-  margin:2px 0;
-  border-radius:6px;
-  cursor:pointer;
-  font-size:14px;
-  transition:background-color .16s ease,color .16s ease;
-}
-.nav-item-directo:hover { background:#F1F5F9; color:#1D4ED8; }
-.nav-item-directo.activo { background:#EFF6FF; color:#1D4ED8; font-weight:600; }
-.nav-item-icono { width:22px; min-width:22px; text-align:center; font-size:16px; }
+    width: 100%;
 
-.sidebar-footer { border-top:1px solid #E2E8F0; padding:10px; }
+    border: 0;
+    background: transparent;
+
+    color: #475569;
+
+    text-align: left;
+
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 11px 12px;
+
+    margin: 3px 0;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition:
+        background-color 0.16s ease,
+        color 0.16s ease;
+}
+
+
+/* Iconos */
+
+.nav-item-icono {
+    width: 22px;
+    min-width: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #64748B;
+}
+
+
+/* Hover */
+
+.nav-item-directo:hover {
+    background: #F1F5F9;
+    color: #1D4ED8;
+}
+
+.nav-item-directo:hover .nav-item-icono {
+    color: #1D4ED8;
+}
+
+
+/* Elemento activo */
+
+.nav-item-directo.activo {
+    background: #E8F1FF;
+
+    color: #1D4ED8;
+
+    font-weight: 600;
+}
+
+.nav-item-directo.activo .nav-item-icono {
+    color: #1D4ED8;
+}
+
+
+/* ================================================================
+   FOOTER DEL SIDEBAR
+   ================================================================ */
+
+.sidebar-footer {
+    border-top: 1px solid #E2E8F0;
+
+    padding: 10px;
+
+    background: #FFFFFF;
+}
+
+
+/* Botones inferiores */
+
 .sidebar-action {
-  width:100%;
-  border:0;
-  background:transparent;
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding:10px 11px;
-  border-radius:6px;
-  color:#475569;
-  font-size:13px;
-  text-align:left;
-  cursor:pointer;
+    width: 100%;
+
+    border: 0;
+
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 11px;
+
+    border-radius: 7px;
+
+    color: #475569;
+
+    font-size: 13px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.16s ease,
+        color 0.16s ease;
 }
-.sidebar-action:hover { background:#F1F5F9; color:#1D4ED8; }
-.sidebar-action.danger:hover { background:#FEF2F2; color:#DC2626; }
 
-.mobile-navbar, .mobile-menu-overlay { display:none; }
 
-body.dark .sidebar-desktop { background:#1E293B; border-color:#334155; color:#E2E8F0; }
-body.dark .sidebar-brand, body.dark .sidebar-user, body.dark .sidebar-footer { border-color:#334155; }
-body.dark .sidebar-user strong { color:#E2E8F0; }
-body.dark .sidebar-user span { color:#94A3B8; }
-body.dark .nav-item-directo { color:#CBD5E1; }
-body.dark .nav-item-directo:hover, body.dark .sidebar-action:hover { background:#263449; color:#93C5FD; }
-body.dark .nav-item-directo.activo { background:#1E3A5F; color:#BFDBFE; }
-body.dark .sidebar-action { color:#CBD5E1; }
-body.dark .sidebar-action.danger:hover { background:#3B2529; color:#FCA5A5; }
+/* Hover */
 
-@media (max-width:900px) {
-  .sidebar-desktop { display:none; }
-  .mobile-navbar {
-    position:fixed;
-    inset:0 0 auto 0;
-    z-index:1000;
-    height:68px;
-    padding:10px 14px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    background:#FFFFFF;
-    border-bottom:1px solid #E2E8F0;
-  }
-  .mobile-logo { width:130px; height:auto; cursor:pointer; }
-  .mobile-actions { display:flex; align-items:center; gap:8px; }
-  .mobile-theme, .mobile-menu-button {
-    width:40px;
-    height:40px;
-    border:1px solid #CBD5E1;
-    background:#FFFFFF;
-    color:#334155;
-    border-radius:6px;
-    font-size:17px;
-  }
-  .mobile-menu-button { font-size:20px; }
-  .mobile-theme:hover, .mobile-menu-button:hover { background:#F1F5F9; }
+.sidebar-action:hover {
+    background: #F1F5F9;
+    color: #1D4ED8;
+}
 
-  .mobile-menu-overlay {
-    display:block;
-    position:fixed;
-    inset:0;
-    z-index:1100;
-    background:#FFFFFF;
-  }
-  .mobile-menu-panel { width:100%; height:100%; display:flex; flex-direction:column; background:#FFFFFF; }
-  .mobile-menu-header {
-    min-height:68px;
-    padding:12px 16px;
-    border-bottom:1px solid #E2E8F0;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-  }
-  .mobile-menu-header div { display:flex; flex-direction:column; gap:2px; }
-  .mobile-menu-header strong { font-size:14px; color:#172033; }
-  .mobile-menu-header span { font-size:12px; color:#64748B; }
-  .mobile-menu-header button {
-    width:38px;
-    height:38px;
-    border:1px solid #CBD5E1;
-    background:#FFFFFF;
-    border-radius:6px;
-    font-size:18px;
-    color:#334155;
-  }
-  .mobile-menu-panel .nav-scroll-area { padding:12px 14px; }
-  .mobile-menu-footer { padding:10px 14px; border-top:1px solid #E2E8F0; }
 
-  body.dark .mobile-navbar,
-  body.dark .mobile-menu-overlay,
-  body.dark .mobile-menu-panel,
-  body.dark .mobile-theme,
-  body.dark .mobile-menu-button,
-  body.dark .mobile-menu-header button {
-    background:#0F172A;
-    border-color:#334155;
-    color:#E2E8F0;
-  }
-  body.dark .mobile-menu-header, body.dark .mobile-menu-footer { border-color:#334155; }
-  body.dark .mobile-menu-header strong { color:#E2E8F0; }
-  body.dark .mobile-menu-header span { color:#94A3B8; }
+/* Cerrar sesión */
+
+.sidebar-action.danger:hover {
+    background: #FEF2F2;
+    color: #DC2626;
+}
+
+
+/* ================================================================
+   MOBILE
+   ================================================================ */
+
+.mobile-navbar,
+.mobile-menu-overlay {
+    display: none;
+}
+
+
+/* ================================================================
+   MODO OSCURO
+   ================================================================ */
+
+body.dark .sidebar-desktop {
+    background: #111C31;
+
+    border-right-color: #263A55;
+
+    color: #E2E8F0;
+}
+
+body.dark .sidebar-brand,
+body.dark .sidebar-user,
+body.dark .sidebar-footer {
+    border-color: #263A55;
+
+    background: #111C31;
+}
+
+body.dark .sidebar-user strong {
+    color: #E2E8F0;
+}
+
+body.dark .sidebar-user span {
+    color: #94A3B8;
+}
+
+
+/* Items */
+
+body.dark .nav-item-directo {
+    color: #CBD5E1;
+}
+
+body.dark .nav-item-directo .nav-item-icono {
+    color: #94A3B8;
+}
+
+body.dark .nav-item-directo:hover {
+    background: #263449;
+    color: #93C5FD;
+}
+
+body.dark .nav-item-directo:hover .nav-item-icono {
+    color: #93C5FD;
+}
+
+body.dark .nav-item-directo.activo {
+    background: #2563EB;
+    color: #FFFFFF;
+}
+
+body.dark .nav-item-directo.activo .nav-item-icono {
+    color: #FFFFFF;
+}
+
+
+/* Footer */
+
+body.dark .sidebar-action {
+    color: #CBD5E1;
+}
+
+body.dark .sidebar-action:hover {
+    background: #263449;
+    color: #93C5FD;
+}
+
+body.dark .sidebar-action.danger:hover {
+    background: #3B2529;
+    color: #FCA5A5;
+}
+
+
+/* ================================================================
+   MOBILE
+   ================================================================ */
+
+@media (max-width: 900px) {
+
+    .sidebar-desktop {
+        display: none;
+    }
+
+
+    /* Barra superior */
+
+    .mobile-navbar {
+        position: fixed;
+
+        inset: 0 0 auto 0;
+
+        z-index: 1000;
+
+        height: 68px;
+
+        padding: 10px 14px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        background: #FFFFFF;
+
+        border-bottom: 1px solid #E2E8F0;
+    }
+
+
+    .mobile-logo {
+        width: 130px;
+        height: auto;
+
+        cursor: pointer;
+    }
+
+
+    .mobile-actions {
+        display: flex;
+        align-items: center;
+
+        gap: 8px;
+    }
+
+
+    /* Botones */
+
+    .mobile-theme,
+    .mobile-menu-button {
+        width: 40px;
+        height: 40px;
+
+        border: 1px solid #CBD5E1;
+
+        background: #FFFFFF;
+
+        color: #334155;
+
+        border-radius: 6px;
+
+        font-size: 17px;
+
+        cursor: pointer;
+    }
+
+    .mobile-menu-button {
+        font-size: 20px;
+    }
+
+
+    .mobile-theme:hover,
+    .mobile-menu-button:hover {
+        background: #F1F5F9;
+    }
+
+
+    /* Overlay */
+
+    .mobile-menu-overlay {
+        display: block;
+
+        position: fixed;
+
+        inset: 0;
+
+        z-index: 1100;
+
+        background: #FFFFFF;
+    }
+
+
+    .mobile-menu-panel {
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        background: #FFFFFF;
+    }
+
+
+    /* Header del menú */
+
+    .mobile-menu-header {
+        min-height: 68px;
+
+        padding: 12px 16px;
+
+        border-bottom: 1px solid #E2E8F0;
+
+        display: flex;
+
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    .mobile-menu-header div {
+        display: flex;
+        flex-direction: column;
+
+        gap: 2px;
+    }
+
+
+    .mobile-menu-header strong {
+        font-size: 14px;
+
+        color: #172033;
+    }
+
+
+    .mobile-menu-header span {
+        font-size: 12px;
+
+        color: #64748B;
+    }
+
+
+    .mobile-menu-header button {
+        width: 38px;
+        height: 38px;
+
+        border: 1px solid #CBD5E1;
+
+        background: #FFFFFF;
+
+        border-radius: 6px;
+
+        font-size: 18px;
+
+        color: #334155;
+
+        cursor: pointer;
+    }
+
+
+    .mobile-menu-panel .nav-scroll-area {
+        padding: 12px 14px;
+    }
+
+
+    .mobile-menu-footer {
+        padding: 10px 14px;
+
+        border-top: 1px solid #E2E8F0;
+    }
+
+
+    /* ============================================================
+       MOBILE — MODO OSCURO
+       ============================================================ */
+
+    body.dark .mobile-navbar,
+    body.dark .mobile-menu-overlay,
+    body.dark .mobile-menu-panel {
+        background: #0F172A;
+    }
+
+
+    body.dark .mobile-navbar {
+        border-bottom-color: #334155;
+    }
+
+
+    body.dark .mobile-theme,
+    body.dark .mobile-menu-button,
+    body.dark .mobile-menu-header button {
+        background: #0F172A;
+
+        border-color: #334155;
+
+        color: #E2E8F0;
+    }
+
+
+    body.dark .mobile-menu-header,
+    body.dark .mobile-menu-footer {
+        border-color: #334155;
+    }
+
+
+    body.dark .mobile-menu-header strong {
+        color: #E2E8F0;
+    }
+
+
+    body.dark .mobile-menu-header span {
+        color: #94A3B8;
+    }
+
+
+    body.dark .mobile-theme:hover,
+    body.dark .mobile-menu-button:hover,
+    body.dark .mobile-menu-header button:hover {
+        background: #1E293B;
+    }
 }

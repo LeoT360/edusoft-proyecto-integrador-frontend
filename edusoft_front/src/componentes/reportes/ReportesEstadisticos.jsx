@@ -1,3 +1,4 @@
+import Icon from '../shared/Icon';
 // ====================================
 // REPORTES ESTADÍSTICOS - UNIFICADO
 // Fusiona ReporAcademicos + ReporAdministrativos
@@ -79,7 +80,7 @@ function ReportesEstadisticos() {
       {/* ENCABEZADO */}
       <div className="reportes-header">
         <div>
-          <h2>📊 Reportes Estadísticos</h2>
+          <h2><Icon name="chart" size={18} /> Reportes Estadísticos</h2>
           <p className="reportes-subtitulo">
             Panel de gestión exclusivo para docentes
           </p>
@@ -88,7 +89,7 @@ function ReportesEstadisticos() {
           className="btn-nuevo-reporte"
           onClick={() => { setSeleccionado(null); setModoForm(true); }}
         >
-          ＋ Nuevo Reporte
+           Nuevo Reporte
         </button>
       </div>
 
@@ -101,14 +102,14 @@ function ReportesEstadisticos() {
           className={`tab-btn ${pestana === 'academico' ? 'tab-activo' : ''}`}
           onClick={() => { setPestana('academico'); setBusqueda(''); }}
         >
-          🎓 Académicos
+           Académicos
           <span className="tab-badge">{academicos.length}</span>
         </button>
         <button
           className={`tab-btn ${pestana === 'administrativo' ? 'tab-activo' : ''}`}
           onClick={() => { setPestana('administrativo'); setBusqueda(''); }}
         >
-          📄 Administrativos
+           Administrativos
           <span className="tab-badge">{administrativos.length}</span>
         </button>
       </div>
@@ -119,7 +120,7 @@ function ReportesEstadisticos() {
       <div className="reportes-toolbar">
         <input
           className="reportes-search"
-          placeholder="🔍 Buscar por ID, período, desempeño, curso, calificación..."
+          placeholder=" Buscar por ID, período, desempeño, curso, calificación..."
           value={busqueda}
           onChange={e => { setBusqueda(e.target.value); }}
         />
@@ -157,7 +158,7 @@ function ReportesEstadisticos() {
       {/* LISTA DE REPORTES */}
       {listaMostrada.length === 0 && !error ? (
         <div className="reportes-vacio">
-          <span className="reportes-vacio-icono">📭</span>
+          <span className="reportes-vacio-icono"><Icon name="mail" size={18} /></span>
           <p>No hay reportes {pestana === 'academico' ? 'académicos' : 'administrativos'} registrados.</p>
           <button className="btn-nuevo-reporte-vacio"
             onClick={() => { setSeleccionado(null); setModoForm(true); }}>
@@ -167,7 +168,7 @@ function ReportesEstadisticos() {
       ) : (
         <div className="reportes-lista">
           <h3 className="lista-titulo">
-            {pestana === 'academico' ? '📋 Detalle de Reportes Académicos' : '📋 Detalle de Reportes Administrativos'}
+            {pestana === 'academico' ? ' Detalle de Reportes Académicos' : ' Detalle de Reportes Administrativos'}
           </h3>
           {listaMostrada.map(rep => (
             <TarjetaReporte
@@ -210,7 +211,7 @@ function KpisAcademicos({ reportes }) {
     <>
       <TarjetaKPI
         color="azul"
-        icono="🏆"
+        icono={<Icon name="chart" size={18} />}
         label="Promedio General"
         valor={ultimo.notaFinal != null ? ultimo.notaFinal.toFixed(1) : '—'}
         barra={porcentajeBarra(ultimo.notaFinal)}
@@ -218,19 +219,19 @@ function KpisAcademicos({ reportes }) {
       />
       <TarjetaKPI
         color="aqua"
-        icono="📅"
+        icono={<Icon name="calendar" size={18} />}
         label="Asistencia Total"
         valor={valorO(ultimo.asistenciaTotal)}
       />
       <TarjetaKPI
         color="amarillo"
-        icono="📚"
+        icono={<Icon name="book" size={18} />}
         label="Cursos Activos"
         valor={valorO(ultimo.cantidadCursos)}
       />
       <TarjetaKPI
         color="azul"
-        icono="⭐"
+        icono={<Icon name="chart" size={18} />}
         label="Promedio Notas"
         valor={ultimo.promedioNotaCursos != null ? ultimo.promedioNotaCursos.toFixed(1) : '—'}
         barra={porcentajeBarra(ultimo.promedioNotaCursos)}
@@ -247,19 +248,19 @@ function KpisAdministrativos({ reportes }) {
     <>
       <TarjetaKPI
         color="azul"
-        icono="👥"
+        icono={<Icon name="group" size={18} />}
         label="Total Usuarios"
         valor={valorO(ultimo.cantidadUsuarios)}
       />
       <TarjetaKPI
         color="aqua"
-        icono="💰"
+        icono={<Icon name="chart" size={18} />}
         label="Promedio Matrícula"
         valor={ultimo.promedioMatricula != null ? `$${ultimo.promedioMatricula.toFixed(0)}` : '—'}
       />
       <TarjetaKPI
         color="amarillo"
-        icono="👨‍🏫"
+        icono={<Icon name="graduation" size={18} />}
         label="Calificación Docente"
         valor={valorO(ultimo.calificacionDocente)}
       />
@@ -309,8 +310,8 @@ function TarjetaReporte({ reporte, tipo, onVer, onEditar }) {
         </span>
       </div>
       <div className="reporte-row-acciones">
-        <button className="btn-rep-ver"    onClick={onVer}>👁 Ver</button>
-        <button className="btn-rep-editar" onClick={onEditar}>✏️ Editar</button>
+        <button className="btn-rep-ver"    onClick={onVer}><Icon name="eye" size={18} /> Ver</button>
+        <button className="btn-rep-editar" onClick={onEditar}><Icon name="edit" size={18} /> Editar</button>
       </div>
     </div>
   );
@@ -324,16 +325,16 @@ function ModalDetalleReporte({ reporte, tipo, onCerrar, onEditar }) {
 
         <div className="modal-rep-header">
           <div>
-            <h3>📊 Reporte #{reporte.id}</h3>
+            <h3><Icon name="chart" size={18} /> Reporte #{reporte.id}</h3>
             {reporte.periodoReporte && <span className="modal-rep-periodo">{reporte.periodoReporte}</span>}
           </div>
-          <button className="btn-cerrar-modal-rep" onClick={onCerrar}>✕</button>
+          <button className="btn-cerrar-modal-rep" onClick={onCerrar}><Icon name="close" size={18}/></button>
         </div>
 
         <div className="modal-rep-body">
           {tipo === 'academico' ? (
             <>
-              <SeccionModal titulo="🎓 Datos Académicos">
+              <SeccionModal titulo=" Datos Académicos">
                 <FilaRep label="Nota Final"          valor={reporte.notaFinal} />
                 <FilaRep label="Desempeño"           valor={reporte.desempeno} />
                 <FilaRep label="Asistencia Total"    valor={reporte.asistenciaTotal} />
@@ -341,7 +342,7 @@ function ModalDetalleReporte({ reporte, tipo, onCerrar, onEditar }) {
                 <FilaRep label="Promedio Nota Cursos" valor={reporte.promedioNotaCursos} />
                 <FilaRep label="Asistencia Cursos"   valor={reporte.asistenciaCursos} />
               </SeccionModal>
-              <SeccionModal titulo="📚 Datos de Cursos">
+              <SeccionModal titulo=" Datos de Cursos">
                 <FilaRep label="Cantidad de Cursos"  valor={reporte.cantidadCursos} />
                 <FilaRep label="Curso Popular"       valor={reporte.cursoPopular} />
                 <FilaRep label="Curso Menos Popular" valor={reporte.cursoMenosPopular} />
@@ -349,7 +350,7 @@ function ModalDetalleReporte({ reporte, tipo, onCerrar, onEditar }) {
               </SeccionModal>
             </>
           ) : (
-            <SeccionModal titulo="📄 Datos Administrativos">
+            <SeccionModal titulo=" Datos Administrativos">
               <FilaRep label="Total Usuarios"          valor={reporte.cantidadUsuarios} />
               <FilaRep label="Usuarios en Curso"       valor={reporte.cantidadUsuariosCurso} />
               <FilaRep label="% Aprobados"             valor={reporte.promedioUsuariosAprobadosCurso} />
@@ -361,7 +362,7 @@ function ModalDetalleReporte({ reporte, tipo, onCerrar, onEditar }) {
 
         <div className="modal-rep-footer">
           <button className="btn-rep-editar-modal" onClick={onEditar}>
-            ✏️ Editar este reporte
+             Editar este reporte
           </button>
         </div>
       </div>
@@ -464,8 +465,8 @@ function ModalFormReporte({ reporte, tipoPorDefecto, onCerrar, onGuardado }) {
       <div className="modal-rep modal-rep-form" onClick={e => e.stopPropagation()}>
 
         <div className="modal-rep-header">
-          <h3>{modoEdicion ? '✏️ Editar Reporte' : '➕ Nuevo Reporte'}</h3>
-          <button className="btn-cerrar-modal-rep" onClick={onCerrar}>✕</button>
+          <h3>{modoEdicion ? ' Editar Reporte' : ' Nuevo Reporte'}</h3>
+          <button className="btn-cerrar-modal-rep" onClick={onCerrar}><Icon name="close" size={18}/></button>
         </div>
 
         {mensaje && (
@@ -497,7 +498,7 @@ function ModalFormReporte({ reporte, tipoPorDefecto, onCerrar, onGuardado }) {
           {/* Campos académicos */}
           {esAcademico && (
             <fieldset>
-              <legend>🎓 Datos Académicos</legend>
+              <legend><Icon name="graduation" size={18} /> Datos Académicos</legend>
               <div className="form-grid-2">
                 <div className="form-group">
                   <label>Nota Final</label>
@@ -547,7 +548,7 @@ function ModalFormReporte({ reporte, tipoPorDefecto, onCerrar, onGuardado }) {
           {/* Campos administrativos */}
           {!esAcademico && (
             <fieldset>
-              <legend>📄 Datos Administrativos</legend>
+              <legend><Icon name="file" size={18} /> Datos Administrativos</legend>
               <div className="form-grid-2">
                 <div className="form-group">
                   <label>Total Usuarios</label>
@@ -581,7 +582,7 @@ function ModalFormReporte({ reporte, tipoPorDefecto, onCerrar, onGuardado }) {
 
           <div className="form-actions">
             <button type="submit" className="btn-submit" disabled={cargando}>
-              {cargando ? '⏳ Guardando...' : modoEdicion ? '💾 Actualizar' : '➕ Crear Reporte'}
+              {cargando ? ' Guardando...' : modoEdicion ? ' Actualizar' : ' Crear Reporte'}
             </button>
             <button type="button" className="btn-cancel" onClick={onCerrar} disabled={cargando}>
               Cancelar

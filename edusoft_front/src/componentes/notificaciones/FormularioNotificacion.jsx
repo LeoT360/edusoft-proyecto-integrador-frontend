@@ -1,3 +1,4 @@
+import Icon from '../shared/Icon';
 // ====================================
 // COMPONENTE FORMULARIO NOTIFICACIÓN
 // ====================================
@@ -165,7 +166,7 @@ function FormularioNotificacion() {
   // Todo lo que está dentro del return() es lo que se mostrará en pantalla
   return (
     <div className="formulario-container">
-      <h2> 📩 Notificación </h2>
+      <h2>  Notificación </h2>
       
       {/* Mostramos mensajes de éxito o error si existen */}
       {mensaje && (
@@ -179,7 +180,7 @@ function FormularioNotificacion() {
         
         {/* ===== SECCIÓN 1: DATOS DE REMITENTE Y DESTINATARIO ===== */}
         <fieldset>
-          <legend>👤 Información de Usuarios</legend>
+          <legend><Icon name="user" size={18} /> Información de Usuarios</legend>
           
           <div className="form-group">
             <label htmlFor="idRemitente">ID Remitente:</label>
@@ -234,7 +235,7 @@ function FormularioNotificacion() {
 
         {/* ===== SECCIÓN 2: CONTENIDO DEL MENSAJE ===== */}
         <fieldset>
-          <legend>✉️ Contenido del Mensaje</legend>
+          <legend><Icon name="mail" size={18} /> Contenido del Mensaje</legend>
           
           <div className="form-group">
             <label htmlFor="asunto">Asunto: *</label>
@@ -265,7 +266,7 @@ function FormularioNotificacion() {
 
         {/* ===== SECCIÓN 3: CLASIFICACIÓN ===== */}
         <fieldset>
-          <legend>🏷️ Clasificación</legend>
+          <legend><Icon name="tag" size={18} /> Clasificación</legend>
           
           <div className="form-group">
             <label htmlFor="tipoNotificacion">Tipo de Notificación:</label>
@@ -301,7 +302,7 @@ function FormularioNotificacion() {
 
         {/* ===== SECCIÓN 4: INFORMACIÓN DEL CURSO ===== */}
         <fieldset>
-          <legend>📚 Curso Relacionado</legend>
+          <legend><Icon name="book" size={18} /> Curso Relacionado</legend>
           
           <div className="form-group">
             <label htmlFor="cursoRelacionado">Curso:</label>
@@ -341,7 +342,7 @@ function FormularioNotificacion() {
 
         {/* ===== SECCIÓN 5: FECHAS Y HORA ===== */}
         <fieldset>
-          <legend>📅 Fechas y Hora</legend>
+          <legend><Icon name="calendar" size={18} /> Fechas y Hora</legend>
           
           <div className="form-group">
             <label htmlFor="fechaCreacion">Fecha Creación:</label>
@@ -381,7 +382,7 @@ function FormularioNotificacion() {
 
         {/* ===== SECCIÓN 6: OPCIONES ADICIONALES ===== */}
         <fieldset>
-          <legend>⚙️ Opciones Adicionales</legend>
+          <legend><Icon name="settings" size={18} /> Opciones Adicionales</legend>
           
           <div className="form-group">
             <label htmlFor="cantidadArchivosAdjuntos">Archivos Adjuntos:</label>
@@ -429,7 +430,7 @@ function FormularioNotificacion() {
             className="btn-enviar"
             disabled={enviando}
           >
-            {enviando ? '⏳ Enviando...' : '📤 Enviar Notificación'}
+            {enviando ? ' Enviando...' : ' Enviar Notificación'}
           </button>
           
           <button 
@@ -438,7 +439,7 @@ function FormularioNotificacion() {
             onClick={limpiarFormulario}
             disabled={enviando}
           >
-            🗑️ Limpiar Formulario
+             Limpiar Formulario
           </button>
         </div>
       </form>

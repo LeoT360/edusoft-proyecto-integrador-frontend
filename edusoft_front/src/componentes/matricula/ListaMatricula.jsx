@@ -1,3 +1,4 @@
+import Icon from '../shared/Icon';
 // ====================================
 // LISTA MATRÍCULAS
 // Profesor : ve todas + acceso a FormularioMatricula
@@ -86,7 +87,7 @@ function ListaMatricula() {
       {/* ENCABEZADO */}
       <div className="matricula-header">
         <div>
-          <h2>🏫 {esProfesor ? 'Gestión de Matrículas' : 'Mi Matrícula'}</h2>
+          <h2><Icon name="school" size={18} /> {esProfesor ? 'Gestión de Matrículas' : 'Mi Matrícula'}</h2>
           <p className="matricula-subtitulo">
             {esProfesor
               ? 'Consulta y administra todos los registros de matrícula'
@@ -98,7 +99,7 @@ function ListaMatricula() {
             className="btn-nueva-matricula"
             onClick={() => navigate('/matricula/crear')}
           >
-            ＋ Nueva Matrícula
+             Nueva Matrícula
           </button>
         )}
       </div>
@@ -107,12 +108,12 @@ function ListaMatricula() {
       <div className="matricula-kpis">
         <div className="kpi-mat kpi-mat-total">
           <span className="kpi-mat-num">{filtradas.length}</span>
-          <span className="kpi-mat-lbl">📋 Registros</span>
+          <span className="kpi-mat-lbl"><Icon name="clipboard" size={18} /> Registros</span>
         </div>
         {esProfesor && (
           <div className="kpi-mat kpi-mat-valor">
             <span className="kpi-mat-num">{formatValor(totalValor)}</span>
-            <span className="kpi-mat-lbl">💰 Total recaudado</span>
+            <span className="kpi-mat-lbl"><Icon name="chart" size={18} /> Total recaudado</span>
           </div>
         )}
         <div className="kpi-mat kpi-mat-fecha">
@@ -121,7 +122,7 @@ function ListaMatricula() {
               ? formatFecha(filtradas[filtradas.length - 1]?.fechaMatricula)
               : '—'}
           </span>
-          <span className="kpi-mat-lbl">📅 Último registro</span>
+          <span className="kpi-mat-lbl"><Icon name="calendar" size={18} /> Último registro</span>
         </div>
       </div>
 
@@ -131,7 +132,7 @@ function ListaMatricula() {
       <div className="matricula-toolbar">
         <input
           className="matricula-search"
-          placeholder="🔍 Buscar por nombre, correo o documento..."
+          placeholder=" Buscar por nombre, correo o documento..."
           value={busqueda}
           onChange={e => setBusqueda(e.target.value)}
         />
@@ -141,7 +142,7 @@ function ListaMatricula() {
       <div className="matricula-tabla-wrap">
         {filtradas.length === 0 ? (
           <div className="matricula-vacio">
-            <span>📭</span>
+            <span><Icon name="mail" size={18} /></span>
             <p>No se encontraron registros de matrícula.</p>
             {esProfesor && (
               <button
@@ -180,7 +181,7 @@ function ListaMatricula() {
                         className="btn-mat-editar"
                         onClick={() => navigate(`/matricula/editar/${m.id}`)}
                       >
-                        ✏️ Editar
+                         Editar
                       </button>
                     </td>
                   )}

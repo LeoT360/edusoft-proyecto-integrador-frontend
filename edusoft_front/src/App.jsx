@@ -2,7 +2,7 @@
 // APP.JSX - VERSIÓN FINAL
 // ✅ Usuarios       ✅ Notificaciones
 // ✅ Profesores     ✅ Cursos
-// ✅ Reportes       ✅ Notas  ⏳ Matrícula
+// ✅ Reportes       ✅ Notas   Matrícula
 // ====================================
 
 import React from 'react';

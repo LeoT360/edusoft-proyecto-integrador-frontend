@@ -1,3 +1,4 @@
+import Icon from '../shared/Icon';
 // ====================================
 // FORMULARIO PROFESOR - CORREGIDO
 // ✅ celular como String (no Integer)
@@ -14,7 +15,7 @@ const FORM_INICIAL = {
   nombreCompleto:    '',
   numeroDocumento:   '',
   correoElectronico: '',
-  celular:           '',   // ← String siempre
+  celular:           '',   //  String siempre
   edad:              '',
   tipoIdentificacion: '',
   estadoCivil:       '',
@@ -25,7 +26,7 @@ const FORM_INICIAL = {
   tipoContrato:      '',
   jornadaLaboral:    '',
   perfilProfesional: '',
-  foto:              '',   // ← solo URL, NO base64
+  foto:              '',   //  solo URL, NO base64
   hojaDeVida:        '',
   vigencia:          true,
 };
@@ -155,7 +156,7 @@ function FormularioProfesor() {
 
         {/* ENCABEZADO */}
         <div className="form-info">
-          <h3>{modoEdicion ? '✏️ Editar Profesor' : '➕ Nuevo Profesor'}</h3>
+          <h3>{modoEdicion ? ' Editar Profesor' : ' Nuevo Profesor'}</h3>
           <p>{modoEdicion ? 'Modifica los datos del docente.' : 'Completa la información del nuevo docente.'}</p>
         </div>
 
@@ -170,7 +171,7 @@ function FormularioProfesor() {
 
           {/* ═══ DATOS PERSONALES ═══ */}
           <fieldset>
-            <legend>👤 Datos Personales</legend>
+            <legend><Icon name="user" size={18} /> Datos Personales</legend>
 
             <div className="form-group">
               <label htmlFor="nombreCompleto">Nombre Completo *</label>
@@ -249,7 +250,7 @@ function FormularioProfesor() {
 
           {/* ═══ DATOS ACADÉMICOS ═══ */}
           <fieldset>
-            <legend>📚 Datos Académicos</legend>
+            <legend><Icon name="book" size={18} /> Datos Académicos</legend>
 
             <div className="form-group">
               <label htmlFor="nivelAcademico">Nivel Académico</label>
@@ -292,7 +293,7 @@ function FormularioProfesor() {
 
           {/* ═══ DATOS LABORALES ═══ */}
           <fieldset>
-            <legend>💼 Datos Laborales</legend>
+            <legend><Icon name="file" size={18} /> Datos Laborales</legend>
 
             <div className="form-group">
               <label htmlFor="tipoContrato">Tipo de Contrato</label>
@@ -329,7 +330,7 @@ function FormularioProfesor() {
 
           {/* ═══ FOTO Y DOCUMENTOS ═══ */}
           <fieldset>
-            <legend>🖼️ Foto y Documentos</legend>
+            <legend><Icon name="image" size={18} /> Foto y Documentos</legend>
 
             {/* ✅ Solo URL - NO se sube base64 al backend */}
             <div className="form-group">
@@ -338,7 +339,7 @@ function FormularioProfesor() {
                 value={formData.foto} onChange={handleChange}
                 placeholder="https://ejemplo.com/foto.jpg" />
               <small className="help-text">
-                💡 Ingresa una URL pública de la foto (Imgur, Google Drive, etc.)
+                 Ingresa una URL pública de la foto (Imgur, Google Drive, etc.)
               </small>
               {formData.foto && (
                 <div className="foto-preview">
@@ -358,7 +359,7 @@ function FormularioProfesor() {
                 value={formData.hojaDeVida} onChange={handleChange}
                 placeholder="https://ejemplo.com/cv.pdf" />
               <small className="help-text">
-                💡 URL de Google Drive, Dropbox u otro servicio de almacenamiento
+                 URL de Google Drive, Dropbox u otro servicio de almacenamiento
               </small>
             </div>
           </fieldset>
@@ -367,8 +368,8 @@ function FormularioProfesor() {
           <div className="form-actions">
             <button type="submit" className="btn-submit" disabled={cargando}>
               {cargando
-                ? '⏳ Guardando...'
-                : modoEdicion ? '💾 Actualizar Profesor' : '➕ Crear Profesor'}
+                ? ' Guardando...'
+                : modoEdicion ? ' Actualizar Profesor' : ' Crear Profesor'}
             </button>
             <button type="button" className="btn-cancel"
               onClick={() => navigate('/profesores')} disabled={cargando}>
