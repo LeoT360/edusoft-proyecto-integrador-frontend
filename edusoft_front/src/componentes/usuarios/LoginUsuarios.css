@@ -15,22 +15,22 @@
   left: 20px;
   z-index: 2;
   padding: 10px 16px;
-  border: 1px solid var(--sura-azul-profundo);
+  border: 1px solid var(--edusoft-azul-profundo);
   border-radius: 8px;
-  background: var(--sura-blanco);
-  color: var(--sura-azul-profundo);
+  background: var(--edusoft-blanco);
+  color: var(--edusoft-azul-profundo);
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .btn-volver-inicio:hover {
-  background: var(--sura-azul-profundo);
-  color: var(--sura-blanco);
+  background: var(--edusoft-azul-profundo);
+  color: var(--edusoft-blanco);
   transform: translateY(-2px);
 }
 
-.logo-sura-login {
+.logo-edusoft-login {
   width: 350px;
   height: auto;
   flex-shrink: 0;
@@ -38,7 +38,7 @@
 }
 
 .login-formulario {
-  background: var(--sura-blanco);
+  background: var(--edusoft-blanco);
   padding: 35px;
   width: 100%;
   max-width: 360px; 
@@ -54,20 +54,20 @@
 .login-formulario h2 {
   margin: 0 0 10px;
   text-align: center;
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
 }
 
 .login-formulario input {
   padding: 12px 14px;
   border-radius: 10px;
-  border: 1px solid var(--sura-gris-claro);
+  border: 1px solid var(--edusoft-gris-claro);
   font-size: 14px;
   transition: 0.3s;
 }
 
 .login-formulario input:focus {
   outline: none;
-  border-color: var(--sura-azul-profundo);
+  border-color: var(--edusoft-azul-profundo);
   box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
 }
 
@@ -75,23 +75,23 @@
   padding: 12px;
   border: none;
   border-radius: 12px;
-  background: var(--sura-azul-profundo);
-  color: var(--sura-blanco);
+  background: var(--edusoft-azul-profundo);
+  color: var(--edusoft-blanco);
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .login-formulario button:hover {
-  background: var(--sura-aqua);
-  color: var(--sura-azul-profundo);
+  background: var(--edusoft-aqua);
+  color: var(--edusoft-azul-profundo);
   transform: translateY(-2px);
 }
 
 .login-formulario p {
   font-size: 14px;
   text-align: center;
-  color: var(--sura-texto-principal);
+  color: var(--edusoft-texto-principal);
 }
 
 @media (max-width: 900px) {
@@ -100,7 +100,7 @@
     padding: 12px;
     gap: 24px;
   }
-  .logo-sura-login {
+  .logo-edusoft-login {
     width: 250px;
     margin-bottom: 20px;
   }

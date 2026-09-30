@@ -1,274 +1,86 @@
-// ====================================
-// NAVBAR - MENÚ ACORDEÓN CON SCROLL
-// + Toggle Dark Mode integrado
-// ====================================
-
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import './Navbar.css';
 import logoEdusoft from '../../assets/title-edusoft.svg';
 
-const SECCIONES_COMUNES = [
-  { id: 'home',     icono: '🏠', label: 'Home',     ruta: '/home' },
-  { id: 'usuarios', icono: '👤', label: 'Usuarios', ruta: '/usuarios', soloProfesor:true },
-];
-
-const SECCIONES_MODULOS = [
-  {
-    id: 'notificaciones',
-    icono: '📧',
-    label: 'Notificaciones',
-    soloProfesor: false,
-    proximamente: false,
-    items: [
-      { label: 'Ver Notificaciones', ruta: '/notificaciones',       soloProfesor: false },
-      { label: 'Nueva Notificación', ruta: '/notificaciones/crear', soloProfesor: true  },
-    ],
-  },
-  {
-    id: 'profesores',
-    icono: '🎓',
-    label: 'Profesores',
-    soloProfesor: false,
-    proximamente: false,
-    items: [
-      { label: 'Ver Profesores', ruta: '/profesores',       soloProfesor: false },
-      { label: 'Nuevo Profesor', ruta: '/profesores/crear', soloProfesor: true  },
-    ],
-  },
-  {
-    id: 'asistencias',
-    icono: '📋',
-    label: 'Asistencias',
-    soloProfesor: false,
-    proximamente: false,
-    items: [
-      { label: 'Ver Asistencias',      ruta: '/asistencias',       soloProfesor: false },
-      { label: 'Registrar Asistencia', ruta: '/asistencias/crear', soloProfesor: true  },
-    ],
-  },
-  {
-    id: 'cursos',
-    icono: '📖',
-    label: 'Cursos',
-    soloProfesor: false,
-    proximamente: false,
-    items: [
-      { label: 'Ver Cursos',  ruta: '/cursos',       soloProfesor: false },
-      { label: 'Nuevo Curso', ruta: '/cursos/crear', soloProfesor: true  },
-    ],
-  },
-  {
-    id: 'notas',
-    icono: '📝',
-    label: 'Notas',
-    soloProfesor: false,
-    proximamente: false,
-    items: [
-      { label: 'Ver Notas',  ruta: '/notas',       soloProfesor: false },
-      { label: 'Nueva Nota', ruta: '/notas/crear', soloProfesor: true  },
-    ],
-  },
-  {
-    id: 'matricula',
-    icono: '🏫',
-    label: 'Matrícula',
-    soloProfesor: false,
-    proximamente: false,
-    items: [
-      { label: 'Ver Matrículas',  ruta: '/matricula',       soloProfesor: false },
-      { label: 'Nueva Matrícula', ruta: '/matricula/crear', soloProfesor: true  },
-    ],
-  },
-  {
-    id: 'reportes',
-    icono: '📊',
-    label: 'Reportes Estadísticos',
-    soloProfesor: true,
-    proximamente: false,
-    items: [
-      { label: 'Ver Reportes', ruta: '/reportes', soloProfesor: true },
-    ],
-  },
+const SECCIONES = [
+  { id: 'home', icono: '🏠', label: 'Inicio', ruta: '/home' },
+  { id: 'usuarios', icono: '👤', label: 'Usuarios', ruta: '/usuarios', soloProfesor: true },
+  { id: 'notificaciones', icono: '📧', label: 'Notificaciones', ruta: '/notificaciones' },
+  { id: 'profesores', icono: '🎓', label: 'Profesores', ruta: '/profesores' },
+  { id: 'asistencias', icono: '📋', label: 'Asistencias', ruta: '/asistencias' },
+  { id: 'cursos', icono: '📖', label: 'Cursos', ruta: '/cursos' },
+  { id: 'notas', icono: '📝', label: 'Notas', ruta: '/notas' },
+  { id: 'matricula', icono: '🏫', label: 'Matrícula', ruta: '/matricula' },
+  { id: 'reportes', icono: '📊', label: 'Reportes Estadísticos', ruta: '/reportes', soloProfesor: true },
 ];
 
 function Navbar() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [menuAbierto, setMenuAbierto] = useState(false);
-  const [expandidos,  setExpandidos]  = useState({});
-
-  // ── Dark Mode ──────────────────────────────
-  // Se persiste en localStorage para que sobreviva recargas
-  const [darkMode, setDarkMode] = useState(() => {
-    return localStorage.getItem('sura-dark') === 'true';
-  });
-
-  useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add('dark');
-    } else {
-      document.body.classList.remove('dark');
-    }
-    localStorage.setItem('sura-dark', darkMode);
-  }, [darkMode]);
-
-  const toggleDark = () => setDarkMode(prev => !prev);
-  // ──────────────────────────────────────────
-
-  const usuario    = JSON.parse(localStorage.getItem('usuario'));
+  const [darkMode, setDarkMode] = useState(() => localStorage.getItem('edusoft-dark') === 'true');
+  const usuario = JSON.parse(localStorage.getItem('usuario'));
   const esProfesor = usuario?.rol === 'Profesor';
 
-  const salir = () => {
-    localStorage.removeItem('usuario');
-    navigate('/');
-  };
+  useEffect(() => {
+    document.body.classList.toggle('dark', darkMode);
+    localStorage.setItem('edusoft-dark', darkMode);
+  }, [darkMode]);
 
-  const redirigir = (ruta) => {
-    navigate(ruta);
-    setMenuAbierto(false);
-    setExpandidos({});
-  };
+  useEffect(() => { setMenuAbierto(false); }, [location.pathname]);
 
-  const toggleSeccion = (id) => {
-    setExpandidos(prev => ({ ...prev, [id]: !prev[id] }));
-  };
+  const salir = () => { localStorage.removeItem('usuario'); navigate('/'); };
+  const redirigir = (ruta) => navigate(ruta);
+  const activo = (ruta) => location.pathname === ruta || location.pathname.startsWith(ruta + '/');
 
-  return (
-    <>
-      {menuAbierto && (
-        <div
-          className="menu-overlay"
-          onClick={() => { setMenuAbierto(false); setExpandidos({}); }}
-          aria-hidden="true"
-        />
-      )}
-
-      <nav className="navbar">
-        <div className="navbar-sura-izquierda">
-          <img
-            src={logoEdusoft}
-            alt="Logo Edusoft"
-            className="logo-sura-navbar"
-            onClick={() => redirigir('/home')}
-            style={{ cursor: 'pointer' }}
-          />
-          <h3>Hola, {usuario?.nombre}</h3>
-          <span className="badge-rol">{usuario?.rol}</span>
-        </div>
-
-        <div className="acciones-derecha">
-
-          {/* ── Botón Dark Mode ── */}
+  const renderNav = () => (
+    <div className="nav-scroll-area">
+      {SECCIONES.map(sec => {
+        if (sec.soloProfesor && !esProfesor) return null;
+        return (
           <button
-            className="btn-dark-toggle"
-            onClick={toggleDark}
-            aria-label={darkMode ? 'Activar modo claro' : 'Activar modo oscuro'}
-            title={darkMode ? 'Modo claro' : 'Modo oscuro'}
+            key={sec.id}
+            className={`nav-item-directo ${activo(sec.ruta) ? 'activo' : ''}`}
+            onClick={() => redirigir(sec.ruta)}
           >
-            {darkMode ? '☀️' : '🌙'}
+            <span className="nav-item-icono">{sec.icono}</span>
+            <span>{sec.label}</span>
           </button>
-
-          <div className="contenedor-menu">
-            <button
-              className="boton-menu"
-              onClick={() => setMenuAbierto(!menuAbierto)}
-              aria-label={menuAbierto ? 'Cerrar menú' : 'Abrir menú'}
-              aria-expanded={menuAbierto}
-            >
-              {menuAbierto ? '✕' : '☰'}
-            </button>
-
-            {menuAbierto && (
-              <div className="menu-lateral">
-
-                {/* ENCABEZADO FIJO */}
-                <div className="menu-panel-header">
-                  <span className="menu-panel-titulo">Menú</span>
-                  <span className="badge-rol-panel">{usuario?.rol}</span>
-                </div>
-
-                {/* ZONA SCROLLEABLE */}
-                <div className="menu-scroll-area">
-
-                  {SECCIONES_COMUNES.map((sec) => (
-                    <div
-                      key={sec.id}
-                      className="menu-item-directo"
-                      onClick={() => redirigir(sec.ruta)}
-                    >
-                      <span className="menu-item-icono">{sec.icono}</span>
-                      <span>{sec.label}</span>
-                      <span className="menu-item-arrow">›</span>
-                    </div>
-                  ))}
-
-                  <div className="menu-divisor" />
-
-                  {SECCIONES_MODULOS.map((seccion) => {
-                    if (seccion.soloProfesor && !esProfesor) return null;
-
-                    const abierto = !!expandidos[seccion.id];
-
-                    return (
-                      <div key={seccion.id} className="menu-acordeon">
-                        <button
-                          className={`menu-acordeon-header ${abierto ? 'abierto' : ''}`}
-                          onClick={() => toggleSeccion(seccion.id)}
-                          aria-expanded={abierto}
-                        >
-                          <div className="menu-acordeon-titulo">
-                            <span className="menu-item-icono">{seccion.icono}</span>
-                            <span>{seccion.label}</span>
-                            {seccion.proximamente && (
-                              <span className="badge-prox-menu">Próx.</span>
-                            )}
-                          </div>
-                          <span className={`menu-chevron ${abierto ? 'rotado' : ''}`}>›</span>
-                        </button>
-
-                        {abierto && (
-                          <div className="menu-acordeon-body">
-                            {seccion.items.map((item) => {
-                              if (item.soloProfesor && !esProfesor) return null;
-                              const deshabilitado = seccion.proximamente;
-
-                              return (
-                                <div
-                                  key={item.ruta}
-                                  className={`menu-subitem ${deshabilitado ? 'menu-subitem-deshabilitado' : ''}`}
-                                  onClick={() => !deshabilitado && redirigir(item.ruta)}
-                                >
-                                  <span className="menu-subitem-bullet">▸</span>
-                                  <span>{item.label}</span>
-                                  {deshabilitado && (
-                                    <span className="badge-prox-menu">Próx.</span>
-                                  )}
-                                </div>
-                              );
-                            })}
-                          </div>
-                        )}
-                      </div>
-                    );
-                  })}
-
-                </div>{/* fin scroll-area */}
-
-                {/* PIE FIJO */}
-                <div className="menu-pie">
-                  <button className="btn-cerrar-sesion" onClick={salir}>
-                    <span>🚪</span>
-                    <span>Cerrar sesión</span>
-                  </button>
-                </div>
-
-              </div>
-            )}
-          </div>
-        </div>
-      </nav>
-    </>
+        );
+      })}
+    </div>
   );
+
+  return <>
+    <aside className="sidebar-desktop">
+      <div className="sidebar-brand" onClick={() => redirigir('/home')}>
+        <img src={logoEdusoft} alt="Logo EduSoft" />
+      </div>
+      <div className="sidebar-user"><strong>{usuario?.nombre}</strong><span>{usuario?.rol}</span></div>
+      {renderNav()}
+      <div className="sidebar-footer">
+        <button className="sidebar-action" onClick={() => setDarkMode(v => !v)}>{darkMode ? '☀️' : '🌙'}<span>{darkMode ? 'Modo claro' : 'Modo oscuro'}</span></button>
+        <button className="sidebar-action danger" onClick={salir}>🚪<span>Cerrar sesión</span></button>
+      </div>
+    </aside>
+
+    <header className="mobile-navbar">
+      <img src={logoEdusoft} alt="Logo EduSoft" className="mobile-logo" onClick={() => redirigir('/home')} />
+      <div className="mobile-actions">
+        <button className="mobile-theme" onClick={() => setDarkMode(v => !v)} aria-label="Cambiar tema">{darkMode ? '☀️' : '🌙'}</button>
+        <button className="mobile-menu-button" onClick={() => setMenuAbierto(v => !v)} aria-label={menuAbierto ? 'Cerrar menú' : 'Abrir menú'}>{menuAbierto ? '✕' : '☰'}</button>
+      </div>
+    </header>
+
+    {menuAbierto && <div className="mobile-menu-overlay">
+      <div className="mobile-menu-panel">
+        <div className="mobile-menu-header"><div><strong>{usuario?.nombre}</strong><span>{usuario?.rol}</span></div><button onClick={() => setMenuAbierto(false)}>✕</button></div>
+        {renderNav()}
+        <div className="mobile-menu-footer"><button className="sidebar-action" onClick={salir}>🚪<span>Cerrar sesión</span></button></div>
+      </div>
+    </div>}
+  </>;
 }
 
 export default Navbar;

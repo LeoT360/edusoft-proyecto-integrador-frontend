@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { notificationService } from '../../services/notificationService';
-import './EditarNotificacion_Sura.css';
+import './EditarNotificacion_EduSoft.css';
 
 // El componente recibe el ID de la notificación a editar como prop
 function EditarNotificacion({ notificacionId, onCancelar, onGuardado }) {

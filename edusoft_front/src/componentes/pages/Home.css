@@ -5,7 +5,7 @@
 .home-container {
   min-height: calc(100vh - 72px);
   padding: 40px 20px;
-  background: linear-gradient(135deg, rgba(48, 43, 180, 0.05) 0%, rgba(0, 214, 240, 0.05) 100%);
+  background: rgba(48, 43, 180, 0.05);
 }
 
 .home-content {
@@ -32,19 +32,19 @@
 
 .home-header h1 {
   font-size: 36px;
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
   margin-bottom: 12px;
   font-weight: bold;
 }
 
 .home-rol {
   font-size: 18px;
-  color: var(--sura-texto-principal);
+  color: var(--edusoft-texto-principal);
   margin: 0;
 }
 
 .badge-rol-home {
-  background: linear-gradient(135deg, var(--sura-aqua) 0%, #00AFC7 100%);
+  background: var(--edusoft-aqua);
   color: white;
   padding: 6px 16px;
   border-radius: 20px;
@@ -62,7 +62,7 @@
   background: rgba(0, 214, 240, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 16px;
-  border-left: 4px solid var(--sura-aqua);
+  border-left: 4px solid var(--edusoft-aqua);
   animation: fadeIn 0.8s ease;
 }
 
@@ -73,7 +73,7 @@
 
 .home-descripcion p {
   font-size: 16px;
-  color: var(--sura-texto-principal);
+  color: var(--edusoft-texto-principal);
   margin: 0;
   line-height: 1.6;
 }
@@ -123,7 +123,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  background: rgba(255,255,255,0.3);
   transition: left 0.5s;
 }
 
@@ -137,9 +137,9 @@
 }
 
 /* Bordes de color por variante */
-.tarjeta-azul:not(.tarjeta-proximamente):hover  { border-color: var(--sura-azul-medio, #302BB4); }
-.tarjeta-cyan:not(.tarjeta-proximamente):hover  { border-color: var(--sura-azul-cielo, #00D6F0); }
-.tarjeta-dorado:not(.tarjeta-proximamente):hover{ border-color: var(--sura-amarillo, #FDB913); }
+.tarjeta-azul:not(.tarjeta-proximamente):hover  { border-color: var(--edusoft-azul-medio, #1D4ED8); }
+.tarjeta-cyan:not(.tarjeta-proximamente):hover  { border-color: var(--edusoft-azul-cielo, #3B82F6); }
+.tarjeta-dorado:not(.tarjeta-proximamente):hover{ border-color: var(--edusoft-amarillo, #E5A11A); }
 
 /* ===== TARJETA PRÓXIMAMENTE ===== */
 .tarjeta-proximamente {
@@ -162,14 +162,14 @@
 
 .tarjeta h3 {
   font-size: 22px;
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
   margin-bottom: 10px;
   font-weight: bold;
 }
 
 .tarjeta p {
   font-size: 14px;
-  color: var(--sura-texto-principal);
+  color: var(--edusoft-texto-principal);
   margin-bottom: 15px;
   line-height: 1.5;
 }
@@ -177,8 +177,8 @@
 /* ===== BADGES ===== */
 .badge-profesor {
   display: inline-block;
-  background: linear-gradient(135deg, #FDB913 0%, #FFA000 100%);
-  color: #302BB4;
+  background: #E5A11A;
+  color: #1D4ED8;
   padding: 4px 12px;
   border-radius: 12px;
   font-size: 11px;
@@ -190,7 +190,7 @@
 
 .badge-proximamente {
   display: inline-block;
-  background: linear-gradient(135deg, #aaa 0%, #888 100%);
+  background: #aaa;
   color: #fff;
   padding: 4px 12px;
   border-radius: 12px;
@@ -206,7 +206,7 @@
   bottom: 20px;
   right: 20px;
   font-size: 28px;
-  color: var(--sura-aqua);
+  color: var(--edusoft-aqua);
   transition: transform 0.3s ease;
 }
 
@@ -223,7 +223,7 @@
   background: rgba(253, 185, 19, 0.1);
   backdrop-filter: blur(10px);
   border-radius: 16px;
-  border-left: 4px solid #FDB913;
+  border-left: 4px solid #E5A11A;
   margin-bottom: 40px;
   animation: fadeIn 1s ease;
 }
@@ -235,12 +235,12 @@
 
 .info-estudiante p {
   margin: 0;
-  color: var(--sura-texto-principal);
+  color: var(--edusoft-texto-principal);
   line-height: 1.6;
 }
 
 .info-estudiante strong {
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
 }
 
 /* ===== ESTADÍSTICAS ===== */
@@ -273,7 +273,7 @@
 
 .estadistica p {
   font-size: 14px;
-  color: var(--sura-texto-principal);
+  color: var(--edusoft-texto-principal);
   margin: 0;
   font-weight: 600;
 }

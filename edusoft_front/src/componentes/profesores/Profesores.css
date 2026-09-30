@@ -1,19 +1,19 @@
 /* ====================================
-   MÓDULO PROFESORES - TEMA SURA G8
-   Adaptado de barranavP con variables Sura
+   MÓDULO PROFESORES - TEMA EduSoft
+   Adaptado con variables del sistema institucional
    ==================================== */
 
 /* ===== CONTENEDOR PRINCIPAL ===== */
 .profesores-container {
   padding: 35px 24px;
   min-height: calc(100vh - 68px);
-  background: linear-gradient(135deg, rgba(0, 61, 165, 0.04) 0%, rgba(0, 163, 224, 0.04) 100%);
+  background: rgba(48, 43, 180, 0.04);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* ===== TÍTULO ===== */
 .profesores-container h2 {
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
   text-align: center;
   font-size: 2rem;
   font-weight: 700;
@@ -30,7 +30,7 @@
   transform: translateX(-50%);
   width: 70px;
   height: 3px;
-  background: linear-gradient(90deg, var(--sura-azul-profundo), var(--sura-aqua), var(--sura-amarillo, #FDB913));
+  background: var(--edusoft-azul-profundo);
   border-radius: 2px;
 }
 
@@ -49,7 +49,7 @@
 /* ===== BOTÓN NUEVO PROFESOR ===== */
 .add-profesor-btn {
   padding: 11px 26px;
-  background: linear-gradient(135deg, var(--sura-azul-profundo) 0%, var(--sura-aqua) 100%);
+  background: var(--edusoft-azul-profundo);
   color: white;
   border: none;
   border-radius: 25px;
@@ -57,13 +57,13 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 14px rgba(0, 30, 96, 0.25);
+  box-shadow: 0 4px 14px rgba(48, 43, 180, 0.25);
   white-space: nowrap;
 }
 
 .add-profesor-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 30, 96, 0.35);
+  box-shadow: 0 6px 20px rgba(48, 43, 180, 0.35);
 }
 
 /* ===== BUSCADOR ===== */
@@ -73,19 +73,19 @@
   max-width: 550px;
   margin: 0 auto 30px;
   padding: 13px 22px;
-  border: 2px solid rgba(0, 30, 96, 0.15);
+  border: 2px solid rgba(48, 43, 180, 0.15);
   border-radius: 25px;
   font-size: 0.95rem;
   background: rgba(255, 255, 255, 0.95);
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
   transition: all 0.3s ease;
-  box-shadow: var(--sura-sombra-sm, 0 2px 8px rgba(0,61,165,0.08));
+  box-shadow: var(--edusoft-sombra-sm, 0 2px 8px rgba(48,43,180,0.08));
 }
 
 .search-bar:focus {
   outline: none;
-  border-color: var(--sura-aqua);
-  box-shadow: 0 0 0 3px rgba(5, 195, 222, 0.12);
+  border-color: var(--edusoft-aqua);
+  box-shadow: 0 0 0 3px rgba(0, 214, 240, 0.12);
   background: white;
 }
 
@@ -105,7 +105,7 @@
 }
 
 .sin-resultados-lista {
-  color: var(--sura-texto-secundario, #666);
+  color: var(--edusoft-texto-secundario, #666);
 }
 
 /* ===== GRID DE TARJETAS ===== */
@@ -121,11 +121,11 @@
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border-radius: 18px;
-  box-shadow: 0 4px 16px rgba(0, 30, 96, 0.08);
+  box-shadow: 0 4px 16px rgba(48, 43, 180, 0.08);
   padding: 26px 22px;
   text-align: center;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(0, 30, 96, 0.07);
+  border: 1px solid rgba(48, 43, 180, 0.07);
   position: relative;
   overflow: hidden;
   animation: fadeInUp 0.5s ease both;
@@ -142,12 +142,12 @@
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--sura-azul-profundo), var(--sura-aqua));
+  background: var(--edusoft-azul-profundo);
 }
 
 .profesor-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 30px rgba(0, 30, 96, 0.15);
+  box-shadow: 0 10px 30px rgba(48, 43, 180, 0.15);
 }
 
 .profesor-inactivo {
@@ -162,19 +162,19 @@
   border-radius: 50%;
   object-fit: cover;
   margin: 0 auto 14px;
-  border: 3px solid var(--sura-aqua);
-  box-shadow: 0 4px 14px rgba(5, 195, 222, 0.25);
+  border: 3px solid var(--edusoft-aqua);
+  box-shadow: 0 4px 14px rgba(0, 214, 240, 0.25);
   transition: all 0.3s ease;
 }
 
 .profesor-card:hover .profesor-foto {
   transform: scale(1.07);
-  box-shadow: 0 6px 20px rgba(5, 195, 222, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 214, 240, 0.4);
 }
 
 /* ===== INFO EN TARJETA ===== */
 .profesor-card h3 {
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
   margin: 0 0 8px;
   font-size: 1.15rem;
   font-weight: 700;
@@ -182,20 +182,20 @@
 
 .profesor-areas {
   font-size: 13px;
-  color: var(--sura-texto-secundario, #666);
+  color: var(--edusoft-texto-secundario, #666);
   margin: 0 0 10px;
 }
 
 .profesor-perfil-breve {
   font-size: 12px;
-  color: var(--sura-texto-principal);
+  color: var(--edusoft-texto-principal);
   margin: 0 0 12px;
   line-height: 1.5;
 }
 
 .profesor-exp {
   font-size: 12px;
-  color: var(--sura-aqua);
+  color: var(--edusoft-aqua);
   font-weight: 600;
   margin: 6px 0 12px;
 }
@@ -203,7 +203,7 @@
 /* ===== BADGES ===== */
 .badge-nivel {
   display: inline-block;
-  background: linear-gradient(135deg, var(--sura-azul-profundo) 0%, var(--sura-aqua) 100%);
+  background: var(--edusoft-azul-profundo);
   color: white;
   padding: 3px 12px;
   border-radius: 12px;
@@ -245,15 +245,15 @@
 }
 
 .btn-ver {
-  background: linear-gradient(135deg, var(--sura-azul-profundo) 0%, var(--sura-aqua) 100%);
+  background: var(--edusoft-azul-profundo);
   color: white;
 }
 
 .btn-ver:hover { transform: scale(1.07); opacity: 0.9; }
 
 .btn-editar {
-  background: linear-gradient(135deg, #FDB913 0%, #FFA000 100%);
-  color: var(--sura-azul-profundo);
+  background: #E5A11A;
+  color: var(--edusoft-azul-profundo);
 }
 
 .btn-editar:hover { transform: scale(1.07); }
@@ -274,7 +274,7 @@
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0, 30, 96, 0.6);
+  background: rgba(48, 43, 180, 0.6);
   backdrop-filter: blur(6px);
   display: flex;
   justify-content: center;
@@ -296,7 +296,7 @@
   max-width: 600px;
   max-height: 88vh;
   overflow-y: auto;
-  box-shadow: 0 20px 60px rgba(0, 30, 96, 0.35);
+  box-shadow: 0 20px 60px rgba(48, 43, 180, 0.35);
   animation: modalSlide 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -310,7 +310,7 @@
   align-items: center;
   gap: 16px;
   padding: 24px;
-  background: linear-gradient(135deg, var(--sura-azul-profundo) 0%, var(--sura-aqua) 100%);
+  background: var(--edusoft-azul-profundo);
   border-radius: 20px 20px 0 0;
   position: relative;
 }
@@ -364,20 +364,20 @@
 .modal-seccion {
   margin-bottom: 22px;
   padding: 16px;
-  background: rgba(0, 30, 96, 0.03);
+  background: rgba(48, 43, 180, 0.03);
   border-radius: 12px;
-  border: 1px solid rgba(0, 30, 96, 0.07);
+  border: 1px solid rgba(48, 43, 180, 0.07);
 }
 
 .modal-seccion h4 {
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
   margin: 0 0 12px;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.4px;
   padding-bottom: 8px;
-  border-bottom: 2px solid rgba(5, 195, 222, 0.25);
+  border-bottom: 2px solid rgba(0, 214, 240, 0.25);
 }
 
 .modal-item {
@@ -385,7 +385,7 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 7px 0;
-  border-bottom: 1px solid rgba(0,30,96,0.05);
+  border-bottom: 1px solid rgba(48,43,180,0.05);
   gap: 12px;
 }
 
@@ -395,21 +395,21 @@
 
 .modal-label {
   font-weight: 600;
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
   font-size: 13px;
   min-width: 130px;
   flex-shrink: 0;
 }
 
 .modal-valor {
-  color: var(--sura-gris-oscuro, #484949);
+  color: var(--edusoft-gris-oscuro, #484949);
   font-size: 13px;
   text-align: right;
   flex: 1;
 }
 
 .modal-valor-bloque {
-  color: var(--sura-gris-oscuro, #484949);
+  color: var(--edusoft-gris-oscuro, #484949);
   font-size: 13px;
   line-height: 1.6;
   margin: 8px 0 0;
@@ -418,18 +418,18 @@
 .modal-aviso-estudiante {
   padding: 14px 16px;
   background: rgba(253, 185, 19, 0.1);
-  border-left: 4px solid #FDB913;
+  border-left: 4px solid #E5A11A;
   border-radius: 8px;
   font-size: 13px;
-  color: var(--sura-texto-principal);
+  color: var(--edusoft-texto-principal);
   margin-top: 10px;
 }
 
 /* Scrollbar del modal */
 .modal-detalle::-webkit-scrollbar { width: 6px; }
-.modal-detalle::-webkit-scrollbar-track { background: rgba(0,30,96,0.05); border-radius: 10px; }
+.modal-detalle::-webkit-scrollbar-track { background: rgba(48,43,180,0.05); border-radius: 10px; }
 .modal-detalle::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--sura-azul-profundo), var(--sura-aqua));
+  background: var(--edusoft-azul-profundo);
   border-radius: 10px;
 }
 
@@ -439,12 +439,12 @@
   margin: 0 auto;
   background: white;
   border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(0, 30, 96, 0.12);
+  box-shadow: 0 8px 32px rgba(48, 43, 180, 0.12);
   overflow: hidden;
 }
 
 .form-info {
-  background: linear-gradient(135deg, var(--sura-azul-profundo) 0%, var(--sura-aqua) 100%);
+  background: var(--edusoft-azul-profundo);
   color: white;
   padding: 28px 32px;
   text-align: center;
@@ -479,19 +479,6 @@
   border: 1px solid rgba(220, 53, 69, 0.3);
   border-left: 4px solid #dc3545;
 }
-.titulo-profesores {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 0;
-}
-
-.icono-profesores {
-  width: 42px;
-  height: 42px;
-  object-fit: cover;
-  border-radius: 50%;
-}
 
 .profesor-form {
   padding: 28px 32px;
@@ -501,23 +488,23 @@
 }
 
 .profesor-form fieldset {
-  border: 1px solid rgba(0, 30, 96, 0.15);
+  border: 1px solid rgba(48, 43, 180, 0.15);
   border-radius: 14px;
   padding: 20px 22px;
-  background: rgba(0, 30, 96, 0.02);
+  background: rgba(48, 43, 180, 0.02);
   transition: all 0.3s ease;
 }
 
 .profesor-form fieldset:hover {
-  border-color: rgba(5, 195, 222, 0.4);
-  box-shadow: 0 4px 14px rgba(5, 195, 222, 0.1);
+  border-color: rgba(0, 214, 240, 0.4);
+  box-shadow: 0 4px 14px rgba(0, 214, 240, 0.1);
 }
 
 .profesor-form legend {
   font-weight: 700;
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
   padding: 4px 14px;
-  background: rgba(5, 195, 222, 0.1);
+  background: rgba(0, 214, 240, 0.1);
   border-radius: 8px;
   font-size: 14px;
 }
@@ -532,7 +519,7 @@
 
 .form-group label {
   font-weight: 600;
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
   font-size: 13px;
   margin-bottom: 6px;
 }
@@ -541,12 +528,12 @@
 .form-group select,
 .form-group textarea {
   padding: 11px 15px;
-  border: 2px solid rgba(0, 30, 96, 0.12);
+  border: 2px solid rgba(48, 43, 180, 0.12);
   border-radius: 10px;
   font-size: 14px;
   font-family: inherit;
   background: rgba(255,255,255,0.95);
-  color: var(--sura-gris-oscuro, #484949);
+  color: var(--edusoft-gris-oscuro, #484949);
   transition: all 0.3s ease;
 }
 
@@ -554,8 +541,8 @@
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--sura-aqua);
-  box-shadow: 0 0 0 3px rgba(5, 195, 222, 0.1);
+  border-color: var(--edusoft-aqua);
+  box-shadow: 0 0 0 3px rgba(0, 214, 240, 0.1);
 }
 
 .form-group-checkbox {
@@ -567,19 +554,19 @@
   transition: background 0.2s ease;
 }
 
-.form-group-checkbox:hover { background: rgba(5,195,222,0.05); }
+.form-group-checkbox:hover { background: rgba(0,214,240,0.05); }
 
 .form-group-checkbox input {
   width: 18px;
   height: 18px;
-  accent-color: var(--sura-aqua);
+  accent-color: var(--edusoft-aqua);
   cursor: pointer;
   padding: 0;
   border: none;
 }
 
 .form-group-checkbox label {
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
   font-weight: 500;
   cursor: pointer;
   font-size: 14px;
@@ -587,14 +574,14 @@
 
 .char-count {
   font-size: 11px;
-  color: var(--sura-texto-secundario, #666);
+  color: var(--edusoft-texto-secundario, #666);
   text-align: right;
   margin-top: 4px;
 }
 
 .help-text {
   font-size: 12px;
-  color: var(--sura-aqua);
+  color: var(--edusoft-aqua);
   margin-top: 4px;
 }
 
@@ -610,8 +597,8 @@
   height: 90px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--sura-aqua);
-  box-shadow: 0 4px 12px rgba(5,195,222,0.25);
+  border: 3px solid var(--edusoft-aqua);
+  box-shadow: 0 4px 12px rgba(0,214,240,0.25);
 }
 
 /* ===== BOTONES DEL FORMULARIO ===== */
@@ -624,7 +611,7 @@
 
 .btn-submit {
   padding: 13px 36px;
-  background: linear-gradient(135deg, var(--sura-azul-profundo) 0%, var(--sura-aqua) 100%);
+  background: var(--edusoft-azul-profundo);
   color: white;
   border: none;
   border-radius: 12px;
@@ -632,12 +619,12 @@
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 14px rgba(0, 30, 96, 0.25);
+  box-shadow: 0 4px 14px rgba(48, 43, 180, 0.25);
 }
 
 .btn-submit:hover:not(:disabled) {
   transform: translateY(-3px);
-  box-shadow: 0 8px 22px rgba(0, 30, 96, 0.35);
+  box-shadow: 0 8px 22px rgba(48, 43, 180, 0.35);
 }
 
 .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
@@ -674,6 +661,4 @@
   .profesor-form { padding: 20px 16px; }
   .form-actions { flex-direction: column; }
   .btn-submit, .btn-cancel { width: 100%; }
-
 }
-

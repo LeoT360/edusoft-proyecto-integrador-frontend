@@ -183,7 +183,7 @@ function ListaNotas() {
         ) : (
           <>
             <div className="table-container">
-              <table className="sura-table">
+              <table className="edusoft-table">
                 <thead>
                   <tr>
                     <th>Estudiante</th>

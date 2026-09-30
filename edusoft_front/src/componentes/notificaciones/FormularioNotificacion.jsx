@@ -10,7 +10,7 @@ import React, { useState } from 'react';
 import { notificationService } from '../../services/notificationService';
 
 // Importamos los estilos CSS (lo crearemos después)
-import './FormularioNotificacion_Sura.css';
+import './FormularioNotificacion_EduSoft.css';
 
 
 // Definimos nuestro componente como una función

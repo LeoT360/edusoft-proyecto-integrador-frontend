@@ -6,7 +6,7 @@
    .reportes-container {
     padding: 35px 24px;
     min-height: calc(100vh - 68px);
-    background: linear-gradient(135deg, rgba(48,43,180,0.04) 0%, rgba(0,214,240,0.04) 100%);
+    background: rgba(48,43,180,0.04);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
@@ -21,7 +21,7 @@
   }
   
   .reportes-header h2 {
-    color: var(--sura-azul-profundo);
+    color: var(--edusoft-azul-profundo);
     font-size: 2rem;
     font-weight: 700;
     margin: 0 0 6px;
@@ -34,19 +34,19 @@
     position: absolute;
     bottom: 0; left: 0;
     width: 60px; height: 3px;
-    background: linear-gradient(90deg, var(--sura-azul-profundo), var(--sura-aqua));
+    background: var(--edusoft-azul-profundo);
     border-radius: 2px;
   }
   
   .reportes-subtitulo {
-    color: var(--sura-texto-secundario, #666);
+    color: var(--edusoft-texto-secundario, #666);
     font-size: 14px;
     margin: 0;
   }
   
   .btn-nuevo-reporte {
     padding: 11px 26px;
-    background: linear-gradient(135deg, var(--sura-azul-profundo), var(--sura-aqua));
+    background: var(--edusoft-azul-profundo);
     color: white;
     border: none;
     border-radius: 25px;
@@ -81,7 +81,7 @@
     border: none;
     border-bottom: 3px solid transparent;
     margin-bottom: -2px;
-    color: var(--sura-texto-secundario, #666);
+    color: var(--edusoft-texto-secundario, #666);
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
@@ -90,18 +90,18 @@
   }
   
   .tab-btn:hover {
-    color: var(--sura-azul-profundo);
+    color: var(--edusoft-azul-profundo);
     background: rgba(48,43,180,0.04);
   }
   
   .tab-activo {
-    color: var(--sura-azul-profundo) !important;
-    border-bottom-color: var(--sura-aqua) !important;
+    color: var(--edusoft-azul-profundo) !important;
+    border-bottom-color: var(--edusoft-aqua) !important;
   }
   
   .tab-badge {
     background: rgba(0,214,240,0.15);
-    color: var(--sura-aqua);
+    color: var(--edusoft-aqua);
     padding: 2px 8px;
     border-radius: 12px;
     font-size: 12px;
@@ -109,7 +109,7 @@
   }
   
   .tab-activo .tab-badge {
-    background: var(--sura-aqua);
+    background: var(--edusoft-aqua);
     color: white;
   }
   
@@ -158,9 +158,9 @@
     height: 3px;
   }
   
-  .kpi-azul::before    { background: linear-gradient(90deg, var(--sura-azul-profundo), var(--sura-aqua)); }
-  .kpi-aqua::before    { background: linear-gradient(90deg, var(--sura-aqua), #00d4ff); }
-  .kpi-amarillo::before { background: linear-gradient(90deg, #FDB913, #FFA000); }
+  .kpi-azul::before    { background: var(--edusoft-azul-profundo); }
+  .kpi-aqua::before    { background: var(--edusoft-aqua); }
+  .kpi-amarillo::before { background: #E5A11A; }
   
   .kpi-icono {
     font-size: 24px;
@@ -172,13 +172,13 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: var(--sura-texto-secundario, #666);
+    color: var(--edusoft-texto-secundario, #666);
   }
   
   .kpi-valor {
     font-size: 2rem;
     font-weight: 800;
-    color: var(--sura-azul-profundo);
+    color: var(--edusoft-azul-profundo);
     line-height: 1;
   }
   
@@ -192,7 +192,7 @@
   
   .kpi-barra-fill {
     height: 100%;
-    background: linear-gradient(90deg, var(--sura-azul-profundo), var(--sura-aqua));
+    background: var(--edusoft-azul-profundo);
     border-radius: 10px;
     transition: width 1s ease;
   }
@@ -201,7 +201,7 @@
   .reportes-lista { margin-top: 8px; }
   
   .lista-titulo {
-    color: var(--sura-azul-profundo);
+    color: var(--edusoft-azul-profundo);
     font-size: 15px;
     font-weight: 700;
     margin: 0 0 14px;
@@ -237,12 +237,12 @@
   }
   
   .reporte-row-info strong {
-    color: var(--sura-azul-profundo);
+    color: var(--edusoft-azul-profundo);
     font-size: 14px;
   }
   
   .reporte-row-detalle {
-    color: var(--sura-texto-secundario, #666);
+    color: var(--edusoft-texto-secundario, #666);
     font-size: 13px;
   }
   
@@ -254,7 +254,7 @@
   
   .btn-rep-ver {
     padding: 7px 14px;
-    background: linear-gradient(135deg, var(--sura-azul-profundo), var(--sura-aqua));
+    background: var(--edusoft-azul-profundo);
     color: white;
     border: none;
     border-radius: 10px;
@@ -269,7 +269,7 @@
   .btn-rep-editar {
     padding: 7px 14px;
     background: rgba(253,185,19,0.15);
-    color: #a07000;
+    color: #92400E;
     border: 1px solid rgba(253,185,19,0.4);
     border-radius: 10px;
     font-size: 12px;
@@ -278,13 +278,13 @@
     transition: all 0.25s ease;
   }
   
-  .btn-rep-editar:hover { background: #FDB913; color: var(--sura-azul-profundo); transform: scale(1.05); }
+  .btn-rep-editar:hover { background: #E5A11A; color: var(--edusoft-azul-profundo); transform: scale(1.05); }
   
   /* ── Estado vacío ── */
   .reportes-vacio {
     text-align: center;
     padding: 60px 20px;
-    color: var(--sura-texto-secundario, #666);
+    color: var(--edusoft-texto-secundario, #666);
   }
   
   .reportes-vacio-icono { font-size: 3rem; display: block; margin-bottom: 12px; }
@@ -292,7 +292,7 @@
   .btn-nuevo-reporte-vacio {
     margin-top: 14px;
     padding: 10px 24px;
-    background: linear-gradient(135deg, var(--sura-azul-profundo), var(--sura-aqua));
+    background: var(--edusoft-azul-profundo);
     color: white;
     border: none;
     border-radius: 20px;
@@ -345,7 +345,7 @@
     justify-content: space-between;
     align-items: flex-start;
     padding: 22px 24px 18px;
-    background: linear-gradient(135deg, var(--sura-azul-profundo), var(--sura-aqua));
+    background: var(--edusoft-azul-profundo);
     border-radius: 20px 20px 0 0;
   }
   
@@ -389,7 +389,7 @@
   }
   
   .modal-rep-seccion h4 {
-    color: var(--sura-azul-profundo);
+    color: var(--edusoft-azul-profundo);
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
@@ -412,14 +412,14 @@
   
   .fila-rep-label {
     font-weight: 600;
-    color: var(--sura-azul-profundo);
+    color: var(--edusoft-azul-profundo);
     font-size: 13px;
     min-width: 160px;
     flex-shrink: 0;
   }
   
   .fila-rep-valor {
-    color: var(--sura-gris-oscuro, #484949);
+    color: var(--edusoft-gris-oscuro, #484949);
     font-size: 13px;
     text-align: right;
   }
@@ -433,8 +433,8 @@
   .btn-rep-editar-modal {
     width: 100%;
     padding: 11px;
-    background: linear-gradient(135deg, #FDB913, #FFA000);
-    color: var(--sura-azul-profundo);
+    background: #E5A11A;
+    color: var(--edusoft-azul-profundo);
     border: none;
     border-radius: 12px;
     font-size: 14px;
@@ -462,7 +462,7 @@
   
   .rep-form legend {
     font-weight: 700;
-    color: var(--sura-azul-profundo);
+    color: var(--edusoft-azul-profundo);
     padding: 4px 14px;
     background: rgba(0,214,240,0.1);
     border-radius: 8px;
@@ -473,7 +473,7 @@
   .modal-rep::-webkit-scrollbar { width: 6px; }
   .modal-rep::-webkit-scrollbar-track { background: rgba(48,43,180,0.05); border-radius: 10px; }
   .modal-rep::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, var(--sura-azul-profundo), var(--sura-aqua));
+    background: var(--edusoft-azul-profundo);
     border-radius: 10px;
   }
   
@@ -521,13 +521,13 @@
     border-radius: 25px;
     font-size: 14px;
     background: rgba(255,255,255,0.95);
-    color: var(--sura-azul-profundo);
+    color: var(--edusoft-azul-profundo);
     transition: all 0.3s ease;
   }
   
   .reportes-search:focus {
     outline: none;
-    border-color: var(--sura-aqua);
+    border-color: var(--edusoft-aqua);
     box-shadow: 0 0 0 3px rgba(0,214,240,0.12);
   }
   
@@ -537,7 +537,7 @@
     border-radius: 50%;
     border: none;
     background: rgba(48,43,180,0.1);
-    color: var(--sura-azul-profundo);
+    color: var(--edusoft-azul-profundo);
     font-size: 12px;
     font-weight: 700;
     cursor: pointer;
@@ -546,13 +546,13 @@
   }
   
   .btn-limpiar-search:hover {
-    background: var(--sura-azul-profundo);
+    background: var(--edusoft-azul-profundo);
     color: white;
   }
   
   .reportes-resultados-info {
     font-size: 13px;
-    color: var(--sura-texto-secundario, #666);
+    color: var(--edusoft-texto-secundario, #666);
     margin: 0 0 14px;
     padding-left: 6px;
   }

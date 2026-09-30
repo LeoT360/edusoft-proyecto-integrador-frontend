@@ -92,7 +92,7 @@ function UsuarioFormulario() {
         ← Volver al inicio
       </button>
 
-      <img src={logoEdusoft} alt="Logo Edusoft" className="logo-sura-formulario" />
+      <img src={logoEdusoft} alt="Logo Edusoft" className="logo-edusoft-formulario" />
 
       <form onSubmit={envioDatos} className="usuario-formulario">
         <h2>Registro de usuario</h2>

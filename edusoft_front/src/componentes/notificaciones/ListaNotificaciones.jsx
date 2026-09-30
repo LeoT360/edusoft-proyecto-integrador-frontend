@@ -5,7 +5,7 @@
 import React, { useState, useEffect } from 'react';
 import { notificationService } from '../../services/notificationService';
 import EditarNotificacion from './EditarNotificacion';
-import './ListaNotificaciones_Sura.css';
+import './ListaNotificaciones_EduSoft.css';
 
 
 function ListaNotificaciones() {

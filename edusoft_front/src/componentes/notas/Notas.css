@@ -15,7 +15,7 @@
   font-size: 22px;
   margin-bottom: 20px;
   text-align: center;
-  color: #302BB4;
+  color: #1D4ED8;
 }
 
 /* ===============================
@@ -68,23 +68,23 @@
 }
 
 .btn-primary {
-  background-color: #0055a4;
+  background-color: #1D4ED8;
   color: #ffffff;
   border: none;
 }
 
 .btn-primary:hover {
-  background-color: #302BB4;
+  background-color: #1D4ED8;
 }
 
 .btn-outline {
   background: transparent;
-  border: 1px solid #0055a4;
-  color: #0055a4;
+  border: 1px solid #1D4ED8;
+  color: #1D4ED8;
 }
 
 .btn-outline:hover {
-  background-color: #0055a4;
+  background-color: #1D4ED8;
   color: #ffffff;
 }
 
@@ -95,34 +95,34 @@
   overflow-x: auto;
 }
 
-.sura-table {
+.edusoft-table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.sura-table th,
-.sura-table td {
+.edusoft-table th,
+.edusoft-table td {
   padding: 12px;
   font-size: 14px;
   text-align: left;
 }
 
-.sura-table thead {
-  background-color: #0055a4;
+.edusoft-table thead {
+  background-color: #1D4ED8;
   color: #ffffff;
 }
 
-.sura-table tbody tr {
+.edusoft-table tbody tr {
   border-bottom: 1px solid #e0e6ef;
 }
 
 /* Modo Claro Hover */
-body.light .sura-table tbody tr:hover {
+body.light .edusoft-table tbody tr:hover {
   background-color: #f0f6ff;
 }
 
 /* Modo Oscuro Hover */
-body.dark .sura-table tbody tr:hover {
+body.dark .edusoft-table tbody tr:hover {
   background-color: #1e293b; 
 }
 
@@ -143,13 +143,13 @@ body.dark .sura-table tbody tr:hover {
   cursor: pointer;
   transition: 0.2s;
   background: transparent;
-  border: 1px solid #0055a4;
-  color: #0055a4;
+  border: 1px solid #1D4ED8;
+  color: #1D4ED8;
 }
 
 .pagination button:hover,
 .pagination button.active {
-  background-color: #0055a4;
+  background-color: #1D4ED8;
   color: #ffffff;
 }
 
@@ -177,7 +177,7 @@ body.dark .sura-table tbody tr:hover {
 .admin-form button {
   grid-column: 1 / -1;
   padding: 10px;
-  background: #0055a4;
+  background: #1D4ED8;
   color: white;
   border: none;
   border-radius: 8px;
@@ -200,7 +200,7 @@ body.dark .sura-table tbody tr:hover {
     padding: 16px;
   }
 
-  .sura-table {
+  .edusoft-table {
     min-width: 600px;
   }
 }

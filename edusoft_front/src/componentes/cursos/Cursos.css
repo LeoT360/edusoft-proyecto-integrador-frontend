@@ -6,7 +6,7 @@
 .cursos-container {
   padding: 35px 24px;
   min-height: calc(100vh - 68px);
-  background: linear-gradient(135deg, rgba(48, 43, 180, 0.04) 0%, rgba(0, 214, 240, 0.04) 100%);
+  background: rgba(48, 43, 180, 0.04);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -21,7 +21,7 @@
 }
 
 .cursos-header-texto h2 {
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
   font-size: 2rem;
   font-weight: 700;
   margin: 0 0 6px;
@@ -34,19 +34,19 @@
   position: absolute;
   bottom: 0; left: 0;
   width: 60px; height: 3px;
-  background: linear-gradient(90deg, var(--sura-azul-profundo), var(--sura-aqua));
+  background: var(--edusoft-azul-profundo);
   border-radius: 2px;
 }
 
 .cursos-subtitulo {
-  color: var(--sura-texto-secundario, #666);
+  color: var(--edusoft-texto-secundario, #666);
   font-size: 14px;
   margin: 0;
 }
 
 .btn-nuevo-curso {
   padding: 11px 26px;
-  background: linear-gradient(135deg, var(--sura-azul-profundo), var(--sura-aqua));
+  background: var(--edusoft-azul-profundo);
   color: white;
   border: none;
   border-radius: 25px;
@@ -79,13 +79,13 @@
   border-radius: 25px;
   font-size: 14px;
   background: rgba(255,255,255,0.95);
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
   transition: all 0.3s ease;
 }
 
 .cursos-search:focus {
   outline: none;
-  border-color: var(--sura-aqua);
+  border-color: var(--edusoft-aqua);
   box-shadow: 0 0 0 3px rgba(0, 214, 240, 0.1);
 }
 
@@ -95,7 +95,7 @@
   border-radius: 25px;
   font-size: 14px;
   background: rgba(255,255,255,0.95);
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
   cursor: pointer;
   transition: all 0.3s ease;
   min-width: 160px;
@@ -103,7 +103,7 @@
 
 .cursos-select-filtro:focus {
   outline: none;
-  border-color: var(--sura-aqua);
+  border-color: var(--edusoft-aqua);
 }
 
 /* ===== ESTADOS ===== */
@@ -119,7 +119,7 @@
 .cursos-vacio {
   text-align: center;
   padding: 60px 20px;
-  color: var(--sura-texto-secundario, #666);
+  color: var(--edusoft-texto-secundario, #666);
 }
 
 .cursos-vacio-icono { font-size: 3rem; display: block; margin-bottom: 12px; }
@@ -128,8 +128,8 @@
   margin-top: 14px;
   padding: 8px 20px;
   background: rgba(0, 214, 240, 0.1);
-  color: var(--sura-aqua);
-  border: 2px solid var(--sura-aqua);
+  color: var(--edusoft-aqua);
+  border: 2px solid var(--edusoft-aqua);
   border-radius: 20px;
   cursor: pointer;
   font-size: 13px;
@@ -138,7 +138,7 @@
 }
 
 .btn-limpiar-filtros:hover {
-  background: var(--sura-aqua);
+  background: var(--edusoft-aqua);
   color: white;
 }
 
@@ -176,7 +176,7 @@
 
 /* Franja de tipo */
 .curso-tipo-franja {
-  background: linear-gradient(135deg, var(--sura-azul-profundo), var(--sura-aqua));
+  background: var(--edusoft-azul-profundo);
   color: white;
   font-size: 11px;
   font-weight: 700;
@@ -204,7 +204,7 @@
 
 .badge-virtual {
   background: rgba(0, 214, 240, 0.12);
-  color: var(--sura-aqua);
+  color: var(--edusoft-aqua);
   border: 1px solid rgba(0, 214, 240, 0.3);
 }
 
@@ -214,7 +214,7 @@
 }
 
 .curso-titulo {
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
   font-size: 1.1rem;
   font-weight: 700;
   margin: 0 0 8px;
@@ -223,13 +223,13 @@
 
 .curso-maestro {
   font-size: 13px;
-  color: var(--sura-texto-secundario, #666);
+  color: var(--edusoft-texto-secundario, #666);
   margin: 0 0 10px;
 }
 
 .curso-descripcion {
   font-size: 13px;
-  color: var(--sura-texto-principal, #333);
+  color: var(--edusoft-texto-principal, #333);
   line-height: 1.5;
   margin: 0 0 12px;
 }
@@ -244,7 +244,7 @@
 
 .curso-meta-item {
   background: rgba(48, 43, 180, 0.06);
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
   padding: 3px 10px;
   border-radius: 12px;
   font-size: 12px;
@@ -259,13 +259,13 @@
 }
 
 .estrellas {
-  color: #FDB913;
+  color: #E5A11A;
   font-size: 15px;
   letter-spacing: 1px;
 }
 
 .cal-numero {
-  color: var(--sura-texto-secundario, #666);
+  color: var(--edusoft-texto-secundario, #666);
   font-size: 12px;
   font-weight: 600;
 }
@@ -282,7 +282,7 @@
 .btn-curso-ver {
   flex: 1;
   padding: 8px;
-  background: linear-gradient(135deg, var(--sura-azul-profundo), var(--sura-aqua));
+  background: var(--edusoft-azul-profundo);
   color: white;
   border: none;
   border-radius: 10px;
@@ -297,7 +297,7 @@
 .btn-curso-editar {
   padding: 8px 14px;
   background: rgba(253, 185, 19, 0.15);
-  color: #a07000;
+  color: #92400E;
   border: 1px solid rgba(253, 185, 19, 0.4);
   border-radius: 10px;
   font-size: 12px;
@@ -307,8 +307,8 @@
 }
 
 .btn-curso-editar:hover {
-  background: #FDB913;
-  color: var(--sura-azul-profundo);
+  background: #E5A11A;
+  color: var(--edusoft-azul-profundo);
   transform: scale(1.03);
 }
 
@@ -354,7 +354,7 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 22px 24px 18px;
-  background: linear-gradient(135deg, var(--sura-azul-profundo), var(--sura-aqua));
+  background: var(--edusoft-azul-profundo);
   border-radius: 20px 20px 0 0;
 }
 
@@ -405,7 +405,7 @@
 }
 
 .modal-curso-seccion h4 {
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
@@ -429,44 +429,44 @@
 
 .fila-label {
   font-weight: 600;
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
   font-size: 13px;
   min-width: 140px;
   flex-shrink: 0;
 }
 
 .fila-valor {
-  color: var(--sura-gris-oscuro, #484949);
+  color: var(--edusoft-gris-oscuro, #484949);
   font-size: 13px;
   text-align: right;
 }
 
 .fila-valor-bloque {
-  color: var(--sura-gris-oscuro, #484949);
+  color: var(--edusoft-gris-oscuro, #484949);
   font-size: 13px;
   line-height: 1.5;
   margin: 6px 0 0;
 }
 
 .modal-descripcion {
-  color: var(--sura-texto-principal, #333);
+  color: var(--edusoft-texto-principal, #333);
   font-size: 14px;
   line-height: 1.6;
   margin: 0;
 }
 
 .estrellas-modal {
-  color: #FDB913;
+  color: #E5A11A;
   font-size: 16px;
 }
 
 .modal-aviso-estudiante-curso {
   padding: 12px 16px;
   background: rgba(253, 185, 19, 0.1);
-  border-left: 4px solid #FDB913;
+  border-left: 4px solid #E5A11A;
   border-radius: 8px;
   font-size: 13px;
-  color: var(--sura-texto-principal, #333);
+  color: var(--edusoft-texto-principal, #333);
 }
 
 .modal-curso-footer {
@@ -478,8 +478,8 @@
 .btn-curso-editar-modal {
   width: 100%;
   padding: 11px;
-  background: linear-gradient(135deg, #FDB913 0%, #FFA000 100%);
-  color: var(--sura-azul-profundo);
+  background: #E5A11A;
+  color: var(--edusoft-azul-profundo);
   border: none;
   border-radius: 12px;
   font-size: 14px;
@@ -497,7 +497,7 @@
 .modal-curso::-webkit-scrollbar { width: 6px; }
 .modal-curso::-webkit-scrollbar-track { background: rgba(48,43,180,0.05); border-radius:10px; }
 .modal-curso::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, var(--sura-azul-profundo), var(--sura-aqua));
+  background: var(--edusoft-azul-profundo);
   border-radius: 10px;
 }
 
@@ -512,7 +512,7 @@
 }
 
 .curso-form-header {
-  background: linear-gradient(135deg, var(--sura-azul-profundo), var(--sura-aqua));
+  background: var(--edusoft-azul-profundo);
   color: white;
   padding: 26px 32px;
   text-align: center;
@@ -543,7 +543,7 @@
 
 .curso-form legend {
   font-weight: 700;
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
   padding: 4px 14px;
   background: rgba(0, 214, 240, 0.1);
   border-radius: 8px;
@@ -577,7 +577,7 @@
 .curso-presencialidad input {
   width: 18px;
   height: 18px;
-  accent-color: var(--sura-aqua);
+  accent-color: var(--edusoft-aqua);
   cursor: pointer;
   padding: 0;
   border: none;
@@ -585,7 +585,7 @@
 
 .curso-presencialidad label {
   font-weight: 600;
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
   cursor: pointer;
   font-size: 14px;
   margin: 0;

@@ -5,7 +5,7 @@
 .asistencias-container {
   padding: 35px 24px;
   min-height: calc(100vh - 68px);
-  background: linear-gradient(135deg, rgba(48,43,180,0.04) 0%, rgba(0,214,240,0.04) 100%);
+  background: rgba(48,43,180,0.04);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .asistencias-header h2 {
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
   font-size: 2rem;
   font-weight: 700;
   margin: 0 0 6px;
@@ -33,19 +33,19 @@
   position: absolute;
   bottom: 0; left: 0;
   width: 60px; height: 3px;
-  background: linear-gradient(90deg, var(--sura-azul-profundo), var(--sura-aqua));
+  background: var(--edusoft-azul-profundo);
   border-radius: 2px;
 }
 
 .asistencias-subtitulo {
-  color: var(--sura-texto-secundario, #666);
+  color: var(--edusoft-texto-secundario, #666);
   font-size: 14px;
   margin: 0;
 }
 
 .btn-nueva-asistencia {
   padding: 11px 26px;
-  background: linear-gradient(135deg, var(--sura-azul-profundo), var(--sura-aqua));
+  background: var(--edusoft-azul-profundo);
   color: white;
   border: none;
   border-radius: 25px;
@@ -94,21 +94,21 @@
   height: 3px;
 }
 
-.kpi-presentes::before { background: linear-gradient(90deg, #22c55e, #16a34a); }
-.kpi-ausentes::before  { background: linear-gradient(90deg, #ef4444, #dc2626); }
-.kpi-pct::before       { background: linear-gradient(90deg, var(--sura-azul-profundo), var(--sura-aqua)); }
-.kpi-total::before     { background: linear-gradient(90deg, #FDB913, #FFA000); }
+.kpi-presentes::before { background: #22c55e; }
+.kpi-ausentes::before  { background: #ef4444; }
+.kpi-pct::before       { background: var(--edusoft-azul-profundo); }
+.kpi-total::before     { background: #E5A11A; }
 
 .kpi-num {
   font-size: 2rem;
   font-weight: 800;
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
   line-height: 1;
 }
 
 .kpi-lbl {
   font-size: 12px;
-  color: var(--sura-texto-secundario, #666);
+  color: var(--edusoft-texto-secundario, #666);
   font-weight: 600;
 }
 
@@ -129,7 +129,7 @@
 }
 
 .asistencia-form-panel h3 {
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
   margin: 0 0 18px;
   font-size: 1.1rem;
 }
@@ -154,7 +154,7 @@
 
 .asist-checkbox input {
   width: 18px; height: 18px;
-  accent-color: var(--sura-aqua);
+  accent-color: var(--edusoft-aqua);
   cursor: pointer;
   padding: 0;
   border: none;
@@ -162,7 +162,7 @@
 
 .asist-checkbox label {
   font-weight: 600;
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
   cursor: pointer;
   font-size: 14px;
   margin: 0;
@@ -192,13 +192,13 @@
   border-radius: 25px;
   font-size: 14px;
   background: rgba(255,255,255,0.95);
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
   transition: all 0.3s ease;
 }
 
 .asistencias-search:focus {
   outline: none;
-  border-color: var(--sura-aqua);
+  border-color: var(--edusoft-aqua);
   box-shadow: 0 0 0 3px rgba(0,214,240,0.1);
 }
 
@@ -247,7 +247,7 @@
 .asistencias-vacio {
   text-align: center;
   padding: 50px 20px;
-  color: var(--sura-texto-secundario, #666);
+  color: var(--edusoft-texto-secundario, #666);
 }
 
 .asistencias-vacio span { font-size: 3rem; display: block; margin-bottom: 12px; }
@@ -268,7 +268,7 @@
 }
 
 .asistencias-tabla thead tr {
-  background: linear-gradient(135deg, var(--sura-azul-profundo), var(--sura-aqua));
+  background: var(--edusoft-azul-profundo);
 }
 
 .asistencias-tabla th {
@@ -284,7 +284,7 @@
 .asistencias-tabla td {
   padding: 12px 16px;
   border-bottom: 1px solid rgba(48,43,180,0.06);
-  color: var(--sura-gris-oscuro, #484949);
+  color: var(--edusoft-gris-oscuro, #484949);
 }
 
 .asistencias-tabla tbody tr:hover {
@@ -294,8 +294,8 @@
 .fila-presente { border-left: 3px solid #22c55e; }
 .fila-ausente  { border-left: 3px solid #ef4444; }
 
-.td-id     { color: var(--sura-texto-secundario, #999); font-size: 12px; }
-.td-nombre { font-weight: 600; color: var(--sura-azul-profundo); }
+.td-id     { color: var(--edusoft-texto-secundario, #999); font-size: 12px; }
+.td-nombre { font-weight: 600; color: var(--edusoft-azul-profundo); }
 
 /* Badges */
 .badge-asistencia {

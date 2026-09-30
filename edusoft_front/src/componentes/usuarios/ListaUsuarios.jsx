@@ -110,13 +110,13 @@ function ListaUsuarios() {
       </div>
 
       {!error && usuarios.length === 0 && (
-        <p style={{ textAlign: 'center', color: 'var(--sura-texto-secundario)' }}>
+        <p style={{ textAlign: 'center', color: 'var(--edusoft-texto-secundario)' }}>
           No hay usuarios registrados.
         </p>
       )}
 
       {!error && usuarios.length > 0 && usuariosFiltrados.length === 0 && (
-        <p style={{ textAlign: 'center', color: 'var(--sura-texto-secundario)' }}>
+        <p style={{ textAlign: 'center', color: 'var(--edusoft-texto-secundario)' }}>
           No se encontraron usuarios con esa búsqueda.
         </p>
       )}

@@ -8,10 +8,9 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { profesorService } from '../../services/profesorService';
 import './Profesores.css';
-import profesoresImg from '../../assets/logo_profesor.jpeg';
+import defaultAvatar from '../../assets/icon-edusoft.svg';
 
-
-const DEFAULT_AVATAR = 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png';
+const DEFAULT_AVATAR = defaultAvatar;
 
 function ListaProfesores() {
   const navigate = useNavigate();
@@ -78,15 +77,8 @@ function ListaProfesores() {
     <div className="profesores-container">
 
       {/* ENCABEZADO */}
-     <div className="list-header">
-  <h2 className="titulo-profesores">
-    <img
-      src={profesoresImg}
-      alt="Profesores"
-      className="icono-profesores"
-    />
-    {esProfesor ? 'Gestión de Profesores' : 'Nuestros Profesores'}
-  </h2>
+      <div className="list-header">
+        <h2>🎓 {esProfesor ? 'Gestión de Profesores' : 'Nuestros Profesores'}</h2>
         {esProfesor && (
           <button
             className="add-profesor-btn"
@@ -214,7 +206,7 @@ function ListaProfesores() {
 // ====================================
 function ModalDetalle({ prof, esProfesor, onCerrar }) {
   const nombre = prof.nombreCompleto || prof.nombre || 'Sin nombre';
-  const foto   = prof.foto || 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png';
+  const foto   = prof.foto || DEFAULT_AVATAR;
 
   return (
     <div className="modal-overlay" onClick={onCerrar}>
@@ -226,7 +218,7 @@ function ModalDetalle({ prof, esProfesor, onCerrar }) {
             src={foto}
             alt={nombre}
             className="modal-foto"
-            onError={e => { e.target.src = 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png'; }}
+            onError={e => { e.target.src = DEFAULT_AVATAR; }}
           />
           <div>
             <h3>{nombre}</h3>

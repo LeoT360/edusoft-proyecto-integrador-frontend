@@ -53,7 +53,7 @@ import './componentes/shared/Colores.css';
 // ── Inicializar Dark Mode ANTES del primer render ──────────────
 // Evita el "flash" de tema claro al recargar en modo oscuro
 (function initDarkMode() {
-  if (localStorage.getItem('sura-dark') === 'true') {
+  if (localStorage.getItem('edusoft-dark') === 'true') {
     document.body.classList.add('dark');
   }
 })();
@@ -67,7 +67,7 @@ function RutaProtegida({ children }) {
   return (
     <>
       <Navbar />
-      {children}
+      <main className="protected-content">{children}</main>
     </>
   );
 }
@@ -85,7 +85,7 @@ function RutaSoloProfesor({ children }) {
   return (
     <>
       <Navbar />
-      {children}
+      <main className="protected-content">{children}</main>
     </>
   );
 }

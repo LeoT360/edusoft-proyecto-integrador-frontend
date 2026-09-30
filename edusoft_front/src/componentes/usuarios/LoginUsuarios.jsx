@@ -79,7 +79,7 @@ function LoginUsuarios() {
         ← Volver al inicio
       </button>
 
-      <img src={logoEdusoft} alt="Logo Edusoft" className="logo-sura-login" />
+      <img src={logoEdusoft} alt="Logo Edusoft" className="logo-edusoft-login" />
 
       <form className="login-formulario" onSubmit={envioDatos}>
         <h2>Iniciar sesión</h2>

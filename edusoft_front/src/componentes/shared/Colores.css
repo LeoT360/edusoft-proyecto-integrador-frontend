@@ -1,500 +1,455 @@
 /* ====================================
-  COLORES CORPORATIVOS EDUSOFT - UNIFICADO
-   Variables globales para todo el proyecto
-   Dark Mode: añadir clase "dark" al <body>
+   EDUSOFT — PALETA CORPORATIVA
+   Variables globales. Se mantienen los nombres
+   --edusoft-* para no romper los módulos existentes.
    ==================================== */
-
-   :root {
-    /* ===== PALETA PRINCIPAL EDUSOFT ===== */
-    --sura-azul-profundo: #302BB4;
-    --sura-aqua: #00D6F0;
-    --sura-blanco: #FFFFFF;
-    --sura-gris-oscuro: #17203A;
-    --sura-gris-claro: #EEF1F7;
-  
-    /* ===== ALIASES PARA CONSISTENCIA ===== */
-    --sura-azul-medio: #4D48D6;
-    --sura-azul-cielo: #6CE7F5;
-    --sura-amarillo: #FDB913;
-    --sura-amarillo-oscuro: #FFA000;
-  
-    /* ===== TEXTOS ===== */
-    --sura-texto-principal: var(--sura-gris-oscuro);
-    --sura-texto-secundario: #5D6780;
-    --sura-texto-sobre-azul: var(--sura-blanco);
-  
-    /* ===== FONDO GENERAL DE LA APP ===== */
-    --sura-fondo-app: #F5F7FC;
-    --sura-fondo-card: rgba(255, 255, 255, 0.98);
-    --sura-fondo-card-hover: rgba(48, 43, 180, 0.04);
-    --sura-borde-card: rgba(48, 43, 180, 0.10);
-    --sura-borde-input: rgba(48, 43, 180, 0.16);
-  
-    /* ===== TABLA ===== */
-    --sura-tabla-th-bg: linear-gradient(135deg, var(--sura-azul-profundo), var(--sura-aqua));
-    --sura-tabla-th-color: #ffffff;
-    --sura-tabla-td-color: var(--sura-gris-oscuro);
-    --sura-tabla-borde: rgba(48, 43, 180, 0.08);
-    --sura-tabla-hover: rgba(0, 214, 240, 0.06);
-  
-    /* ===== NAVBAR ===== */
-    --sura-navbar-bg: linear-gradient(135deg, #241F8F 0%, var(--sura-azul-profundo) 100%);
-    --sura-navbar-texto: #ffffff;
-    --sura-menu-bg: #ffffff;
-    --sura-menu-header-bg: linear-gradient(135deg, #241F8F, var(--sura-azul-profundo));
-    --sura-menu-item-hover: rgba(0, 214, 240, 0.08);
-    --sura-menu-item-color: var(--sura-azul-profundo);
-    --sura-menu-divisor: rgba(48, 43, 180, 0.10);
-    --sura-menu-subitem-color: #4B5570;
-    --sura-menu-subitem-hover: rgba(0, 214, 240, 0.06);
-    --sura-menu-pie-bg: rgba(48, 43, 180, 0.05);
-  
-    /* ===== ESTADOS / FEEDBACK ===== */
-    --sura-exito: #28a745;
-    --sura-exito-fondo: rgba(40, 167, 69, 0.15);
-    --sura-exito-texto: #155724;
-  
-    --sura-error: #dc3545;
-    --sura-error-fondo: rgba(220, 53, 69, 0.15);
-    --sura-error-texto: #721c24;
-  
-    --sura-info: var(--sura-aqua);
-    --sura-info-fondo: rgba(0, 214, 240, 0.15);
-    --sura-info-texto: var(--sura-azul-medio);
-  
-    --sura-advertencia: var(--sura-amarillo);
-    --sura-advertencia-fondo: rgba(253, 185, 19, 0.15);
-    --sura-advertencia-texto: #856404;
-  
-    /* ===== GRADIENTES REUTILIZABLES ===== */
-    --sura-gradiente-principal: linear-gradient(135deg, var(--sura-azul-profundo) 0%, var(--sura-aqua) 100%);
-    --sura-gradiente-dorado: linear-gradient(135deg, var(--sura-amarillo) 0%, var(--sura-amarillo-oscuro) 100%);
-    --sura-gradiente-peligro: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
-  
-    /* ===== GLASSMORPHISM ===== */
-    --sura-glass-fondo: rgba(255, 255, 255, 0.85);
-    --sura-glass-borde: rgba(255, 255, 255, 0.3);
-    --sura-glass-sombra: 0 8px 32px 0 rgba(48, 43, 180, 0.15), inset 0 1px 0 0 rgba(255, 255, 255, 0.5);
-    --sura-glass-blur: blur(20px) saturate(180%);
-  
-    /* ===== BORDES Y RADIOS ===== */
-    --sura-radio-sm: 8px;
-    --sura-radio-md: 12px;
-    --sura-radio-lg: 16px;
-    --sura-radio-xl: 20px;
-  
-    /* ===== SOMBRAS ===== */
-    --sura-sombra-sm: 0 2px 8px rgba(48, 43, 180, 0.10);
-    --sura-sombra-md: 0 4px 16px rgba(48, 43, 180, 0.14);
-    --sura-sombra-lg: 0 8px 32px rgba(48, 43, 180, 0.22);
-  
-    /* ===== TRANSICIONES ===== */
-    --sura-transicion: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  
-    /* ===== TOGGLE DARK MODE ===== */
-    --sura-toggle-bg: rgba(255,255,255,0.15);
-    --sura-toggle-icon: '🌙';
-  }
-  
-  /* ============================================================
-     DARK MODE — se activa añadiendo la clase "dark" al <body>
-     Todos los módulos heredan estas variables automáticamente
-     ============================================================ */
-  body.dark {
-    /* ===== PALETA ADAPTADA AL OSCURO ===== */
-    --sura-azul-profundo: #7EADFF;       /* texto azul → legible sobre fondo oscuro */
-    --sura-aqua: #00D6F0;
-    --sura-blanco: #1a1f2e;              /* superficies "blancas" → gris muy oscuro */
-    --sura-gris-oscuro: #e2e8f0;        /* texto principal → casi blanco */
-    --sura-gris-claro: #2d3748;         /* bordes suaves */
-  
-    /* ===== ALIASES ===== */
-    --sura-azul-medio: #4A90D9;
-    --sura-azul-cielo: #38bdf8;
-    --sura-amarillo: #FDB913;
-    --sura-amarillo-oscuro: #FFA000;
-  
-    /* ===== TEXTOS ===== */
-    --sura-texto-principal: #e2e8f0;
-    --sura-texto-secundario: #94a3b8;
-    --sura-texto-sobre-azul: #ffffff;
-  
-    /* ===== FONDO GENERAL DE LA APP ===== */
-    --sura-fondo-app: #0f1623;
-    --sura-fondo-card: rgba(26, 31, 46, 0.98);
-    --sura-fondo-card-hover: rgba(255, 255, 255, 0.04);
-    --sura-borde-card: rgba(255, 255, 255, 0.07);
-    --sura-borde-input: rgba(255, 255, 255, 0.12);
-  
-    /* ===== TABLA ===== */
-    --sura-tabla-th-bg: linear-gradient(135deg, #0f2050, #1a4080);
-    --sura-tabla-th-color: #e2e8f0;
-    --sura-tabla-td-color: #cbd5e1;
-    --sura-tabla-borde: rgba(255, 255, 255, 0.05);
-    --sura-tabla-hover: rgba(255, 255, 255, 0.04);
-  
-    /* ===== NAVBAR ===== */
-    --sura-navbar-bg: linear-gradient(135deg, #0a1128 0%, #0f1e4a 100%);
-    --sura-navbar-texto: #e2e8f0;
-    --sura-menu-bg: #161d30;
-    --sura-menu-header-bg: linear-gradient(135deg, #0a1128, #0f2050);
-    --sura-menu-item-hover: rgba(255, 255, 255, 0.06);
-    --sura-menu-item-color: #93c5fd;
-    --sura-menu-divisor: rgba(255, 255, 255, 0.07);
-    --sura-menu-subitem-color: #cbd5e1;
-    --sura-menu-subitem-hover: rgba(255, 255, 255, 0.05);
-    --sura-menu-pie-bg: rgba(0, 0, 0, 0.2);
-  
-    /* ===== ESTADOS / FEEDBACK ===== */
-    --sura-exito: #4ade80;
-    --sura-exito-fondo: rgba(74, 222, 128, 0.12);
-    --sura-exito-texto: #86efac;
-  
-    --sura-error: #f87171;
-    --sura-error-fondo: rgba(248, 113, 113, 0.12);
-    --sura-error-texto: #fca5a5;
-  
-    --sura-info: #38bdf8;
-    --sura-info-fondo: rgba(56, 189, 248, 0.12);
-    --sura-info-texto: #7dd3fc;
-  
-    --sura-advertencia: #fbbf24;
-    --sura-advertencia-fondo: rgba(251, 191, 36, 0.12);
-    --sura-advertencia-texto: #fde68a;
-  
-    /* ===== GRADIENTES ===== */
-    --sura-gradiente-principal: linear-gradient(135deg, #1e3a6e 0%, #1a4a7a 100%);
-    --sura-gradiente-dorado: linear-gradient(135deg, #FDB913 0%, #FFA000 100%);
-    --sura-gradiente-peligro: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%);
-  
-    /* ===== GLASSMORPHISM ===== */
-    --sura-glass-fondo: rgba(15, 22, 35, 0.85);
-    --sura-glass-borde: rgba(255, 255, 255, 0.08);
-    --sura-glass-sombra: 0 8px 32px 0 rgba(0, 0, 0, 0.4), inset 0 1px 0 0 rgba(255,255,255,0.05);
-  
-    /* ===== SOMBRAS ===== */
-    --sura-sombra-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-    --sura-sombra-md: 0 4px 16px rgba(0, 0, 0, 0.4);
-    --sura-sombra-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
-  
-    /* ===== TOGGLE ===== */
-    --sura-toggle-bg: rgba(0,0,0,0.25);
-  }
-  
-  /* ── Fondo base del body ── */
-  body {
-    background-color: var(--sura-fondo-app);
-    color: var(--sura-texto-principal);
-    transition: background-color 0.35s ease, color 0.35s ease;
-  }
-  
-  /* ── Inputs y selects globales en dark mode ── */
-  body.dark input,
-  body.dark select,
-  body.dark textarea {
-    background-color: #1e2740 !important;
-    color: #e2e8f0 !important;
-    border-color: rgba(255,255,255,0.12) !important;
-  }
-  
-  body.dark input::placeholder,
-  body.dark textarea::placeholder {
-    color: #64748b !important;
-  }
-  
-  body.dark input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(1);
-  }
-  
-  /* ============================================================
-     DARK MODE — OVERRIDES GLOBALES POR MÓDULO
-     Corrige texto ilegible hardcodeado en los CSS individuales.
-     No es necesario tocar ningún archivo de módulo.
-     ============================================================ */
-  
-  /* ── Contenedores / fondos de página ── */
-  body.dark .matricula-container,
-  body.dark .notas-container,
-  body.dark .cursos-container,
-  body.dark .asistencias-container,
-  body.dark .profesores-container,
-  body.dark .reportes-container,
-  body.dark .notificaciones-container,
-  body.dark .usuarios-container,
-  body.dark .home-container,
-  body.dark [class$="-container"] {
-    background: var(--sura-fondo-app) !important;
-    color: var(--sura-texto-principal) !important;
-  }
-  
-  /* ── Títulos de encabezado (h1 h2 h3) ── */
-  body.dark h1,
-  body.dark h2,
-  body.dark h3,
-  body.dark h4,
-  body.dark h5 {
-    color: var(--sura-azul-profundo) !important;
-  }
-  
-  /* ── Subtítulos y párrafos secundarios ── */
-  body.dark p,
-  body.dark [class*="-subtitulo"],
-  body.dark [class*="-descripcion"],
-  body.dark [class*="-label"],
-  body.dark [class*="-meta"] {
-    color: var(--sura-texto-secundario) !important;
-  }
-  
-  /* ── Cards / tarjetas ── */
-  body.dark [class*="-card"],
-  body.dark [class*="kpi-"],
-  body.dark [class*="-panel"],
-  body.dark [class*="-box"],
-  body.dark [class*="-tabla-wrap"],
-  body.dark [class*="-resumen"] {
-    background: var(--sura-fondo-card) !important;
-    border-color: var(--sura-borde-card) !important;
-    box-shadow: var(--sura-sombra-md) !important;
-  }
-  
-  /* ── Texto dentro de KPIs y cards ── */
-  body.dark [class*="kpi-"] span,
-  body.dark [class*="kpi-"] p,
-  body.dark [class*="-num"],
-  body.dark [class*="-lbl"] {
-    color: var(--sura-azul-profundo) !important;
-  }
-  
-  /* ── Tablas: body de filas ── */
-  body.dark table td,
-  body.dark [class*="-tabla"] td {
-    background: var(--sura-fondo-card) !important;
-    color: var(--sura-tabla-td-color) !important;
-    border-color: var(--sura-tabla-borde) !important;
-  }
-  
-  body.dark table tbody tr:hover td,
-  body.dark [class*="-tabla"] tbody tr:hover td {
-    background: var(--sura-fondo-card-hover) !important;
-  }
-  
-  /* ── Texto especial en tablas ── */
-  body.dark .td-nombre,
-  body.dark [class*="td-nombre"] {
-    color: var(--sura-azul-profundo) !important;
-  }
-  
-  body.dark .td-correo,
-  body.dark .td-id,
-  body.dark [class*="td-correo"],
-  body.dark [class*="td-id"] {
-    color: var(--sura-texto-secundario) !important;
-  }
-  
-  body.dark .td-valor,
-  body.dark [class*="td-valor"] {
-    color: #4ade80 !important;
-  }
-  
-  /* ── Buscador / inputs de búsqueda ── */
-  body.dark [class*="-search"],
-  body.dark [class*="buscar"],
-  body.dark [class*="search-input"] {
-    background: #1e2740 !important;
-    color: #e2e8f0 !important;
-    border-color: rgba(255,255,255,0.15) !important;
-  }
-  
-  /* ── Mensajes de error ── */
-  body.dark [class*="-error"] {
-    background: var(--sura-error-fondo) !important;
-    color: var(--sura-error-texto) !important;
-    border-color: var(--sura-error) !important;
-  }
-  
-  /* ── Mensajes de éxito ── */
-  body.dark [class*="message-success"],
-  body.dark [class*="-exito"],
-  body.dark [class*="success"] {
-    background: var(--sura-exito-fondo) !important;
-    color: var(--sura-exito-texto) !important;
-  }
-  
-  /* ── Estado vacío ── */
-  body.dark [class*="-vacio"],
-  body.dark [class*="-empty"] {
-    color: var(--sura-texto-secundario) !important;
-  }
-  
-  /* ── Badges de rol (SOLO PROFESORES, etc.) ── */
-  body.dark [class*="badge-prox"],
-  body.dark [class*="solo-prof"],
-  body.dark [class*="badge-rol"] {
-    background: rgba(0,214,240,0.15) !important;
-    color: var(--sura-aqua) !important;
-  }
-  
-  /* ── Texto de cargando ── */
-  body.dark [class*="cargando"] p,
-  body.dark [class*="loading"] p {
-    color: var(--sura-texto-secundario) !important;
-  }
-  
-  /* ── Formularios: labels y texto de campos ── */
-  body.dark .form-group label,
-  body.dark [class*="form-"] label {
-    color: var(--sura-azul-profundo) !important;
-  }
-  
-  body.dark .error-field,
-  body.dark [class*="error-field"] {
-    color: var(--sura-error-texto) !important;
-  }
-  
-  /* ── Prefijo $ en valor matrícula ── */
-  body.dark .input-prefix {
-    color: var(--sura-texto-secundario) !important;
-  }
-  
-  /* ── Resumen post-envío ── */
-  body.dark .resumen-label {
-    color: var(--sura-azul-profundo) !important;
-  }
-  body.dark .resumen-valor {
-    color: var(--sura-texto-principal) !important;
-  }
-  body.dark .resumen-redireccion {
-    color: var(--sura-texto-secundario) !important;
-  }
-  
-  /* ── Home: cards de acceso rápido ── */
-  body.dark [class*="home-card"],
-  body.dark [class*="acceso-card"],
-  body.dark [class*="modulo-card"] {
-    background: var(--sura-fondo-card) !important;
-    border-color: var(--sura-borde-card) !important;
-  }
-  
-  body.dark [class*="home-card"] h3,
-  body.dark [class*="home-card"] p,
-  body.dark [class*="acceso-card"] h3,
-  body.dark [class*="acceso-card"] p,
-  body.dark [class*="modulo-card"] h3,
-  body.dark [class*="modulo-card"] p {
-    color: var(--sura-texto-principal) !important;
-  }
-  
-  /* ── Línea decorativa bajo títulos (::after) ── */
-  /* Los gradientes se conservan, no hace falta override */
-  
-  /* ── Reportes: tabs / pestañas ── */
-  body.dark [class*="-tab"],
-  body.dark [class*="tab-btn"],
-  body.dark [class*="tab-item"] {
-    color: var(--sura-texto-secundario) !important;
-    border-color: transparent !important;
-  }
-  
-  body.dark [class*="-tab"].active,
-  body.dark [class*="-tab"][class*="activo"],
-  body.dark [class*="tab-btn"].active {
-    color: var(--sura-aqua) !important;
-    border-color: var(--sura-aqua) !important;
-  }
-  
-  /* ── Reportes: métricas / números grandes ── */
-  body.dark [class*="reporte-num"],
-  body.dark [class*="metric-value"],
-  body.dark [class*="-valor-grande"] {
-    color: var(--sura-azul-profundo) !important;
-  }
-  
-  /* ── Detalle de reporte / fila de reporte ── */
-  body.dark [class*="reporte-fila"],
-  body.dark [class*="reporte-item"] {
-    background: var(--sura-fondo-card) !important;
-    color: var(--sura-texto-principal) !important;
-    border-color: var(--sura-borde-card) !important;
-  }
-  
-  body.dark [class*="reporte-fila"] span,
-  body.dark [class*="reporte-item"] span,
-  body.dark [class*="reporte-fila"] p,
-  body.dark [class*="reporte-item"] p {
-    color: var(--sura-texto-secundario) !important;
-  }
-  
-  /* ── Sección "Detalle de Reportes" título ── */
-  body.dark [class*="detalle-titulo"],
-  body.dark [class*="seccion-titulo"] {
-    color: var(--sura-azul-profundo) !important;
-  }
-
-  /* ===============================
-   SWEETALERT DARK MODE
-================================ */
-
-body.dark .swal-dark {
-  background-color: #1e293b !important;
-  color: #e5e7eb !important;
+:root {
+  --edusoft-azul-profundo: #172554;
+  --edusoft-azul-medio: #1D4ED8;
+  --edusoft-azul-cielo: #3B82F6;
+  --edusoft-aqua: #3B82F6;
+  --edusoft-blanco: #FFFFFF;
+  --edusoft-gris-oscuro: #172033;
+  --edusoft-gris-claro: #F5F7FA;
+  --edusoft-amarillo: #E5A11A;
+  --edusoft-amarillo-oscuro: #B7791F;
+  --edusoft-texto-principal: #172033;
+  --edusoft-texto-secundario: #64748B;
+  --edusoft-texto-sobre-azul: #FFFFFF;
+  --edusoft-fondo-app: #F5F7FA;
+  --edusoft-fondo-card: #FFFFFF;
+  --edusoft-fondo-card-hover: #F8FAFC;
+  --edusoft-borde-card: #E2E8F0;
+  --edusoft-borde-input: #CBD5E1;
+  --edusoft-sombra-sm: 0 1px 3px rgba(15,23,42,.05);
+  --edusoft-sombra-md: 0 2px 6px rgba(15,23,42,.06);
+  --edusoft-exito: #16A34A;
+  --edusoft-exito-fondo: #DCFCE7;
+  --edusoft-exito-texto: #166534;
+  --edusoft-error: #DC2626;
+  --edusoft-error-fondo: #FEE2E2;
+  --edusoft-error-texto: #991B1B;
+  --edusoft-info: #2563EB;
+  --edusoft-info-fondo: #DBEAFE;
+  --edusoft-info-texto: #1E40AF;
+  --edusoft-advertencia: #E5A11A;
+  --edusoft-advertencia-fondo: #FEF3C7;
+  --edusoft-advertencia-texto: #92400E;
 }
 
-body.dark .swal-dark .swal2-title {
-  color: #e5e7eb !important;
+body.dark {
+  --edusoft-azul-profundo: #60A5FA;
+  --edusoft-azul-medio: #3B82F6;
+  --edusoft-azul-cielo: #93C5FD;
+  --edusoft-aqua: #60A5FA;
+  --edusoft-blanco: #1E293B;
+  --edusoft-gris-oscuro: #E2E8F0;
+  --edusoft-gris-claro: #0F172A;
+  --edusoft-texto-principal: #E2E8F0;
+  --edusoft-texto-secundario: #94A3B8;
+  --edusoft-texto-sobre-azul: #FFFFFF;
+  --edusoft-fondo-app: #0F172A;
+  --edusoft-fondo-card: #1E293B;
+  --edusoft-fondo-card-hover: #263449;
+  --edusoft-borde-card: #334155;
+  --edusoft-borde-input: #475569;
+  --edusoft-sombra-sm: none;
+  --edusoft-sombra-md: none;
 }
 
-body.dark .swal-dark .swal2-html-container {
-  color: #cbd5e1 !important;
+/* Base de tema */
+html, body, #root { min-height: 100%; }
+body { background: var(--edusoft-fondo-app); color: var(--edusoft-texto-principal); }
+body.dark { background: #0F172A !important; color: #E2E8F0 !important; }
+
+/* Componentes comunes: sobrios, sin glassmorphism ni sombras fuertes */
+body:not(.dark) [class*="card"], body:not(.dark) [class*="carta"],
+body:not(.dark) [class*="panel"], body:not(.dark) [class*="tabla-wrap"],
+body:not(.dark) [class*="resumen"] {
+  box-shadow: 0 2px 6px rgba(15,23,42,.06);
+  border-color: #E2E8F0;
 }
 
-/* ===============================
-   SWEETALERT DARK MODE FIX PRO
-================================ */
-
-/* Fondo del popup */
-body.dark .swal-dark {
-  background-color: #1e293b !important;
-  color: #e5e7eb !important;
-  border-radius: 12px !important;
+input, select, textarea {
+  border-color: var(--edusoft-borde-input) !important;
+  border-radius: 6px !important;
+}
+input:focus, select:focus, textarea:focus {
+  outline: none !important;
+  border-color: #3B82F6 !important;
+  box-shadow: 0 0 0 3px rgba(59,130,246,.12) !important;
 }
 
-/* Texto */
-body.dark .swal-dark .swal2-title {
-  color: #e5e7eb !important;
+/* Reduce excesos heredados sin tocar avatares/círculos funcionales. */
+[class*="btn"], button { border-radius: 6px; box-shadow: none; }
+[class*="card"], [class*="carta"], [class*="panel"], [class*="tabla-wrap"] { border-radius: 8px; }
+
+/* Dark mode */
+body.dark input, body.dark select, body.dark textarea {
+  background: #1E293B !important; color: #E2E8F0 !important; border-color: #475569 !important;
+}
+body.dark input::placeholder, body.dark textarea::placeholder { color: #94A3B8 !important; }
+body.dark [class*="card"], body.dark [class*="carta"], body.dark [class*="panel"],
+body.dark [class*="tabla-wrap"], body.dark [class*="resumen"] {
+  background: #1E293B !important; border-color: #334155 !important; box-shadow: none !important;
+}
+body.dark table td, body.dark table th { border-color: #334155 !important; }
+
+/* SweetAlert mantiene el mismo lenguaje visual */
+.swal2-popup { border-radius: 8px !important; box-shadow: 0 8px 24px rgba(15,23,42,.16) !important; }
+
+/* ===== NORMALIZACIÓN VISUAL DE MÓDULOS ===== */
+.profesores-container,.cursos-container,.asistencias-container,.matricula-container,.reportes-container,.notificaciones-container,.usuarios-container,.home-container,.dashboard-container { background:#F5F7FA !important; }
+.inicio-container { background:#172554 !important; }
+.inicio-content,.home-header { background:#FFFFFF !important; backdrop-filter:none !important; -webkit-backdrop-filter:none !important; border:1px solid #E2E8F0; box-shadow:0 2px 6px rgba(15,23,42,.06); border-radius:8px; }
+.home-header h1,.inicio-titulo { color:#172554; }
+.inicio-subtitulo { color:#1D4ED8; }
+[class*="-header"] h2, [class*="-container"] h2, [class*="-container"] h1 { color:#172554; }
+.add-profesor-btn,.btn-nuevo-curso,.btn-nueva-asistencia,.btn-nueva-matricula,.btn-nuevo-reporte,.usuario-carta button,.btn-primary { background:#1D4ED8 !important; color:#FFFFFF !important; border-radius:6px !important; box-shadow:none !important; }
+.add-profesor-btn:hover,.btn-nuevo-curso:hover,.btn-nueva-asistencia:hover,.btn-nueva-matricula:hover,.btn-nuevo-reporte:hover,.usuario-carta button:hover,.btn-primary:hover { background:#1E40AF !important; transform:none !important; box-shadow:none !important; }
+.search-bar,.cursos-search { border:1px solid #CBD5E1 !important; border-radius:6px !important; background:#FFFFFF !important; box-shadow:none !important; }
+.badge-rol-home { background:#DBEAFE !important; color:#1E40AF !important; border-radius:6px !important; box-shadow:none !important; }
+
+body.dark .profesores-container,body.dark .cursos-container,body.dark .asistencias-container,body.dark .matricula-container,body.dark .reportes-container,body.dark .notificaciones-container,body.dark .usuarios-container,body.dark .home-container,body.dark .dashboard-container { background:#0F172A !important; }
+body.dark .inicio-container { background:#0F172A !important; }
+body.dark .inicio-content,body.dark .home-header { background:#1E293B !important; border-color:#334155; box-shadow:none; }
+body.dark .home-header h1,body.dark .inicio-titulo,body.dark [class*="-header"] h2,body.dark [class*="-container"] h2,body.dark [class*="-container"] h1 { color:#E2E8F0; }
+
+
+/* ================================================================
+   EDUSOFT — SEGUNDA PASADA DE TEMA
+   Alineación de módulos con la navegación fija + modo oscuro
+   ================================================================ */
+.protected-content {
+  margin-left: 256px;
+  min-height: 100vh;
+  width: calc(100% - 256px);
+  background: var(--edusoft-fondo-app);
+  color: var(--edusoft-texto-principal);
+  overflow-x: hidden;
 }
 
-body.dark .swal-dark .swal2-html-container {
-  color: #cbd5e1 !important;
+/* Superficies y tipografía comunes de los módulos */
+.protected-content h1, .protected-content h2, .protected-content h3,
+.protected-content h4, .protected-content p, .protected-content label,
+.protected-content span, .protected-content td, .protected-content th {
+  color: inherit;
+}
+.protected-content input, .protected-content select, .protected-content textarea {
+  background: var(--edusoft-fondo-card);
+  color: var(--edusoft-texto-principal);
 }
 
-/* Quitar fondo verde translúcido del icono */
-body.dark .swal-dark .swal2-icon.swal2-success {
-  border-color: #22c55e !important;
+/* Evita que módulos antiguos con estilos propios vuelvan a usar fondos morados. */
+.protected-content .profesores-container,
+.protected-content .cursos-container,
+.protected-content .asistencias-container,
+.protected-content .matricula-container,
+.protected-content .reportes-container,
+.protected-content .home-container,
+.protected-content .dashboard-container,
+.protected-content .lista-container,
+.protected-content .usuario-lista {
+  min-height: 100vh;
+  background: var(--edusoft-fondo-app) !important;
+  color: var(--edusoft-texto-principal);
 }
 
-body.dark .swal-dark .swal2-success-circular-line-left,
-body.dark .swal-dark .swal2-success-circular-line-right,
-body.dark .swal-dark .swal2-success-fix {
-  background: transparent !important;
+.protected-content .lista-container {
+  max-width: none;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  padding: 32px 28px;
 }
 
-/* Overlay más elegante en dark */
-body.dark .swal2-container {
-  background: rgba(0, 0, 0, 0.65) !important;
+/* Formularios protegidos también respetan el espacio del sidebar. */
+.protected-content .formulario-container,
+.protected-content .editar-container,
+.protected-content .contenedor-formulario {
+  min-height: 100vh;
 }
 
-/* ===============================
-   UNIFICAR FONDO SWEETALERT DARK
-================================ */
-
-body.dark .swal-dark .swal2-html-container {
-  background: transparent !important;
+/* ========================= DARK MODE ========================= */
+body.dark .protected-content {
+  background: #0F172A !important;
+  color: #E2E8F0 !important;
 }
 
-body.dark .swal-dark .swal2-title {
-  background: transparent !important;
+body.dark .protected-content .profesores-container,
+body.dark .protected-content .cursos-container,
+body.dark .protected-content .asistencias-container,
+body.dark .protected-content .matricula-container,
+body.dark .protected-content .reportes-container,
+body.dark .protected-content .home-container,
+body.dark .protected-content .dashboard-container,
+body.dark .protected-content .lista-container,
+body.dark .protected-content .usuario-lista,
+body.dark .protected-content .formulario-container,
+body.dark .protected-content .editar-container {
+  background: #0F172A !important;
+  color: #E2E8F0 !important;
 }
 
-body.dark .swal-dark {
-  background: #1e293b !important;
+body.dark .protected-content .home-header,
+body.dark .protected-content .home-descripcion,
+body.dark .protected-content .dashboard-card,
+body.dark .protected-content .usuario-carta,
+body.dark .protected-content .usuario-detalle,
+body.dark .protected-content .kpi-asist,
+body.dark .protected-content .kpi-mat,
+body.dark .protected-content .kpi-card,
+body.dark .protected-content .curso-card,
+body.dark .protected-content .profesor-card,
+body.dark .protected-content .tabla-container,
+body.dark .protected-content .table-container,
+body.dark .protected-content .matricula-tabla-wrap,
+body.dark .protected-content .asistencia-form-panel,
+body.dark .protected-content .formulario,
+body.dark .protected-content .usuario-formulario,
+body.dark .protected-content .curso-form-wrapper,
+body.dark .protected-content .profesor-form-wrapper,
+body.dark .protected-content .rep-form {
+  background: #1E293B !important;
+  color: #E2E8F0 !important;
+  border-color: #334155 !important;
+  box-shadow: none !important;
 }
+
+body.dark .protected-content h1, body.dark .protected-content h2,
+body.dark .protected-content h3, body.dark .protected-content h4,
+body.dark .protected-content .home-header h1,
+body.dark .protected-content .dashboard-title,
+body.dark .protected-content .cursos-header-texto h2,
+body.dark .protected-content .asistencias-header h2,
+body.dark .protected-content .matricula-header h2,
+body.dark .protected-content .reportes-header h2,
+body.dark .protected-content .profesores-container h2,
+body.dark .protected-content .lista-container h2,
+body.dark .protected-content .usuario-lista h2 {
+  color: #E2E8F0 !important;
+}
+
+body.dark .protected-content p, body.dark .protected-content label,
+body.dark .protected-content .cursos-subtitulo,
+body.dark .protected-content .asistencias-subtitulo,
+body.dark .protected-content .matricula-subtitulo,
+body.dark .protected-content .reportes-subtitulo,
+body.dark .protected-content .home-rol,
+body.dark .protected-content .home-descripcion p,
+body.dark .protected-content .usuario-carta p,
+body.dark .protected-content .detalle-label,
+body.dark .protected-content .detalle-valor {
+  color: #CBD5E1 !important;
+}
+
+body.dark .protected-content input,
+body.dark .protected-content select,
+body.dark .protected-content textarea,
+body.dark .protected-content .search-bar,
+body.dark .protected-content .cursos-search,
+body.dark .protected-content .reportes-search,
+body.dark .protected-content .matricula-search,
+body.dark .protected-content .usuarios-search,
+body.dark .protected-content .input-busqueda {
+  background: #0F172A !important;
+  color: #E2E8F0 !important;
+  border-color: #475569 !important;
+}
+body.dark .protected-content input::placeholder,
+body.dark .protected-content textarea::placeholder { color: #94A3B8 !important; }
+
+body.dark .protected-content table { color: #E2E8F0 !important; background: #1E293B !important; }
+body.dark .protected-content table thead,
+body.dark .protected-content table th {
+  background: #172554 !important; color: #F8FAFC !important;
+}
+body.dark .protected-content table td {
+  background: #1E293B !important; color: #CBD5E1 !important;
+  border-color: #334155 !important;
+}
+body.dark .protected-content table tbody tr:hover td { background: #263449 !important; }
+
+body.dark .protected-content .btn-outline,
+body.dark .protected-content .btn-secundario-global,
+body.dark .protected-content .btn-volver {
+  background: #1E293B !important; color: #93C5FD !important; border-color: #475569 !important;
+}
+body.dark .protected-content .btn-outline:hover,
+body.dark .protected-content .btn-secundario-global:hover,
+body.dark .protected-content .btn-volver:hover {
+  background: #263449 !important; color: #BFDBFE !important;
+}
+
+body.dark .protected-content .mensaje-error-lista,
+body.dark .protected-content .cursos-error,
+body.dark .protected-content .matricula-error,
+body.dark .protected-content .reportes-error,
+body.dark .protected-content .mensaje-error,
+body.dark .protected-content .error-mensaje {
+  background: #3B1F24 !important; color: #FCA5A5 !important; border-color: #7F1D1D !important;
+}
+
+body.dark .protected-content .mensaje-exito,
+body.dark .protected-content .message-success {
+  background: #143525 !important; color: #86EFAC !important; border-color: #166534 !important;
+}
+
+body.dark .protected-content .modal-overlay { background: rgba(2, 6, 23, .78) !important; }
+body.dark .protected-content .modal-content,
+body.dark .protected-content .modal-detalle {
+  background: #1E293B !important; color: #E2E8F0 !important; border-color: #334155 !important;
+  box-shadow: none !important;
+}
+
+body.dark .protected-content .home-tarjetas .tarjeta {
+  background: #1E293B !important;
+  color: #E2E8F0 !important;
+  border: 1px solid #334155 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Títulos */
+body.dark .protected-content .home-tarjetas .tarjeta h3 {
+  color: #E2E8F0 !important;
+}
+
+/* Descripción */
+body.dark .protected-content .home-tarjetas .tarjeta p {
+  color: #CBD5E1 !important;
+}
+
+/* Iconos */
+body.dark .protected-content .home-tarjetas .tarjeta-icono {
+  filter: none !important;
+}
+
+/* Flecha */
+body.dark .protected-content .home-tarjetas .tarjeta-flecha {
+  color: #60A5FA !important;
+}
+
+/* Badge de profesores */
+body.dark .protected-content .home-tarjetas .badge-profesor {
+  background: #E5A11A !important;
+  color: #172033 !important;
+}
+
+/* Hover */
+body.dark .protected-content .home-tarjetas .tarjeta:not(.tarjeta-proximamente):hover {
+  background: #263449 !important;
+  border-color: #3B82F6 !important;
+  box-shadow: none !important;
+  transform: translateY(-3px);
+}
+
+/* Elimina el efecto de brillo blanco que tenía el diseño anterior */
+body.dark .protected-content .home-estadisticas .estadistica::before {
+  display: none !important;
+}
+
+body.dark .protected-content .home-estadisticas .estadistica {
+  background: #1E293B !important;
+  color: #E2E8F0 !important;
+  border: 1px solid #334155 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Títulos */
+body.dark .protected-content .home-estadisticas .estadistica h3 {
+  color: #E2E8F0 !important;
+}
+
+/* Descripción */
+body.dark .protected-content .home-estadisticas .estadistica p {
+  color: #CBD5E1 !important;
+}
+
+/* Iconos */
+body.dark .protected-content .home-estadisticas .estadistica-icono {
+  filter: none !important;
+}
+
+/* Flecha */
+body.dark .protected-content .home-estadisticas .estadistica-flecha {
+  color: #60A5FA !important;
+}
+
+/* Badge de profesores */
+body.dark .protected-content .home-estadisticas .badge-profesor {
+  background: #E5A11A !important;
+  color: #172033 !important;
+}
+
+/* Hover */
+body.dark .protected-content .home-estadisticas .estadistica:not(.estadistica-proximamente):hover {
+  background: #263449 !important;
+  border-color: #3B82F6 !important;
+  box-shadow: none !important;
+  transform: translateY(-3px);
+}
+
+/* Elimina el efecto de brillo blanco que tenía el diseño anterior */
+body.dark .protected-content .home-estadisticas .estadistica::before {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  .protected-content {
+    margin-left: 0;
+    width: 100%;
+    padding-top: 68px;
+  }
+  .protected-content .lista-container { padding: 24px 16px; }
+}
+
+/* ===================== EDUSOFT — MODO CLARO ===================== */
+body:not(.dark) .protected-content .profesor-card,
+body:not(.dark) .protected-content .curso-card,
+body:not(.dark) .protected-content .kpi-asist,
+body:not(.dark) .protected-content .kpi-mat,
+body:not(.dark) .protected-content .kpi-card,
+body:not(.dark) .protected-content .dashboard-card,
+body:not(.dark) .protected-content .usuario-carta,
+body:not(.dark) .protected-content .tabla-container,
+body:not(.dark) .protected-content .table-container,
+body:not(.dark) .protected-content .matricula-tabla-wrap,
+body:not(.dark) .protected-content .asistencia-form-panel,
+body:not(.dark) .protected-content .formulario,
+body:not(.dark) .protected-content .curso-form-wrapper,
+body:not(.dark) .protected-content .profesor-form-wrapper,
+body:not(.dark) .protected-content .rep-form {
+  background:#FFFFFF !important;
+  color:#172033;
+  border-color:#E2E8F0 !important;
+  box-shadow:0 2px 6px rgba(15,23,42,.06) !important;
+}
+body:not(.dark) .protected-content .home-descripcion {
+  background:#EFF6FF !important;
+  border-color:#BFDBFE !important;
+  backdrop-filter:none !important;
+}
+body:not(.dark) .protected-content table th {
+  background:#F8FAFC !important;
+  color:#334155 !important;
+  border-color:#E2E8F0 !important;
+}
+body:not(.dark) .protected-content table td {
+  background:#FFFFFF !important;
+  color:#334155 !important;
+  border-color:#E2E8F0 !important;
+}
+body:not(.dark) .protected-content table tbody tr:hover td { background:#F8FAFC !important; }
+body:not(.dark) .protected-content .btn,
+body:not(.dark) .protected-content button { box-shadow:none; }
+
+/* Remove old decorative effects from notification module. */
+.protected-content .lista-container::before { opacity:.025; }
+.protected-content .lista-container h2 { text-shadow:none; }

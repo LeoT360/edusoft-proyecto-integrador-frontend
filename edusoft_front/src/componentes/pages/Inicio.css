@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #302BB4 0%, #00D6F0 50%, #514CE0 100%);
+  background: #1D4ED8;
   padding: 40px 20px;
   position: relative;
   overflow: hidden;
@@ -71,7 +71,7 @@
 /* Títulos */
 .inicio-titulo {
   font-size: 42px;
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
   margin-bottom: 16px;
   font-weight: bold;
   animation: slideInDown 0.8s ease;
@@ -84,14 +84,14 @@
 
 .inicio-subtitulo {
   font-size: 24px;
-  color: var(--sura-aqua);
+  color: var(--edusoft-aqua);
   margin-bottom: 20px;
   font-weight: 600;
 }
 
 .inicio-descripcion {
   font-size: 16px;
-  color: var(--sura-texto-principal);
+  color: var(--edusoft-texto-principal);
   margin-bottom: 40px;
   line-height: 1.6;
   max-width: 650px;
@@ -121,23 +121,23 @@
 }
 
 .btn-primario {
-  background: linear-gradient(135deg, #302BB4 0%, #00D6F0 100%);
+  background: #1D4ED8;
   color: white;
 }
 
 .btn-primario:hover {
-  background: linear-gradient(135deg, #24218A 0%, #00AFC7 100%);
+  background: #1E40AF;
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(48, 43, 180, 0.4);
 }
 
 .btn-secundario {
-  background: linear-gradient(135deg, #FDB913 0%, #FFA000 100%);
-  color: #302BB4;
+  background: #E5A11A;
+  color: #1D4ED8;
 }
 
 .btn-secundario:hover {
-  background: linear-gradient(135deg, #E5A50B 0%, #E68A00 100%);
+  background: #E5A11A;
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(253, 185, 19, 0.4);
 }
@@ -172,14 +172,14 @@
 
 .caracteristica h3 {
   font-size: 17px;
-  color: var(--sura-azul-profundo);
+  color: var(--edusoft-azul-profundo);
   margin-bottom: 8px;
   font-weight: bold;
 }
 
 .caracteristica p {
   font-size: 13px;
-  color: var(--sura-texto-principal);
+  color: var(--edusoft-texto-principal);
   margin: 0;
   line-height: 1.5;
 }

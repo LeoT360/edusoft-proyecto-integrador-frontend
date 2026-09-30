@@ -1,15 +1,15 @@
 /* ====================================
-   EDITAR NOTIFICACIÓN - TEMA SURA
+   FORMULARIO NOTIFICACIÓN - TEMA EduSoft
    Glassmorphism + Colores corporativos
    ==================================== */
 
-/* Contenedor principal */
-.editar-container {
+/* Contenedor principal con efecto glassmorphism */
+.formulario-container {
   max-width: 900px;
   margin: 20px auto;
   padding: 30px;
   
-  /* Glassmorphism */
+  /* Efecto cristal iOS */
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
@@ -23,73 +23,41 @@
   overflow: hidden;
 }
 
-/* Decoración de fondo */
-.editar-container::before {
+/* Decoración del tigre en el fondo */
+.formulario-container::before {
   content: '';
   position: absolute;
-  top: -60px;
-  right: -60px;
-  width: 350px;
-  height: 350px;
+  top: -50px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
   background-image: url('../../assets/icon-edusoft.svg');
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0.05;
   z-index: 0;
   pointer-events: none;
-  animation: floatSlow 15s ease-in-out infinite;
 }
 
-@keyframes floatSlow {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(5deg); }
-}
-
-/* Header con título y botón cerrar */
-.editar-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.formulario-container h2 {
+  color: #1D4ED8;
+  text-align: center;
   margin-bottom: 25px;
-  padding-bottom: 18px;
-  border-bottom: 3px solid transparent;
-  border-image: linear-gradient(90deg, #302BB4 0%, #00D6F0 50%, #FDB913 100%) 1;
+  font-size: 28px;
+  font-weight: bold;
   position: relative;
   z-index: 1;
-}
-
-.editar-header h2 {
-  color: #302BB4;
-  margin: 0;
-  font-size: 26px;
-  font-weight: bold;
   text-shadow: 0 2px 4px rgba(48, 43, 180, 0.1);
 }
 
-.btn-cerrar-header {
-  background: rgba(253, 185, 19, 0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 2px solid rgba(253, 185, 19, 0.3);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 24px;
-  color: #FDB913;
-  cursor: pointer;
-  padding: 0;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.btn-cerrar-header:hover {
-  background: linear-gradient(135deg, #FDB913 0%, #FFA000 100%);
-  color: white;
-  transform: rotate(90deg) scale(1.1);
-  box-shadow: 0 4px 16px rgba(253, 185, 19, 0.5);
-  border-color: transparent;
+.formulario-container h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #E5A11A;
+  margin: 12px auto 0;
+  border-radius: 2px;
 }
 
 /* Mensajes */
@@ -102,51 +70,24 @@
   position: relative;
   z-index: 1;
   
-  /* Glassmorphism */
+  /* Glassmorphism en mensajes */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .mensaje.exito {
   background: rgba(40, 167, 69, 0.15);
   color: #155724;
   border-left: 4px solid #28a745;
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.2);
 }
 
 .mensaje.error {
   background: rgba(220, 53, 69, 0.15);
   color: #721c24;
   border-left: 4px solid #dc3545;
-}
-
-/* Indicador de carga */
-.cargando {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 20px;
-  color: #302BB4;
-  position: relative;
-  z-index: 1;
-}
-
-.spinner {
-  width: 60px;
-  height: 60px;
-  border: 6px solid rgba(48, 43, 180, 0.1);
-  border-top: 6px solid #00D6F0;
-  border-right: 6px solid #FDB913;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin-bottom: 20px;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.2);
 }
 
 /* Formulario */
@@ -158,7 +99,7 @@
   z-index: 1;
 }
 
-/* Fieldsets con glassmorphism */
+/* Fieldsets con efecto cristal */
 fieldset {
   border: 1px solid rgba(48, 43, 180, 0.2);
   border-radius: 16px;
@@ -168,7 +109,6 @@ fieldset {
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 2px 8px rgba(48, 43, 180, 0.08);
   transition: all 0.3s ease;
-  position: relative;
 }
 
 fieldset:hover {
@@ -177,33 +117,14 @@ fieldset:hover {
   transform: translateY(-2px);
 }
 
-fieldset::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(0, 214, 240, 0.05) 0%, transparent 100%);
-  border-radius: 16px;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-fieldset:hover::before {
-  opacity: 1;
-}
-
 legend {
   font-weight: bold;
-  color: #302BB4;
-  padding: 6px 16px;
+  color: #1D4ED8;
+  padding: 0 12px;
   font-size: 16px;
-  background: linear-gradient(135deg, rgba(48, 43, 180, 0.12) 0%, rgba(0, 214, 240, 0.12) 100%);
-  backdrop-filter: blur(5px);
+  background: rgba(48, 43, 180, 0.1);
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(48, 43, 180, 0.1);
+  padding: 6px 16px;
 }
 
 /* Grupos de campos */
@@ -216,7 +137,7 @@ legend {
 .form-group label {
   font-weight: 600;
   margin-bottom: 6px;
-  color: #302BB4;
+  color: #1D4ED8;
   font-size: 14px;
 }
 
@@ -238,25 +159,17 @@ legend {
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #00D6F0;
+  border-color: #3B82F6;
   box-shadow: 0 0 0 3px rgba(0, 214, 240, 0.1);
   background: rgba(255, 255, 255, 1);
 }
 
-.form-group input:read-only {
-  background: rgba(48, 43, 180, 0.05);
-  color: #666;
-  cursor: not-allowed;
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(48, 43, 180, 0.4);
 }
 
-.form-group small {
-  font-size: 12px;
-  color: #00D6F0;
-  margin-top: 5px;
-  font-style: italic;
-}
-
-/* Checkboxes */
+/* Checkboxes con estilo moderno */
 .form-group-checkbox {
   display: flex;
   align-items: center;
@@ -275,16 +188,16 @@ legend {
   height: 20px;
   margin-right: 12px;
   cursor: pointer;
-  accent-color: #00D6F0;
+  accent-color: #3B82F6;
 }
 
 .form-group-checkbox label {
   cursor: pointer;
-  color: #302BB4;
+  color: #1D4ED8;
   font-weight: 500;
 }
 
-/* Botones de acción */
+/* Botones de acción con glassmorphism */
 .form-actions {
   display: flex;
   gap: 15px;
@@ -292,8 +205,8 @@ legend {
   margin-top: 25px;
 }
 
-.btn-guardar,
-.btn-cancelar {
+.btn-enviar,
+.btn-limpiar {
   padding: 14px 36px;
   border: none;
   border-radius: 12px;
@@ -303,50 +216,51 @@ legend {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Botón guardar - Gradiente Sura */
-.btn-guardar {
-  background: linear-gradient(135deg, #302BB4 0%, #00D6F0 100%);
+/* Botón enviar - Color corporativo EduSoft */
+.btn-enviar {
+  background: #1D4ED8;
   color: white;
+  box-shadow: 0 4px 15px rgba(48, 43, 180, 0.3);
 }
 
-.btn-guardar::before {
+.btn-enviar::before {
   content: '';
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background: rgba(255, 255, 255, 0.3);
   transition: left 0.5s;
 }
 
-.btn-guardar:hover::before {
+.btn-enviar:hover::before {
   left: 100%;
 }
 
-.btn-guardar:hover:not(:disabled) {
-  background: linear-gradient(135deg, #24218A 0%, #00AFC7 100%);
+.btn-enviar:hover:not(:disabled) {
+  background: #1E40AF;
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(48, 43, 180, 0.4);
 }
 
-/* Botón cancelar - Dorado */
-.btn-cancelar {
-  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
-  color: white;
+/* Botón limpiar - Dorado del tigre */
+.btn-limpiar {
+  background: #E5A11A;
+  color: #1D4ED8;
+  box-shadow: 0 4px 15px rgba(253, 185, 19, 0.3);
 }
 
-.btn-cancelar:hover:not(:disabled) {
-  background: linear-gradient(135deg, #c82333 0%, #bd2130 100%);
+.btn-limpiar:hover:not(:disabled) {
+  background: #E5A11A;
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(220, 53, 69, 0.4);
+  box-shadow: 0 8px 25px rgba(253, 185, 19, 0.4);
 }
 
-.btn-guardar:disabled,
-.btn-cancelar:disabled {
+.btn-enviar:disabled,
+.btn-limpiar:disabled {
   opacity: 0.6;
   cursor: not-allowed;
   transform: none;
@@ -354,44 +268,35 @@ legend {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .editar-container {
+  .formulario-container {
     padding: 20px 15px;
     margin: 10px;
     border-radius: 16px;
   }
-  
-  .editar-header {
-    flex-direction: column;
-    gap: 10px;
-    align-items: flex-start;
+
+  .formulario-container h2 {
+    font-size: 24px;
   }
-  
-  .btn-cerrar-header {
-    align-self: flex-end;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-  }
-  
+
   .form-actions {
     flex-direction: column;
   }
-  
-  .btn-guardar,
-  .btn-cancelar {
+
+  .btn-enviar,
+  .btn-limpiar {
     width: 100%;
   }
 
-  .editar-container::before {
-    width: 250px;
-    height: 250px;
-    top: -40px;
-    right: -40px;
+  .formulario-container::before {
+    width: 200px;
+    height: 200px;
+    top: -30px;
+    right: -30px;
   }
 }
 
 /* Animaciones de entrada */
-.editar-container {
+.formulario-container {
   animation: slideInScale 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -406,7 +311,7 @@ legend {
   }
 }
 
-/* Efecto de brillo en hover de fieldsets */
+/* Efecto de brillo sutil en hover de fieldsets */
 fieldset::after {
   content: '';
   position: absolute;
@@ -414,12 +319,12 @@ fieldset::after {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(0, 214, 240, 0.15), transparent);
+  background: rgba(253, 185, 19, 0.1);
   transition: left 0.7s;
   pointer-events: none;
-  border-radius: 16px;
 }
 
 fieldset:hover::after {
   left: 100%;
 }
+
