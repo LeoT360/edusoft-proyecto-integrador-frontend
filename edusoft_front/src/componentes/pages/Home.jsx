@@ -1,4 +1,4 @@
-import Icon from '../shared/Icon';
+import { ArrowRight, BookOpen, ChartLine, ClipboardList, FileText, GraduationCap, Info, Lock, Mail, Pencil, School, Users, Zap } from 'lucide-react';
 // ====================================
 // PÁGINA HOME - DASHBOARD PRINCIPAL
 // Sistema de roles: Profesor / Estudiante
@@ -24,7 +24,7 @@ function Home() {
     {
       titulo: 'Usuarios',
       descripcion: 'Ver lista de usuarios registrados en el sistema.',
-      icono: <Icon name="group" size={22} />,
+      icono: <Users size={22} />,
       ruta: '/usuarios',
       color: 'azul',
       disponible: esProfesor,   //  Solo profesores ven esta tarjeta
@@ -36,7 +36,7 @@ function Home() {
     {
       titulo: 'Ver Notificaciones',
       descripcion: 'Consultar notificaciones recibidas.',
-      icono: <Icon name="mail" size={22} />,
+      icono: <Mail size={22} />,
       ruta: '/notificaciones',
       color: 'cyan',
       disponible: true,
@@ -46,7 +46,7 @@ function Home() {
     {
       titulo: 'Nueva Notificación',
       descripcion: 'Crear y enviar una notificación a usuarios.',
-      icono: <Icon name="edit" size={22} />,
+      icono: <Pencil size={22} />,
       ruta: '/notificaciones/crear',
       color: 'dorado',
       disponible: esProfesor,   //  Solo profesores ven esta tarjeta
@@ -58,7 +58,7 @@ function Home() {
     {
       titulo: 'Profesores',
       descripcion: 'Gestionar información de profesores del sistema.',
-      icono: <Icon name="graduation" size={22} />,
+      icono: <GraduationCap size={22} />,
       ruta: '/profesores',
       color: 'azul',
       disponible: true,
@@ -70,7 +70,7 @@ function Home() {
     {
       titulo: 'Cursos',
       descripcion: 'Administrar y gestionar pertenencia a los cursos de los estudiantes.',
-      icono: <Icon name="book" size={22} />,
+      icono: <BookOpen size={22} />,
       color: 'dorado',
       ruta: '/cursos',
       disponible: true,
@@ -82,7 +82,7 @@ function Home() {
     {
       titulo: 'Notas',
       descripcion: 'Consultar y gestionar calificaciones de estudiantes.',
-      icono: <Icon name="note" size={22} />,
+      icono: <FileText size={22} />,
       ruta: '/notas',
       color: 'cyan',
       disponible: true,
@@ -94,7 +94,7 @@ function Home() {
     {
       titulo: 'Asistencias',
       descripcion: 'Registrar y consultar asistencias por curso.',
-      icono: <Icon name="clipboard" size={22} />,
+      icono: <ClipboardList size={22} />,
       ruta: '/asistencias',
       color: 'azul',
       disponible: true,
@@ -106,7 +106,7 @@ function Home() {
     {
       titulo: 'Matrícula',
       descripcion: 'Administrar matrículas y cursos del período.',
-      icono: <Icon name="school" size={22} />,
+      icono: <School size={22} />,
       ruta: '/matricula',
       color: 'dorado',
       disponible: true,
@@ -118,7 +118,7 @@ function Home() {
     {
       titulo: 'Reportes Estadísticos',
       descripcion: 'Visualizar estadísticas y reportes del sistema.',
-      icono: <Icon name="chart" size={22} />,
+      icono: <ChartLine size={22} />,
       ruta: '/reportes',
       color: 'azul',
       disponible: esProfesor,   //  Solo profesores ven esta tarjeta
@@ -178,7 +178,7 @@ function Home() {
                 )}
 
                 {!tarjeta.proximamente && (
-                  <div className="tarjeta-flecha"><Icon name="arrow" size={18} /></div>
+                  <div className="tarjeta-flecha"><ArrowRight size={18} /></div>
                 )}
               </div>
             );
@@ -188,7 +188,7 @@ function Home() {
         {/* ===== AVISO PARA ESTUDIANTES ===== */}
         {!esProfesor && (
           <div className="info-estudiante">
-            <div className="info-icono"><Icon name="info" size={18} /></div>
+            <div className="info-icono"><Info size={18} /></div>
             <p>
               <strong>Nota:</strong> Como estudiante, puedes ver notificaciones pero no crearlas ni editarlas.
               Si necesitas enviar una notificación, contacta a tu profesor.
@@ -199,15 +199,15 @@ function Home() {
         {/* ===== ESTADÍSTICAS / ICONOS INFORMATIVOS ===== */}
         <div className="home-estadisticas">
           <div className="estadistica">
-            <div className="estadistica-numero"><Icon name="chart" size={18} /></div>
+            <div className="estadistica-numero"><ChartLine size={18} /></div>
             <p>Sistema Integrado</p>
           </div>
           <div className="estadistica">
-            <div className="estadistica-numero"><Icon name="lock" size={18} /></div>
+            <div className="estadistica-numero"><Lock size={18} /></div>
             <p>Acceso Seguro por Roles</p>
           </div>
           <div className="estadistica">
-            <div className="estadistica-numero"><Icon name="lighting" size={18} /></div>
+            <div className="estadistica-numero"><Zap size={18} /></div>
             <p>Tiempo Real</p>
           </div>
         </div>

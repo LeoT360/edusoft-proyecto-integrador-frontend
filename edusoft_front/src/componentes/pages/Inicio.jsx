@@ -1,4 +1,4 @@
-import Icon from '../shared/Icon';
+import { ArrowRight, FileText, GraduationCap, Mail, School, User, Users } from 'lucide-react';
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import logoEdusoft from '../../assets/title-edusoft.svg';
@@ -16,12 +16,12 @@ function Inicio() {
   const navigate = useNavigate();
 
   const caracteristicas = [
-    { icono: <Icon name="group" size={21} />, titulo: 'Usuarios', descripcion: 'Roles y perfiles institucionales.' },
-    { icono: <Icon name="mail" size={21} />, titulo: 'Notificaciones', descripcion: 'Comunicación y seguimiento.' },
-    { icono: <Icon name="graduation" size={21} />, titulo: 'Profesores', descripcion: 'Gestión del equipo docente.' },
-    { icono: <Icon name="note" size={21} />, titulo: 'Notas', descripcion: 'Calificaciones por período.' },
-    { icono: <Icon name="user" size={21} />, titulo: 'Asistencias', descripcion: 'Control de asistencia.' },
-    { icono: <Icon name="school" size={21} />, titulo: 'Matrícula', descripcion: 'Administración académica.' },
+    { icono: <Users size={21} />, titulo: 'Usuarios', descripcion: 'Roles y perfiles institucionales.' },
+    { icono: <Mail size={21} />, titulo: 'Notificaciones', descripcion: 'Comunicación y seguimiento.' },
+    { icono: <GraduationCap size={21} />, titulo: 'Profesores', descripcion: 'Gestión del equipo docente.' },
+    { icono: <FileText size={21} />, titulo: 'Notas', descripcion: 'Calificaciones por período.' },
+    { icono: <User size={21} />, titulo: 'Asistencias', descripcion: 'Control de asistencia.' },
+    { icono: <School size={21} />, titulo: 'Matrícula', descripcion: 'Administración académica.' },
   ];
 
   return (
@@ -44,7 +44,7 @@ function Inicio() {
             <div className="inicio-botones">
               <button className="btn-inicio btn-primario" onClick={() => navigate('/login')}>
                 Iniciar sesión
-                <Icon name="arrow" size={17} />
+                <ArrowRight size={17} />
               </button>
               <button className="btn-inicio btn-secundario" onClick={() => navigate('/registro')}>
                 Crear cuenta
@@ -98,7 +98,7 @@ function Inicio() {
             <h2>Información organizada para tomar mejores decisiones.</h2>
             <button className="inicio-text-button" onClick={() => navigate('/login')}>
               Acceder a la plataforma
-              <Icon name="arrow" size={17} />
+              <ArrowRight size={17} />
             </button>
           </div>
         </section>

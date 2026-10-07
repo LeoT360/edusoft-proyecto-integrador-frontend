@@ -1,4 +1,4 @@
-import Icon from '../shared/Icon';
+import { BookOpen, FileIcon, ImageIcon, User } from 'lucide-react';
 // ====================================
 // FORMULARIO PROFESOR - CORREGIDO
 // ✅ celular como String (no Integer)
@@ -171,7 +171,7 @@ function FormularioProfesor() {
 
           {/* ═══ DATOS PERSONALES ═══ */}
           <fieldset>
-            <legend><Icon name="user" size={18} /> Datos Personales</legend>
+            <legend><User size={18} /> Datos Personales</legend>
 
             <div className="form-group">
               <label htmlFor="nombreCompleto">Nombre Completo *</label>
@@ -250,7 +250,7 @@ function FormularioProfesor() {
 
           {/* ═══ DATOS ACADÉMICOS ═══ */}
           <fieldset>
-            <legend><Icon name="book" size={18} /> Datos Académicos</legend>
+            <legend><BookOpen size={18} /> Datos Académicos</legend>
 
             <div className="form-group">
               <label htmlFor="nivelAcademico">Nivel Académico</label>
@@ -293,7 +293,7 @@ function FormularioProfesor() {
 
           {/* ═══ DATOS LABORALES ═══ */}
           <fieldset>
-            <legend><Icon name="file" size={18} /> Datos Laborales</legend>
+            <legend><FileIcon size={18} /> Datos Laborales</legend>
 
             <div className="form-group">
               <label htmlFor="tipoContrato">Tipo de Contrato</label>
@@ -330,7 +330,7 @@ function FormularioProfesor() {
 
           {/* ═══ FOTO Y DOCUMENTOS ═══ */}
           <fieldset>
-            <legend><Icon name="image" size={18} /> Foto y Documentos</legend>
+            <legend><ImageIcon size={18} /> Foto y Documentos</legend>
 
             {/* ✅ Solo URL - NO se sube base64 al backend */}
             <div className="form-group">

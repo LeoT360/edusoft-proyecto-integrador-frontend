@@ -1,4 +1,4 @@
-import Icon from '../shared/Icon';
+import { BookOpen, Calendar, Check, ClipboardList, FileIcon, Mail, Settings, Users, X } from 'lucide-react';
 // ====================================
 // COMPONENTE LISTA DE NOTIFICACIONES - VERSIÓN CON EDITAR
 // ====================================
@@ -142,7 +142,7 @@ function ListaNotificaciones() {
   
   return (
     <div className="lista-container">
-      <h2><Icon name="clipboard" size={18} /> Lista de Notificaciones</h2>
+      <h2><ClipboardList size={18} /> Lista de Notificaciones</h2>
       
       <div className="controles">
         <div className="buscador">
@@ -161,7 +161,7 @@ function ListaNotificaciones() {
               }}
               className="btn-limpiar-busqueda"
             >
-              ✕
+              <X size={16} />
             </button>
           )}
         </div>
@@ -200,7 +200,7 @@ function ListaNotificaciones() {
 
       {!cargando && !error && notificacionesFiltradas.length === 0 && (
         <div className="sin-resultados">
-          <p><Icon name="mail" size={18} /> No se encontraron notificaciones</p>
+          <p><Mail size={18} /> No se encontraron notificaciones</p>
           {textoBusqueda && <p>Intenta con otro término de búsqueda</p>}
         </div>
       )}
@@ -244,9 +244,9 @@ function ListaNotificaciones() {
                   <td>{formatearFecha(notif.fechaCreacion)}</td>
                   <td>
                     {notif.estado ? (
-                      <span className="estado activo"><Icon name="check" size={18} /> Activo</span>
+                      <span className="estado activo"><Check size={18} /> Activo</span>
                     ) : (
-                      <span className="estado inactivo"><Icon name="close" size={18}/> Inactivo</span>
+                      <span className="estado inactivo"><X size={18} /> Inactivo</span>
                     )}
                   </td>
                   <td>
@@ -282,13 +282,13 @@ function ListaNotificaciones() {
         <div className="modal-overlay" onClick={cerrarDetalles}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <div className="modal-header">
-              <h3><Icon name="file" size={18} /> Detalles de la Notificación</h3>
-              <button onClick={cerrarDetalles} className="btn-cerrar"><Icon name="close" size={18}/></button>
+              <h3><FileIcon size={18} /> Detalles de la Notificación</h3>
+              <button onClick={cerrarDetalles} className="btn-cerrar"><X size={18} /></button>
             </div>
             
             <div className="modal-body">
               <div className="detalle-grupo">
-                <h4><Icon name="file" size={18} /> Información General</h4>
+                <h4><FileIcon size={18} /> Información General</h4>
                 <div className="detalle-item">
                   <span className="detalle-label">ID:</span>
                   <span className="detalle-valor">{notificacionSeleccionada.id}</span>
@@ -306,13 +306,13 @@ function ListaNotificaciones() {
                 <div className="detalle-item">
                   <span className="detalle-label">Estado:</span>
                   <span className="detalle-valor">
-                    {notificacionSeleccionada.estado ? ' Activo' : '✕ Inactivo'}
+                    {notificacionSeleccionada.estado ? <><Check size={16} /> Activo</> : <><X size={16} /> Inactivo</>}
                   </span>
                 </div>
               </div>
 
               <div className="detalle-grupo">
-                <h4><Icon name="group" size={18} /> Remitente y Destinatario</h4>
+                <h4><Users size={18} /> Remitente y Destinatario</h4>
                 <div className="detalle-item">
                   <span className="detalle-label">ID Remitente:</span>
                   <span className="detalle-valor">{notificacionSeleccionada.idRemitente || 'N/A'}</span>
@@ -332,7 +332,7 @@ function ListaNotificaciones() {
               </div>
 
               <div className="detalle-grupo">
-                <h4><Icon name="mail" size={18} /> Contenido</h4>
+                <h4><Mail size={18} /> Contenido</h4>
                 <div className="detalle-item">
                   <span className="detalle-label">Asunto:</span>
                   <span className="detalle-valor">{notificacionSeleccionada.asunto || 'Sin asunto'}</span>
@@ -346,7 +346,7 @@ function ListaNotificaciones() {
               </div>
 
               <div className="detalle-grupo">
-                <h4><Icon name="book" size={18} /> Curso Relacionado</h4>
+                <h4><BookOpen size={18} /> Curso Relacionado</h4>
                 <div className="detalle-item">
                   <span className="detalle-label">Curso:</span>
                   <span className="detalle-valor">{notificacionSeleccionada.cursoRelacionado || 'N/A'}</span>
@@ -358,7 +358,7 @@ function ListaNotificaciones() {
               </div>
 
               <div className="detalle-grupo">
-                <h4><Icon name="calendar" size={18} /> Fechas</h4>
+                <h4><Calendar size={18} /> Fechas</h4>
                 <div className="detalle-item">
                   <span className="detalle-label">Fecha Creación:</span>
                   <span className="detalle-valor">{formatearFecha(notificacionSeleccionada.fechaCreacion)}</span>
@@ -378,18 +378,18 @@ function ListaNotificaciones() {
               </div>
 
               <div className="detalle-grupo">
-                <h4><Icon name="settings" size={18} /> Configuración</h4>
+                <h4><Settings size={18} /> Configuración</h4>
                 <div className="detalle-item">
                   <span className="detalle-label">Mensaje Enviado:</span>
-                  <span className="detalle-valor">{notificacionSeleccionada.mensajeEnviado ? ' Sí' : '✕ No'}</span>
+                  <span className="detalle-valor">{notificacionSeleccionada.mensajeEnviado ? <><Check size={16} /> Sí</> : <><X size={16} /> No</>}</span>
                 </div>
                 <div className="detalle-item">
                   <span className="detalle-label">Mensaje Leído:</span>
-                  <span className="detalle-valor">{notificacionSeleccionada.mensajeLeido ? ' Sí' : '✕ No'}</span>
+                  <span className="detalle-valor">{notificacionSeleccionada.mensajeLeido ? <><Check size={16} /> Sí</> : <><X size={16} /> No</>}</span>
                 </div>
                 <div className="detalle-item">
                   <span className="detalle-label">Mensaje Eliminado:</span>
-                  <span className="detalle-valor">{notificacionSeleccionada.mensajeEliminado ? ' Sí' : '✕ No'}</span>
+                  <span className="detalle-valor">{notificacionSeleccionada.mensajeEliminado ? <><Check size={16} /> Sí</> : <><X size={16} /> No</>}</span>
                 </div>
                 <div className="detalle-item">
                   <span className="detalle-label">Archivos Adjuntos:</span>
@@ -397,7 +397,7 @@ function ListaNotificaciones() {
                 </div>
                 <div className="detalle-item">
                   <span className="detalle-label">Notificación Emergente:</span>
-                  <span className="detalle-valor">{notificacionSeleccionada.notificacionEmergente ? ' Sí' : '✕ No'}</span>
+                  <span className="detalle-valor">{notificacionSeleccionada.notificacionEmergente ? <><Check size={16} /> Sí</> : <><X size={16} /> No</>}</span>
                 </div>
               </div>
             </div>

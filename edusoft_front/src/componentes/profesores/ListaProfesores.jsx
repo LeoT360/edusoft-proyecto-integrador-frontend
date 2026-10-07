@@ -1,4 +1,4 @@
-import Icon from '../shared/Icon';
+import { BookOpen, ClipboardList, FileIcon, GraduationCap, Lock, X } from 'lucide-react';
 // ====================================
 // LISTA PROFESORES - UNIFICADA
 // Profesor: ve todos los campos + acciones CRUD
@@ -79,7 +79,7 @@ function ListaProfesores() {
 
       {/* ENCABEZADO */}
       <div className="list-header">
-        <h2><Icon name="graduation" size={18} /> {esProfesor ? 'Gestión de Profesores' : 'Nuestros Profesores'}</h2>
+        <h2><GraduationCap size={18} /> {esProfesor ? 'Gestión de Profesores' : 'Nuestros Profesores'}</h2>
         {esProfesor && (
           <button
             className="add-profesor-btn"
@@ -128,7 +128,7 @@ function ListaProfesores() {
 
               {/* Info */}
               <h3>{nombre}</h3>
-              <p className="profesor-areas"><Icon name="book" size={18} /> {areas}</p>
+              <p className="profesor-areas"><BookOpen size={18} /> {areas}</p>
 
               {perfil && (
                 <p className="profesor-perfil-breve">
@@ -225,7 +225,7 @@ function ModalDetalle({ prof, esProfesor, onCerrar }) {
             <h3>{nombre}</h3>
             <p>{prof.areasAsignadas || prof.especialidad || '—'}</p>
           </div>
-          <button className="btn-cerrar-modal-prof" onClick={onCerrar}><Icon name="close" size={18}/></button>
+          <button className="btn-cerrar-modal-prof" onClick={onCerrar}><X size={18} /></button>
         </div>
 
         {/* Cuerpo */}
@@ -233,7 +233,7 @@ function ModalDetalle({ prof, esProfesor, onCerrar }) {
 
           {/* Info pública - todos la ven */}
           <section className="modal-seccion">
-            <h4><Icon name="clipboard" size={18} /> Información General</h4>
+            <h4><ClipboardList size={18} /> Información General</h4>
             <Item label="Nivel Académico"   valor={prof.nivelAcademico} />
             <Item label="Áreas Asignadas"   valor={prof.areasAsignadas || prof.especialidad} />
             <Item label="Años de Experiencia" valor={prof.anosExperiencia ? `${prof.anosExperiencia} años` : null} />
@@ -249,7 +249,7 @@ function ModalDetalle({ prof, esProfesor, onCerrar }) {
           {esProfesor && (
             <>
               <section className="modal-seccion">
-                <h4><Icon name="lock" size={18} /> Datos Laborales (Confidencial)</h4>
+                <h4><Lock size={18} /> Datos Laborales (Confidencial)</h4>
                 <Item label="N° Documento"    valor={prof.numeroDocumento} />
                 <Item label="Correo"          valor={prof.correoElectronico} />
                 <Item label="Celular"         valor={prof.celular} />
@@ -263,7 +263,7 @@ function ModalDetalle({ prof, esProfesor, onCerrar }) {
               {/* Hoja de vida */}
               {(prof.hojaDeVida || prof.hojaDeVidaFile) && (
                 <section className="modal-seccion">
-                  <h4><Icon name="file" size={18} /> Hoja de Vida</h4>
+                  <h4><FileIcon size={18} /> Hoja de Vida</h4>
                   {prof.hojaDeVida && (
                     <a
                       href={prof.hojaDeVida}

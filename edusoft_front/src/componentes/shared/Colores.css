@@ -484,7 +484,7 @@ body.dark .protected-content .modal-overlay,body.dark .protected-content .modal-
 body.dark .protected-content .modal-content,body.dark .protected-content .modal-detalle,body.dark .protected-content .modal-curso,body.dark .protected-content .modal-rep{background:#1E293B!important;color:#E2E8F0!important;border-color:#334155!important;box-shadow:none!important;}
 body.dark .protected-content .modal-content h3,body.dark .protected-content .modal-detalle h3,body.dark .protected-content .modal-curso h3,body.dark .protected-content .modal-rep h3,body.dark .protected-content .modal-content h4,body.dark .protected-content .modal-detalle h4,body.dark .protected-content .modal-curso h4,body.dark .protected-content .modal-rep h4{color:#F8FAFC!important;}
 body.dark .protected-content .modal-content p,body.dark .protected-content .modal-detalle p,body.dark .protected-content .modal-curso p,body.dark .protected-content .modal-rep p{color:#CBD5E1!important;}
-.edusoft-icon{display:inline-block;vertical-align:middle;flex:none;}
+.lucide{display:inline-block;vertical-align:middle;flex:none;}
 
 /* Logos: versión blanca en tema oscuro */
 body.dark .lista-container::before,

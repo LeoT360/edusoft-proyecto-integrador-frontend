@@ -10,6 +10,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { matriculaService } from '../../services/matriculaService';
 import './Matricula.css';
+import { CircleCheck } from 'lucide-react';
 
 const FORM_INICIAL = {
   nombre:          '',
@@ -278,7 +279,7 @@ function FormularioMatricula() {
           {/* RESUMEN POST-ENVÍO (equivale al bloque <pre> del page.tsx) */}
           {enviado && (
             <div className="matricula-resumen">
-              <h4>✅ Datos registrados:</h4>
+              <h4><CircleCheck size={18} /> Datos registrados:</h4>
               <div className="resumen-grid">
                 <FilaResumen label="Nombre"          valor={form.nombre} />
                 <FilaResumen label="Documento"       valor={form.documento} />
@@ -303,7 +304,7 @@ function FormularioMatricula() {
               disabled={guardando || enviado}
             >
               {enviado
-                ? '✅ Enviado correctamente'
+                ? <><CircleCheck size={18} /> Enviado correctamente</>
                 : guardando
                   ? 'Guardando...'
                   : modoEdicion

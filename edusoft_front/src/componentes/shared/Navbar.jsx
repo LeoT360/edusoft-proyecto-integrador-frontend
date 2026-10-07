@@ -3,18 +3,18 @@ import { useState, useEffect } from 'react';
 import './Navbar.css';
 import logoEdusoft from '../../assets/title-edusoft.svg';
 import logoWhiteEdusoft from '../../assets/title-white-edusoft.svg';
-import Icon from './Icon';
+import { Bell, BookOpen, ChartLine, ClipboardList, FileText, GraduationCap, House, LogOut, Menu, Moon, School, Sun, Users, X } from 'lucide-react';
 
 const SECCIONES = [
-  { id: 'home', icono: 'home', label: 'Inicio', ruta: '/home' },
-  { id: 'usuarios', icono: 'group', label: 'Usuarios', ruta: '/usuarios', soloProfesor: true },
-  { id: 'notificaciones', icono: 'bell', label: 'Notificaciones', ruta: '/notificaciones' },
-  { id: 'profesores', icono: 'graduation', label: 'Profesores', ruta: '/profesores' },
-  { id: 'asistencias', icono: 'clipboard', label: 'Asistencias', ruta: '/asistencias' },
-  { id: 'cursos', icono: 'book', label: 'Cursos', ruta: '/cursos' },
-  { id: 'notas', icono: 'note', label: 'Notas', ruta: '/notas' },
-  { id: 'matricula', icono: 'school', label: 'Matrícula', ruta: '/matricula' },
-  { id: 'reportes', icono: 'chart', label: 'Reportes Estadísticos', ruta: '/reportes', soloProfesor: true },
+  { id: 'home', icono: House, label: 'Inicio', ruta: '/home' },
+  { id: 'usuarios', icono: Users, label: 'Usuarios', ruta: '/usuarios', soloProfesor: true },
+  { id: 'notificaciones', icono: Bell, label: 'Notificaciones', ruta: '/notificaciones' },
+  { id: 'profesores', icono: GraduationCap, label: 'Profesores', ruta: '/profesores' },
+  { id: 'asistencias', icono: ClipboardList, label: 'Asistencias', ruta: '/asistencias' },
+  { id: 'cursos', icono: BookOpen, label: 'Cursos', ruta: '/cursos' },
+  { id: 'notas', icono: FileText, label: 'Notas', ruta: '/notas' },
+  { id: 'matricula', icono: School, label: 'Matrícula', ruta: '/matricula' },
+  { id: 'reportes', icono: ChartLine, label: 'Reportes Estadísticos', ruta: '/reportes', soloProfesor: true },
 ];
 
 function Navbar() {
@@ -40,13 +40,14 @@ function Navbar() {
     <div className="nav-scroll-area">
       {SECCIONES.map(sec => {
         if (sec.soloProfesor && !esProfesor) return null;
+        const IconoSeccion = sec.icono;
         return (
           <button
             key={sec.id}
             className={`nav-item-directo ${activo(sec.ruta) ? 'activo' : ''}`}
             onClick={() => redirigir(sec.ruta)}
           >
-            <span className="nav-item-icono"><Icon name={sec.icono} size={19}/></span>
+            <span className="nav-item-icono"><IconoSeccion size={19}/></span>
             <span>{sec.label}</span>
           </button>
         );
@@ -62,24 +63,24 @@ function Navbar() {
       <div className="sidebar-user"><strong>{usuario?.nombre}</strong><span>{usuario?.rol}</span></div>
       {renderNav()}
       <div className="sidebar-footer">
-        <button className="sidebar-action" onClick={() => setDarkMode(v => !v)}><Icon name={darkMode ? "sun" : "moon"} size={18}/><span>{darkMode ? 'Modo claro' : 'Modo oscuro'}</span></button>
-        <button className="sidebar-action danger" onClick={salir}><Icon name="logout" size={18}/><span>Cerrar sesión</span></button>
+        <button className="sidebar-action" onClick={() => setDarkMode(v => !v)}>{darkMode ? <Sun size={18}/> : <Moon size={18}/>}<span>{darkMode ? 'Modo claro' : 'Modo oscuro'}</span></button>
+        <button className="sidebar-action danger" onClick={salir}><LogOut size={18} /><span>Cerrar sesión</span></button>
       </div>
     </aside>
 
     <header className="mobile-navbar">
       <img src={darkMode ? logoWhiteEdusoft : logoEdusoft} alt="Logo EduSoft" className="mobile-logo" onClick={() => redirigir('/home')} />
       <div className="mobile-actions">
-        <button className="mobile-theme" onClick={() => setDarkMode(v => !v)} aria-label="Cambiar tema"><Icon name={darkMode ? "sun" : "moon"} size={18}/></button>
-        <button className="mobile-menu-button" onClick={() => setMenuAbierto(v => !v)} aria-label={menuAbierto ? 'Cerrar menú' : 'Abrir menú'}>{menuAbierto ? '✕' : '☰'}</button>
+        <button className="mobile-theme" onClick={() => setDarkMode(v => !v)} aria-label="Cambiar tema">{darkMode ? <Sun size={18}/> : <Moon size={18}/>}</button>
+        <button className="mobile-menu-button" onClick={() => setMenuAbierto(v => !v)} aria-label={menuAbierto ? 'Cerrar menú' : 'Abrir menú'}>{menuAbierto ? <X size={22}/> : <Menu size={22}/>}</button>
       </div>
     </header>
 
     {menuAbierto && <div className="mobile-menu-overlay">
       <div className="mobile-menu-panel">
-        <div className="mobile-menu-header"><div><strong>{usuario?.nombre}</strong><span>{usuario?.rol}</span></div><button onClick={() => setMenuAbierto(false)}><Icon name="close" size={20}/></button></div>
+        <div className="mobile-menu-header"><div><strong>{usuario?.nombre}</strong><span>{usuario?.rol}</span></div><button onClick={() => setMenuAbierto(false)}><X size={20} /></button></div>
         {renderNav()}
-        <div className="mobile-menu-footer"><button className="sidebar-action" onClick={salir}><Icon name="logout" size={18}/><span>Cerrar sesión</span></button></div>
+        <div className="mobile-menu-footer"><button className="sidebar-action" onClick={salir}><LogOut size={18} /><span>Cerrar sesión</span></button></div>
       </div>
     </div>}
   </>;

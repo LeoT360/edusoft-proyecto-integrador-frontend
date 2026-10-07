@@ -1,4 +1,4 @@
-import Icon from '../shared/Icon';
+import { BookOpen, Calendar, ChartLine, CircleCheck, Eye, FileIcon, GraduationCap, Mail, Pencil, Users, X } from 'lucide-react';
 // ====================================
 // REPORTES ESTADÍSTICOS - UNIFICADO
 // Fusiona ReporAcademicos + ReporAdministrativos
@@ -80,7 +80,7 @@ function ReportesEstadisticos() {
       {/* ENCABEZADO */}
       <div className="reportes-header">
         <div>
-          <h2><Icon name="chart" size={18} /> Reportes Estadísticos</h2>
+          <h2><ChartLine size={18} /> Reportes Estadísticos</h2>
           <p className="reportes-subtitulo">
             Panel de gestión exclusivo para docentes
           </p>
@@ -130,7 +130,7 @@ function ReportesEstadisticos() {
             onClick={() => setBusqueda('')}
             title="Limpiar búsqueda"
           >
-            ✕
+            <X size={16} />
           </button>
         )}
       </div>
@@ -158,7 +158,7 @@ function ReportesEstadisticos() {
       {/* LISTA DE REPORTES */}
       {listaMostrada.length === 0 && !error ? (
         <div className="reportes-vacio">
-          <span className="reportes-vacio-icono"><Icon name="mail" size={18} /></span>
+          <span className="reportes-vacio-icono"><Mail size={18} /></span>
           <p>No hay reportes {pestana === 'academico' ? 'académicos' : 'administrativos'} registrados.</p>
           <button className="btn-nuevo-reporte-vacio"
             onClick={() => { setSeleccionado(null); setModoForm(true); }}>
@@ -211,7 +211,7 @@ function KpisAcademicos({ reportes }) {
     <>
       <TarjetaKPI
         color="azul"
-        icono={<Icon name="chart" size={18} />}
+        icono={<ChartLine size={18} />}
         label="Promedio General"
         valor={ultimo.notaFinal != null ? ultimo.notaFinal.toFixed(1) : '—'}
         barra={porcentajeBarra(ultimo.notaFinal)}
@@ -219,19 +219,19 @@ function KpisAcademicos({ reportes }) {
       />
       <TarjetaKPI
         color="aqua"
-        icono={<Icon name="calendar" size={18} />}
+        icono={<Calendar size={18} />}
         label="Asistencia Total"
         valor={valorO(ultimo.asistenciaTotal)}
       />
       <TarjetaKPI
         color="amarillo"
-        icono={<Icon name="book" size={18} />}
+        icono={<BookOpen size={18} />}
         label="Cursos Activos"
         valor={valorO(ultimo.cantidadCursos)}
       />
       <TarjetaKPI
         color="azul"
-        icono={<Icon name="chart" size={18} />}
+        icono={<ChartLine size={18} />}
         label="Promedio Notas"
         valor={ultimo.promedioNotaCursos != null ? ultimo.promedioNotaCursos.toFixed(1) : '—'}
         barra={porcentajeBarra(ultimo.promedioNotaCursos)}
@@ -248,25 +248,25 @@ function KpisAdministrativos({ reportes }) {
     <>
       <TarjetaKPI
         color="azul"
-        icono={<Icon name="group" size={18} />}
+        icono={<Users size={18} />}
         label="Total Usuarios"
         valor={valorO(ultimo.cantidadUsuarios)}
       />
       <TarjetaKPI
         color="aqua"
-        icono={<Icon name="chart" size={18} />}
+        icono={<ChartLine size={18} />}
         label="Promedio Matrícula"
         valor={ultimo.promedioMatricula != null ? `$${ultimo.promedioMatricula.toFixed(0)}` : '—'}
       />
       <TarjetaKPI
         color="amarillo"
-        icono={<Icon name="graduation" size={18} />}
+        icono={<GraduationCap size={18} />}
         label="Calificación Docente"
         valor={valorO(ultimo.calificacionDocente)}
       />
       <TarjetaKPI
         color="azul"
-        icono="✅"
+        icono={<CircleCheck size={18} />}
         label="Aprobados (%)"
         valor={ultimo.promedioUsuariosAprobadosCurso != null
           ? `${ultimo.promedioUsuariosAprobadosCurso.toFixed(1)}%` : '—'}
@@ -310,8 +310,8 @@ function TarjetaReporte({ reporte, tipo, onVer, onEditar }) {
         </span>
       </div>
       <div className="reporte-row-acciones">
-        <button className="btn-rep-ver"    onClick={onVer}><Icon name="eye" size={18} /> Ver</button>
-        <button className="btn-rep-editar" onClick={onEditar}><Icon name="edit" size={18} /> Editar</button>
+        <button className="btn-rep-ver"    onClick={onVer}><Eye size={18} /> Ver</button>
+        <button className="btn-rep-editar" onClick={onEditar}><Pencil size={18} /> Editar</button>
       </div>
     </div>
   );
@@ -325,10 +325,10 @@ function ModalDetalleReporte({ reporte, tipo, onCerrar, onEditar }) {
 
         <div className="modal-rep-header">
           <div>
-            <h3><Icon name="chart" size={18} /> Reporte #{reporte.id}</h3>
+            <h3><ChartLine size={18} /> Reporte #{reporte.id}</h3>
             {reporte.periodoReporte && <span className="modal-rep-periodo">{reporte.periodoReporte}</span>}
           </div>
-          <button className="btn-cerrar-modal-rep" onClick={onCerrar}><Icon name="close" size={18}/></button>
+          <button className="btn-cerrar-modal-rep" onClick={onCerrar}><X size={18} /></button>
         </div>
 
         <div className="modal-rep-body">
@@ -466,7 +466,7 @@ function ModalFormReporte({ reporte, tipoPorDefecto, onCerrar, onGuardado }) {
 
         <div className="modal-rep-header">
           <h3>{modoEdicion ? ' Editar Reporte' : ' Nuevo Reporte'}</h3>
-          <button className="btn-cerrar-modal-rep" onClick={onCerrar}><Icon name="close" size={18}/></button>
+          <button className="btn-cerrar-modal-rep" onClick={onCerrar}><X size={18} /></button>
         </div>
 
         {mensaje && (
@@ -498,7 +498,7 @@ function ModalFormReporte({ reporte, tipoPorDefecto, onCerrar, onGuardado }) {
           {/* Campos académicos */}
           {esAcademico && (
             <fieldset>
-              <legend><Icon name="graduation" size={18} /> Datos Académicos</legend>
+              <legend><GraduationCap size={18} /> Datos Académicos</legend>
               <div className="form-grid-2">
                 <div className="form-group">
                   <label>Nota Final</label>
@@ -548,7 +548,7 @@ function ModalFormReporte({ reporte, tipoPorDefecto, onCerrar, onGuardado }) {
           {/* Campos administrativos */}
           {!esAcademico && (
             <fieldset>
-              <legend><Icon name="file" size={18} /> Datos Administrativos</legend>
+              <legend><FileIcon size={18} /> Datos Administrativos</legend>
               <div className="form-grid-2">
                 <div className="form-group">
                   <label>Total Usuarios</label>

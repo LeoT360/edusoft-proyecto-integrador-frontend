@@ -1,4 +1,4 @@
-import Icon from '../shared/Icon';
+import { BookOpen, Calendar, ChartLine, Mail } from 'lucide-react';
 // ====================================
 // FORMULARIO CURSO - UNIFICADO
 // Sirve para CREAR y EDITAR
@@ -157,7 +157,7 @@ function FormularioCurso() {
 
           {/* ═══ INFORMACIÓN BÁSICA ═══ */}
           <fieldset>
-            <legend><Icon name="book" size={18} /> Información Básica</legend>
+            <legend><BookOpen size={18} /> Información Básica</legend>
 
             <div className="form-group">
               <label htmlFor="titulo">Título del Curso *</label>
@@ -206,7 +206,7 @@ function FormularioCurso() {
 
           {/* ═══ DETALLES ACADÉMICOS ═══ */}
           <fieldset>
-            <legend><Icon name="chart" size={18} /> Detalles Académicos</legend>
+            <legend><ChartLine size={18} /> Detalles Académicos</legend>
 
             <div className="form-grid-2">
               <div className="form-group">
@@ -256,7 +256,7 @@ function FormularioCurso() {
 
           {/* ═══ FECHAS ═══ */}
           <fieldset>
-            <legend><Icon name="calendar" size={18} /> Fechas</legend>
+            <legend><Calendar size={18} /> Fechas</legend>
             <div className="form-grid-2">
               <div className="form-group">
                 <label htmlFor="fechaCreacion">Fecha de Inicio</label>
@@ -274,7 +274,7 @@ function FormularioCurso() {
 
           {/* ═══ NOTAS ADICIONALES ═══ */}
           <fieldset>
-            <legend><Icon name="mail" size={18} /> Comentarios Adicionales</legend>
+            <legend><Mail size={18} /> Comentarios Adicionales</legend>
             <div className="form-group">
               <textarea id="comentarios" name="comentarios" rows="3"
                 value={formData.comentarios} onChange={handleChange}

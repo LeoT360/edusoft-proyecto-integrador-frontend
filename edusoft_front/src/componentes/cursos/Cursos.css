@@ -262,6 +262,13 @@
   letter-spacing: 1px;
 }
 
+.estrellas-iconos {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  vertical-align: middle;
+}
+
 .cal-numero {
   color: var(--edusoft-texto-secundario, #666);
   font-size: 12px;

@@ -1,4 +1,4 @@
-import Icon from '../shared/Icon';
+import { BookOpen, Calendar, Mail, Settings, Tag, User } from 'lucide-react';
 // ====================================
 // COMPONENTE FORMULARIO NOTIFICACIÓN
 // ====================================
@@ -180,7 +180,7 @@ function FormularioNotificacion() {
         
         {/* ===== SECCIÓN 1: DATOS DE REMITENTE Y DESTINATARIO ===== */}
         <fieldset>
-          <legend><Icon name="user" size={18} /> Información de Usuarios</legend>
+          <legend><User size={18} /> Información de Usuarios</legend>
           
           <div className="form-group">
             <label htmlFor="idRemitente">ID Remitente:</label>
@@ -235,7 +235,7 @@ function FormularioNotificacion() {
 
         {/* ===== SECCIÓN 2: CONTENIDO DEL MENSAJE ===== */}
         <fieldset>
-          <legend><Icon name="mail" size={18} /> Contenido del Mensaje</legend>
+          <legend><Mail size={18} /> Contenido del Mensaje</legend>
           
           <div className="form-group">
             <label htmlFor="asunto">Asunto: *</label>
@@ -266,7 +266,7 @@ function FormularioNotificacion() {
 
         {/* ===== SECCIÓN 3: CLASIFICACIÓN ===== */}
         <fieldset>
-          <legend><Icon name="tag" size={18} /> Clasificación</legend>
+          <legend><Tag size={18} /> Clasificación</legend>
           
           <div className="form-group">
             <label htmlFor="tipoNotificacion">Tipo de Notificación:</label>
@@ -302,7 +302,7 @@ function FormularioNotificacion() {
 
         {/* ===== SECCIÓN 4: INFORMACIÓN DEL CURSO ===== */}
         <fieldset>
-          <legend><Icon name="book" size={18} /> Curso Relacionado</legend>
+          <legend><BookOpen size={18} /> Curso Relacionado</legend>
           
           <div className="form-group">
             <label htmlFor="cursoRelacionado">Curso:</label>
@@ -342,7 +342,7 @@ function FormularioNotificacion() {
 
         {/* ===== SECCIÓN 5: FECHAS Y HORA ===== */}
         <fieldset>
-          <legend><Icon name="calendar" size={18} /> Fechas y Hora</legend>
+          <legend><Calendar size={18} /> Fechas y Hora</legend>
           
           <div className="form-group">
             <label htmlFor="fechaCreacion">Fecha Creación:</label>
@@ -382,7 +382,7 @@ function FormularioNotificacion() {
 
         {/* ===== SECCIÓN 6: OPCIONES ADICIONALES ===== */}
         <fieldset>
-          <legend><Icon name="settings" size={18} /> Opciones Adicionales</legend>
+          <legend><Settings size={18} /> Opciones Adicionales</legend>
           
           <div className="form-group">
             <label htmlFor="cantidadArchivosAdjuntos">Archivos Adjuntos:</label>

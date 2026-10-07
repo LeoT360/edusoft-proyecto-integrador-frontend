@@ -1,4 +1,4 @@
-import Icon from '../shared/Icon';
+import { Users, X } from 'lucide-react';
 // ====================================
 // LISTA USUARIOS - UNIFICADA
 // Usa usuarioService (sin fetch directo)
@@ -76,7 +76,7 @@ function ListaUsuarios() {
 
   return (
     <div className="usuario-lista">
-      <h2><Icon name="group" size={18} /> Usuarios registrados</h2>
+      <h2><Users size={18} /> Usuarios registrados</h2>
 
       {error && <p className="error-mensaje">{error}</p>}
 
@@ -98,7 +98,7 @@ function ListaUsuarios() {
               className="btn-limpiar-usuarios"
               onClick={() => setBusqueda('')}
               title="Limpiar"
-            ><Icon name="close" size={18}/></button>
+            ><X size={18} /></button>
           )}
         </div>
         {busqueda && (

@@ -1,4 +1,4 @@
-import Icon from '../shared/Icon';
+import { ChartLine, Check, ClipboardList, FileIcon, FileText, Mail, Plus, X } from 'lucide-react';
 // ====================================
 // LISTA ASISTENCIAS - UNIFICADA
 // Profesor: ve todo + puede registrar nuevas asistencias
@@ -148,7 +148,7 @@ function ListaAsistencias() {
       {/* ENCABEZADO */}
       <div className="asistencias-header">
         <div>
-          <h2><Icon name="clipboard" size={18} /> {esProfesor ? 'Gestión de Asistencias' : 'Mi Asistencia'}</h2>
+          <h2><ClipboardList size={18} /> {esProfesor ? 'Gestión de Asistencias' : 'Mi Asistencia'}</h2>
           <p className="asistencias-subtitulo">
             {esProfesor
               ? 'Registra y consulta las asistencias del sistema'
@@ -160,7 +160,7 @@ function ListaAsistencias() {
             className="btn-nueva-asistencia"
             onClick={() => setMostrarForm(!mostrarForm)}
           >
-            {mostrarForm ? '✕ Cerrar' : ' Registrar Asistencia'}
+            {mostrarForm ? <><X size={18} /> Cerrar</> : <><Plus size={18} /> Registrar Asistencia</>}
           </button>
         )}
       </div>
@@ -169,26 +169,26 @@ function ListaAsistencias() {
       <div className="asistencias-kpis">
         <div className="kpi-asist kpi-presentes">
           <span className="kpi-num">{presentes}</span>
-          <span className="kpi-lbl">✅ Presentes</span>
+          <span className="kpi-lbl"><Check size={18} /> Presentes</span>
         </div>
         <div className="kpi-asist kpi-ausentes">
           <span className="kpi-num">{ausentes}</span>
-          <span className="kpi-lbl"><Icon name="close" size={18} /> Ausentes</span>
+          <span className="kpi-lbl"><X size={18} /> Ausentes</span>
         </div>
         <div className="kpi-asist kpi-pct">
           <span className="kpi-num">{pct}%</span>
-          <span className="kpi-lbl"><Icon name="chart" size={18} /> Asistencia</span>
+          <span className="kpi-lbl"><ChartLine size={18} /> Asistencia</span>
         </div>
         <div className="kpi-asist kpi-total">
           <span className="kpi-num">{filtradas.length}</span>
-          <span className="kpi-lbl"><Icon name="file" size={18} /> Total registros</span>
+          <span className="kpi-lbl"><FileIcon size={18} /> Total registros</span>
         </div>
       </div>
 
       {/* FORMULARIO DESLIZANTE (solo Profesor) */}
       {esProfesor && mostrarForm && (
         <div className="asistencia-form-panel">
-          <h3><Icon name="note" size={18} /> Nueva Asistencia</h3>
+          <h3><FileText size={18} /> Nueva Asistencia</h3>
 
           {msgForm && (
             <div className={`message-alert ${tipoMsg === 'exito' ? 'message-success' : 'message-error'}`}>
@@ -232,7 +232,7 @@ function ListaAsistencias() {
                 <input id="asistio" name="asistio" type="checkbox"
                   checked={form.asistio} onChange={handleChange} />
                 <label htmlFor="asistio">
-                  {form.asistio ? '✅ Asistió' : ' No asistió'}
+                  {form.asistio ? <><Check size={16} /> Asistió</> : <><X size={16} /> No asistió</>}
                 </label>
               </div>
 
@@ -278,7 +278,7 @@ function ListaAsistencias() {
         <div className="asistencias-tabla-wrap">
           {filtradas.length === 0 ? (
             <div className="asistencias-vacio">
-              <span><Icon name="mail" size={18} /></span>
+              <span><Mail size={18} /></span>
               <p>No se encontraron registros de asistencia.</p>
             </div>
           ) : (
@@ -301,7 +301,7 @@ function ListaAsistencias() {
                     <td>{a.horaEntrada}</td>
                     <td>
                       <span className={`badge-asistencia ${a.asistio ? 'badge-presente' : 'badge-ausente'}`}>
-                        {a.asistio ? '✅ Presente' : ' Ausente'}
+                        {a.asistio ? <><Check size={16} /> Presente</> : <><X size={16} /> Ausente</>}
                       </span>
                     </td>
                   </tr>

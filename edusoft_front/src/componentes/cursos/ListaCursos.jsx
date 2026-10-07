@@ -1,4 +1,4 @@
-import Icon from '../shared/Icon';
+import { BookOpen, ClipboardList, Clock, FileText, GraduationCap, Lock, Mail, Star, Users, X, Zap } from 'lucide-react';
 // ====================================
 // LISTA CURSOS - UNIFICADA
 // Profesor: CRUD completo
@@ -66,7 +66,13 @@ function ListaCursos() {
   const renderEstrellas = (cal) => {
     if (!cal) return null;
     const llenas = Math.round(cal);
-    return '★'.repeat(llenas) + '☆'.repeat(5 - llenas);
+    return (
+      <span className="estrellas-iconos">
+        {Array.from({ length: 5 }, (_, i) => (
+          <Star key={i} size={15} fill={i < llenas ? 'currentColor' : 'none'} />
+        ))}
+      </span>
+    );
   };
 
   if (cargando) return (
@@ -84,7 +90,7 @@ function ListaCursos() {
       {/* ENCABEZADO */}
       <div className="cursos-header">
         <div className="cursos-header-texto">
-          <h2><Icon name="book" size={18} /> {esProfesor ? 'Gestión de Cursos' : 'Catálogo de Cursos'}</h2>
+          <h2><BookOpen size={18} /> {esProfesor ? 'Gestión de Cursos' : 'Catálogo de Cursos'}</h2>
           <p className="cursos-subtitulo">
             {esProfesor
               ? `${cursos.length} curso${cursos.length !== 1 ? 's' : ''} registrado${cursos.length !== 1 ? 's' : ''}`
@@ -124,7 +130,7 @@ function ListaCursos() {
 
       {!error && filtrados.length === 0 && (
         <div className="cursos-vacio">
-          <span className="cursos-vacio-icono"><Icon name="mail" size={18} /></span>
+          <span className="cursos-vacio-icono"><Mail size={18} /></span>
           <p>No se encontraron cursos con esos criterios.</p>
           {(busqueda || filtraTipo) && (
             <button className="btn-limpiar-filtros"
@@ -183,7 +189,7 @@ function TarjetaCurso({ curso, esProfesor, onVer, onEditar, renderEstrellas }) {
         <h3 className="curso-titulo">{curso.titulo || 'Sin título'}</h3>
 
         {curso.maestro && (
-          <p className="curso-maestro"><Icon name="graduation" size={18} /> {curso.maestro}</p>
+          <p className="curso-maestro"><GraduationCap size={18} /> {curso.maestro}</p>
         )}
 
         {curso.descripcion && (
@@ -197,13 +203,13 @@ function TarjetaCurso({ curso, esProfesor, onVer, onEditar, renderEstrellas }) {
         {/* Metadata */}
         <div className="curso-meta">
           {curso.duracion != null && (
-            <span className="curso-meta-item"><Icon name="clock" size={18}/> {curso.duracion}h</span>
+            <span className="curso-meta-item"><Clock size={18} /> {curso.duracion}h</span>
           )}
           {curso.intensidad != null && (
-            <span className="curso-meta-item">⚡ {curso.intensidad} hrs/sem</span>
+            <span className="curso-meta-item"><Zap size={18} /> {curso.intensidad} hrs/sem</span>
           )}
           {curso.estudiantes != null && (
-            <span className="curso-meta-item"><Icon name="group" size={18} /> {curso.estudiantes}</span>
+            <span className="curso-meta-item"><Users size={18} /> {curso.estudiantes}</span>
           )}
         </div>
 
@@ -243,7 +249,7 @@ function ModalDetalleCurso({ curso, esProfesor, onCerrar, onEditar, renderEstrel
             <h3>{curso.titulo || 'Sin título'}</h3>
             {curso.tipoCurso && <span className="modal-tipo-badge">{curso.tipoCurso}</span>}
           </div>
-          <button className="btn-cerrar-modal-curso" onClick={onCerrar}><Icon name="close" size={18}/></button>
+          <button className="btn-cerrar-modal-curso" onClick={onCerrar}><X size={18} /></button>
         </div>
 
         {/* Body */}
@@ -251,7 +257,7 @@ function ModalDetalleCurso({ curso, esProfesor, onCerrar, onEditar, renderEstrel
 
           {/* Info general - todos la ven */}
           <section className="modal-curso-seccion">
-            <h4><Icon name="clipboard" size={18} /> Información General</h4>
+            <h4><ClipboardList size={18} /> Información General</h4>
             <FilaDetalle label="Maestro"       valor={curso.maestro} />
             <FilaDetalle label="Modalidad"     valor={curso.presencialidad ? 'Presencial' : 'Virtual'} />
             <FilaDetalle label="Tipo"          valor={curso.tipoCurso} />
@@ -273,7 +279,7 @@ function ModalDetalleCurso({ curso, esProfesor, onCerrar, onEditar, renderEstrel
           {/* Descripción */}
           {curso.descripcion && (
             <section className="modal-curso-seccion">
-              <h4><Icon name="note" size={18} /> Descripción</h4>
+              <h4><FileText size={18} /> Descripción</h4>
               <p className="modal-descripcion">{curso.descripcion}</p>
             </section>
           )}
@@ -281,7 +287,7 @@ function ModalDetalleCurso({ curso, esProfesor, onCerrar, onEditar, renderEstrel
           {/* Info solo para profesores */}
           {esProfesor && (
             <section className="modal-curso-seccion">
-              <h4><Icon name="lock" size={18} /> Datos Administrativos</h4>
+              <h4><Lock size={18} /> Datos Administrativos</h4>
               <FilaDetalle label="Lugar de realización" valor={curso.lugarRealizacion} />
               <FilaDetalle label="Fecha de creación"    valor={curso.fechaCreacion} />
               <FilaDetalle label="Fecha de finalización" valor={curso.fechaFinalizacion} />
