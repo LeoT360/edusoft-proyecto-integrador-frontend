@@ -61,7 +61,7 @@
   padding: 20px;
   background: rgba(0, 214, 240, 0.1);
   backdrop-filter: blur(10px);
-  border-radius: 16px;
+  border-radius: 10px;
   border-left: 4px solid var(--edusoft-aqua);
   animation: fadeIn 0.8s ease;
 }
@@ -91,7 +91,7 @@
   padding: 30px;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
-  border-radius: 20px;
+  border-radius: 8px;
   box-shadow: 0 8px 32px rgba(48, 43, 180, 0.15);
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -102,29 +102,9 @@
   animation-fill-mode: both;
 }
 
-/* Delays escalonados para la animación de entrada */
-.tarjeta:nth-child(1) { animation-delay: 0.05s; }
-.tarjeta:nth-child(2) { animation-delay: 0.10s; }
-.tarjeta:nth-child(3) { animation-delay: 0.15s; }
-.tarjeta:nth-child(4) { animation-delay: 0.20s; }
-.tarjeta:nth-child(5) { animation-delay: 0.25s; }
-.tarjeta:nth-child(6) { animation-delay: 0.30s; }
-
-@keyframes slideInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* Efecto brillo en hover */
-.tarjeta::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: rgba(255,255,255,0.3);
-  transition: left 0.5s;
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(48, 43, 180, 0.2);
 }
 
 .tarjeta:not(.tarjeta-proximamente):hover::before {
@@ -157,6 +137,9 @@
   font-size: 48px;
   margin-bottom: 15px;
   filter: grayscale(20%);
+  width: 150px;
+  height: 150px;
+  objectFit: contain;
 }
 
 .tarjeta h3 {
@@ -252,7 +235,7 @@
   padding: 25px;
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(15px);
-  border-radius: 16px;
+  border-radius: 8px;
   text-align: center;
   box-shadow: 0 4px 16px rgba(48, 43, 180, 0.1);
   transition: all 0.3s ease;
@@ -260,6 +243,7 @@
 }
 
 .estadistica:hover {
+  transform: translateY(-5px);
   box-shadow: 0 8px 24px rgba(48, 43, 180, 0.2);
 }
 

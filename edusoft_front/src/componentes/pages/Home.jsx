@@ -6,6 +6,7 @@ import { ArrowRight, BookOpen, ChartLine, ClipboardList, FileText, GraduationCap
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import iconoProfesor from '../../assets/modules-icons/icono_profesor.jpeg';
 import './Home.css';
 
 function Home() {
@@ -24,7 +25,7 @@ function Home() {
     {
       titulo: 'Usuarios',
       descripcion: 'Ver lista de usuarios registrados en el sistema.',
-      icono: <Users size={22} />,
+      icono: (<img className="tarjeta-icono" src={iconoProfesor} alt="Profesores"/>),
       ruta: '/usuarios',
       color: 'azul',
       disponible: esProfesor,   //  Solo profesores ven esta tarjeta
@@ -36,7 +37,7 @@ function Home() {
     {
       titulo: 'Ver Notificaciones',
       descripcion: 'Consultar notificaciones recibidas.',
-      icono: <Mail size={22} />,
+      icono: (<img className="tarjeta-icono" src={iconoProfesor} alt="Profesores"/>),
       ruta: '/notificaciones',
       color: 'cyan',
       disponible: true,
@@ -46,7 +47,7 @@ function Home() {
     {
       titulo: 'Nueva Notificación',
       descripcion: 'Crear y enviar una notificación a usuarios.',
-      icono: <Pencil size={22} />,
+      icono: (<img className="tarjeta-icono" src={iconoProfesor} alt="Profesores"/>),
       ruta: '/notificaciones/crear',
       color: 'dorado',
       disponible: esProfesor,   //  Solo profesores ven esta tarjeta
@@ -58,7 +59,7 @@ function Home() {
     {
       titulo: 'Profesores',
       descripcion: 'Gestionar información de profesores del sistema.',
-      icono: <GraduationCap size={22} />,
+      icono: (<img className="tarjeta-icono" src={iconoProfesor} alt="Profesores"/>),
       ruta: '/profesores',
       color: 'azul',
       disponible: true,
@@ -70,7 +71,7 @@ function Home() {
     {
       titulo: 'Cursos',
       descripcion: 'Administrar y gestionar pertenencia a los cursos de los estudiantes.',
-      icono: <BookOpen size={22} />,
+      icono: (<img className="tarjeta-icono" src={iconoProfesor} alt="Profesores"/>),
       color: 'dorado',
       ruta: '/cursos',
       disponible: true,
@@ -82,7 +83,7 @@ function Home() {
     {
       titulo: 'Notas',
       descripcion: 'Consultar y gestionar calificaciones de estudiantes.',
-      icono: <FileText size={22} />,
+      icono: (<img className="tarjeta-icono" src={iconoProfesor} alt="Profesores"/>),
       ruta: '/notas',
       color: 'cyan',
       disponible: true,
@@ -94,7 +95,7 @@ function Home() {
     {
       titulo: 'Asistencias',
       descripcion: 'Registrar y consultar asistencias por curso.',
-      icono: <ClipboardList size={22} />,
+      icono: (<img className="tarjeta-icono" src={iconoProfesor} alt="Profesores"/>),
       ruta: '/asistencias',
       color: 'azul',
       disponible: true,
@@ -106,7 +107,7 @@ function Home() {
     {
       titulo: 'Matrícula',
       descripcion: 'Administrar matrículas y cursos del período.',
-      icono: <School size={22} />,
+      icono: (<img className="tarjeta-icono" src={iconoProfesor} alt="Profesores"/>),
       ruta: '/matricula',
       color: 'dorado',
       disponible: true,
@@ -118,7 +119,7 @@ function Home() {
     {
       titulo: 'Reportes Estadísticos',
       descripcion: 'Visualizar estadísticas y reportes del sistema.',
-      icono: <ChartLine size={22} />,
+      icono: (<img className="tarjeta-icono" src={iconoProfesor} alt="Profesores"/>),
       ruta: '/reportes',
       color: 'azul',
       disponible: esProfesor,   //  Solo profesores ven esta tarjeta
