@@ -7,6 +7,7 @@ import { ArrowRight, BookOpen, ChartLine, ClipboardList, FileText, GraduationCap
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import iconoProfesor from '../../assets/modules-icons/icono_profesor.jpeg';
+import iconoCursos from '../../assets/modules-icons/icono-cursos.jpeg';
 import './Home.css';
 
 function Home() {
@@ -71,7 +72,7 @@ function Home() {
     {
       titulo: 'Cursos',
       descripcion: 'Administrar y gestionar pertenencia a los cursos de los estudiantes.',
-      icono: (<img className="tarjeta-icono" src={iconoProfesor} alt="Profesores"/>),
+      icono: (<img className="tarjeta-icono" src={iconoCursos} alt="Cursos"/>),
       color: 'dorado',
       ruta: '/cursos',
       disponible: true,
