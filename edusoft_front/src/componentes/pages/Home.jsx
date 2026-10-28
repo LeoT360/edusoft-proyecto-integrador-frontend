@@ -7,11 +7,8 @@ import { ArrowRight, BookOpen, ChartLine, ClipboardList, FileText, GraduationCap
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import iconoProfesor from '../../assets/modules-icons/icono_profesor.jpeg';
-<<<<<<< HEAD
-import iconoNotas from '../../assets/modules-icons/icono_notas.jpeg';
-=======
 import iconoCursos from '../../assets/modules-icons/icono-cursos.jpeg';
->>>>>>> 91fdc77950d84697949b8acf3bbd25bd431fb608
+import iconoNotas from '../../assets/modules-icons/icono_notas.jpeg';
 import './Home.css';
 
 function Home() {
