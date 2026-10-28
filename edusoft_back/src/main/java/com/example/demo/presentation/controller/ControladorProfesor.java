@@ -1,0 +1,49 @@
+package com.example.demo.presentation.controller;
+
+import com.example.demo.domain.models.Profesor;
+import com.example.demo.application.service.ServicioProfesor;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Positive;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/apiedusoft/v1/profesores")
+@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:3001", "http://127.0.0.1:3000"})
+@Validated
+public class ControladorProfesor {
+
+    @Autowired
+    ServicioProfesor servicio;
+
+    @PostMapping
+    public ResponseEntity<Profesor> guardar(@Valid @RequestBody Profesor datos) {
+        return ResponseEntity.ok(this.servicio.guardar(datos));
+    }
+
+    @GetMapping
+    public ResponseEntity<?> buscar() {
+        return ResponseEntity.ok(this.servicio.buscarTodos());
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Profesor> buscarPorId(@PathVariable @Positive Integer id) {
+        return ResponseEntity.ok(this.servicio.buscarPorId(id));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> eliminar(@PathVariable @Positive Integer id) {
+        this.servicio.eliminar(id);
+        return ResponseEntity.ok("Profesor eliminado correctamente");
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Profesor> actualizar(
+            @PathVariable @Positive Integer id,
+            @Valid @RequestBody Profesor datos) {
+        datos.setId(id);
+        return ResponseEntity.ok(this.servicio.guardar(datos));
+    }
+}

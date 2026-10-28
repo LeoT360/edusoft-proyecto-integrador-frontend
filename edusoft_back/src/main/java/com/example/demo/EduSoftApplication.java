@@ -7,10 +7,10 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
-public class IntegradorsuraApplication {
+public class EduSoftApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(IntegradorsuraApplication.class, args);
+		SpringApplication.run(EduSoftApplication.class, args);
 	}
     @Bean
     public WebMvcConfigurer corsConfigurer(){

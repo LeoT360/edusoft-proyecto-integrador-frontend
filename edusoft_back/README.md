@@ -1,7 +1,7 @@
-# 📚 Proyecto Integrador SURA 8 - Spring Boot
+# 📚 EduSoft - API REST con Spring Boot
 
 ## 🧩 Descripción
-Este proyecto corresponde al **Proyecto Integrador SURA 8**, desarrollado con **Spring Boot**, cuyo objetivo es la creación de una **API REST** para la administración de una **plataforma educativa** 🧑‍🎓👩‍🏫.  
+Este proyecto corresponde a **EduSoft**, una **API REST** desarrollada con **Spring Boot** para la administración de una **plataforma educativa** 🧑‍🎓👩‍🏫.
 
 La API permite gestionar la información mediante una arquitectura en capas, siguiendo buenas prácticas de desarrollo backend.
 
@@ -43,6 +43,8 @@ El proyecto está organizado en las siguientes capas:
 ---
 
 ## 🔗 Endpoints Disponibles
+Todos los recursos de la API usan el prefijo `/apiedusoft/v1`. Entre los recursos disponibles están usuarios, profesores, cursos, matrículas, asistencias, notas, notificaciones y reportes.
+
 La API cuenta con los siguientes endpoints principales:
 
 - 🟢 **Guardar entidad**  
@@ -65,6 +67,6 @@ La API cuenta con los siguientes endpoints principales:
 ---
 
 ## 🤝 Autor
-Proyecto desarrollado como parte del grupo SURA 8 CESDE.
+Proyecto desarrollado para la plataforma educativa EduSoft.
 
 ¡Gracias por visitar el repositorio! ⭐
