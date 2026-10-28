@@ -359,11 +359,11 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 22px 24px 18px;
-  background: var(--edusoft-azul-profundo);
-  border-radius: 20px 20px 0 0;
+  background: var(--edusoft-aqua);
+  border-radius: 8px 8px 0 0;
 }
 
-.modal-curso-header h3 {
+.modal-titulo {
   color: white;
   margin: 0 0 8px;
   font-size: 1.2rem;

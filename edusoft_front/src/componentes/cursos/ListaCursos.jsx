@@ -246,7 +246,7 @@ function ModalDetalleCurso({ curso, esProfesor, onCerrar, onEditar, renderEstrel
         {/* Header */}
         <div className="modal-curso-header">
           <div>
-            <h3>{curso.titulo || 'Sin título'}</h3>
+            <h3 className="modal-titulo">{curso.titulo || 'Sin título'}</h3>
             {curso.tipoCurso && <span className="modal-tipo-badge">{curso.tipoCurso}</span>}
           </div>
           <button className="btn-cerrar-modal-curso" onClick={onCerrar}><X size={18} /></button>

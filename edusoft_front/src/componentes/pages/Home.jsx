@@ -7,6 +7,7 @@ import { ArrowRight, BookOpen, ChartLine, ClipboardList, FileText, GraduationCap
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import iconoProfesor from '../../assets/modules-icons/icono_profesor.jpeg';
+import iconoNotas from '../../assets/modules-icons/icono_notas.jpeg';
 import './Home.css';
 
 function Home() {
@@ -83,7 +84,7 @@ function Home() {
     {
       titulo: 'Notas',
       descripcion: 'Consultar y gestionar calificaciones de estudiantes.',
-      icono: (<img className="tarjeta-icono" src={iconoProfesor} alt="Profesores"/>),
+      icono: (<img className="tarjeta-icono" src={iconoNotas} alt="Notas"/>),
       ruta: '/notas',
       color: 'cyan',
       disponible: true,

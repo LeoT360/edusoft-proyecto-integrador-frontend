@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { mostrarAlerta } from "../../utils/swalConfig";
 import { notaService } from "../../services/notaService";
 import { exportarNotasCSV, exportarNotasPDF } from "../../utils/exportNotas";
+import { Trash, Pencil } from 'lucide-react';
 import "./Notas.css";
 
 const ITEMS_POR_PAGINA = 5;
@@ -209,17 +210,19 @@ function ListaNotas() {
                       {esProfesor && (
                         <td>
                           <button
-                            className="btn btn-outline"
+                            className="btn btn-edit"
                             onClick={() => navigate(`/notas/editar/${nota.id}`)}
                           >
                             Editar
+                            <Pencil size={16} style={{ marginLeft: "5px" }} />
                           </button>
 
                           <button
-                            className="btn btn-outline"
+                            className="btn btn-delete"
                             onClick={() => eliminarNota(nota.id)}
                           >
-                            Eliminar
+                            Eliminar 
+                            <Trash size={16} style={{ marginLeft: "5px" }} />
                           </button>
                         </td>
                       )}

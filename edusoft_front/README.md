@@ -438,7 +438,7 @@ Durante la integración de los módulos se detectaron y resolvieron varios probl
 | Matrícula | Usaba componentes de librería externa (shadcn/ui) | Reemplazados por HTML/CSS estándar con el estilo EduSoft |
 | Notificaciones | Botón ✏️ Editar visible para Estudiantes | Condicionado con `{esProfesor && <button...>}` |
 | Todos los listados | La búsqueda no filtraba por ID | Añadido `String(item.id).includes(q)` en cada filtro |
-| Asistencias | El servicio apuntaba a `localhost:8081/api/asistencias` | Corregido a `localhost:8080/apisura8/v1/asistencias` |
+| Asistencias | El servicio apuntaba a `localhost:8081/api/asistencias` | Corregido a `localhost:8080/apiedusoft/v1/asistencias` |
 
 ---
 

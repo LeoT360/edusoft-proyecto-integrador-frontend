@@ -3,10 +3,7 @@
 // Mismo patrón que los demás servicios del proyecto
 // ====================================
 
-// ✅ CORREGIDO: era http://localhost:8081/api/asistencias
-//    Puerto equivocado (8081 vs 8080) y ruta equivocada
-//    También unificado a /apisura8/ (sin la 'g' extra del controlador original)
-const API_URL = 'http://localhost:8080/apisura8/v1/asistencias';
+const API_URL = 'http://localhost:8080/apiedusoft/v1/asistencias';
 
 export const asistenciaService = {
 

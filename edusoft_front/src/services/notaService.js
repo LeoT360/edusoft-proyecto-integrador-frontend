@@ -1,8 +1,8 @@
 // ========== 5. SERVICIO DE NOTAS ==========
 // Conecta con: ControladorNota.java
-// Endpoint base: /apisura8/v1/notas
+// Endpoint base: /apiedusoft/v1/notas
 
-const API_URL_NOTAS = 'http://localhost:8080/apisura8/v1/notas';
+const API_URL_NOTAS = 'http://localhost:8080/apiedusoft/v1/notas';
 
 // ===============================
 // FUNCIÓN GLOBAL PARA MANEJAR RESPUESTAS
